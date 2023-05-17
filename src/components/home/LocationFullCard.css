@@ -1,6 +1,7 @@
 .popup{
     align-content: center;
-    padding:5% 10%;
+    vertical-align: middle;
+    padding:2% 10%;
     transition: background-color 0.3s ease;
     top: 0;
     left: 0;
@@ -9,15 +10,29 @@
     height: 100%;
     background-color: #00000011;
     z-index: 1000000000;
+    overflow: hidden;
 }
 
 .popup.show{
 
     background-color: #000000AA;
 }
-
-.tarjeta {
+.contenedorChueco {
+    border-radius: 1rem;
+    position:relative;
     background-color: white;
     width: 80%;
-    height: 90%
+    aspect-ratio: 20/11;
+    overflow-y: scroll;
 }
+
+.tarjeta {
+}
+.halfImages{
+    border-radius: 0.5vw;
+    display: inline-table;
+    width: 55%;
+    aspect-ratio: 16/9;
+    background-color: black;
+  }
+

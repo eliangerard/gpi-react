@@ -9,9 +9,12 @@ export const LocationCard = ({ id }) => {
     setShow(true);
   };
 
+  const closePopUp = () => {
+    setShow(false);
+  }
   return (
     <>
-      {show && <LocationFullCard id={id} />}
+      {show && (<LocationFullCard id={id} closePop={closePopUp} />)}
       <article className="granja">
       <img className="granjaImg" src="../src/assets/locations/granja1.jpg" />
                 <div className="granjaTop">

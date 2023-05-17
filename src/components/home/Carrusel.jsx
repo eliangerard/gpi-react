@@ -1,5 +1,5 @@
 import { Carousel } from 'react-carousel-minimal';
-
+import './Carrusel.css'
 function Carrusel() {
  const data = [
     {
@@ -21,7 +21,7 @@ function Carrusel() {
   ];
 
   const captionStyle = {
-    fontSize: '2em',
+    fontSize: '0em',
     fontWeight: 'bold',
   }
   const slideNumberStyle = {
@@ -35,8 +35,8 @@ function Carrusel() {
           <Carousel
             data={data}
             time={5000}
-            width="40rem"
-            height="26rem"
+            width="40vw"
+            height="25vw"
             captionStyle={captionStyle}
             radius="0.5vw"
             slideNumber={false}
@@ -45,12 +45,13 @@ function Carrusel() {
             automatic={true}
             dots={true}
             pauseIconColor="white"
-            pauseIconSize="40px"
+            pauseIconSize="2vw"
             slideBackgroundColor="transparent"
             slideImageFit="cover"
             thumbnails={true}
-            thumbnailWidth="100px"
+            thumbnailWidth="150vw"
             style={{
+              display: "inline-table",
               textAlign: "center",
               maxWidth: "100%",
               margin: "2%",

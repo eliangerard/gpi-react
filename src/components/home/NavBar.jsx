@@ -4,29 +4,52 @@ import homeIcon from '../../assets/home.svg';
 import rentarIcon from '../../assets/rentar.png';
 import sellerIcon from '../../assets/seller.png';
 import logo from '../../assets/gpi-w.png';
+
 import './NavBar.css';
 
 function NavBar() {
   return (
     <aside>
-      <div id="navLogoContainer">
-        <img id="navLogo" src={logo} alt="Logo" />
-        <div id="rightBackground">
-          <img id="navRight" src={rightIcon} alt="Right icon" />
+      <div className="navProfileContainer">
+        <div className="navP">
+          <img id="navProfile" src="./src/assets/img/yo.jpg" />
+          <div id="navPi">
+            <img id="navPreview" src="./src/assets/img/right.png" />
+          </div>
+        </div>
+        <div className="navName">Misael Álvarez</div>
+        <div className="navRate">4.95 ⭐</div>
+        <div className="navEdit">Editar perfil<a href="elian.html">
+          <img className="navIcon" id="iPencil" src="./src/assets/img/pencil.png"/></a>
         </div>
       </div>
-      <a className="navIconContainer navLink" href="index.html">
-        <img className="navIcon" src={homeIcon} alt="Home icon" />
-        <h4 className="navText">Inicio</h4>
-      </a>
-      <a className="navIconContainer navLink" href="demo.html">
-        <img className="navIcon" src={rentarIcon} alt="Rentar icon" />
-        <h4 className="navText">Cliente</h4>
-      </a>
-      <a className="navIconContainer navLink" href="form.html">
-        <img className="navIcon" src={sellerIcon} alt="Seller icon" />
-        <h4 className="navText">Anfitrión</h4>
-      </a>
+
+      <div className="navContainer">
+        <a className="navIconContainer" href="adan.html">
+          <img className="navIcon" id="iPlace" src="./src/assets/img/place.png" />
+          <h4 className="navText">Catalogo</h4>
+        </a>
+        <a className="navIconContainer" href="elian.html">
+          <img className="navIcon" src="./src/assets/img/panel.png" />
+          <h4 className="navText">Panel</h4>
+        </a>
+        <a className="navIconContainer" href="elian.html">
+          <img className="navIcon" src="./src/assets/img/fav.png" />
+          <h4 className="navText">Favoritos</h4>
+        </a>
+        <a className="navIconContainer">
+          <img className="navIcon" src="./src/assets/img/not.png" />
+          <h4 className="navText">Notificaciones</h4>
+        </a>
+        <a className="navIconContainer" href="about.html">
+          <img className="navIcon" src="./src/assets/img/info.png" />
+          <h4 className="navText">Conocenos</h4>
+        </a>
+        <a className="navIconContainer" id="iLogout" href="elian.html">
+          <img className="navIcon" src="./src/assets/img/logout.png" />
+          <h4 className="navText" id="iLog">Cerrar sesion</h4>
+        </a>
+      </div>
     </aside>
   );
 }

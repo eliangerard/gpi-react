@@ -1,11 +1,4 @@
-import { useState } from 'react'
-import gpiWhite from './assets/logos/gpi-w.png'
-import viteLogo from '/vite.svg'
-
-import LoginCard from './components/login/LoginCard'
-
-import './App.css'
-
+import { useState, useEffect } from 'react'
 
 export const GPILanding = () => {
   const [showCard, setShowCard] = useState(false);
@@ -28,6 +21,11 @@ export const GPILanding = () => {
         </button>
         <button onClick={ () => mostrarFormulario(false) }>
           Sign Up
+        </button>
+      </div>
+      <div className="card">
+        <button onClick={mostrarHome}>
+          Mostrar Home
         </button>
       </div>
 

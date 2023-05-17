@@ -1,0 +1,23 @@
+.popup{
+    align-content: center;
+    padding:5% 10%;
+    transition: background-color 0.3s ease;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width:100%;
+    height: 100%;
+    background-color: #00000011;
+    z-index: 1000000000;
+}
+
+.popup.show{
+
+    background-color: #000000AA;
+}
+
+.tarjeta {
+    background-color: white;
+    width: 80%;
+    height: 90%
+}

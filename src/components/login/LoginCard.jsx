@@ -1,12 +1,10 @@
 import { useState } from 'react';
 
-import gpiWhite from '../../assets/logos/gpi-w.png';
-import exampleLocation from '../../assets/locations/portada.jpg'
-import './LoginCard.css';
-import Login from './Login';
-import Signup from './Signup';
 
 export const LoginCard = ( { toLogin } ) => {
+    useEffect(() => {
+        import('./LoginCard.css');
+      }, []);
     const [login, setLogin] = useState(toLogin);
     const setShowLogin = (show) => {
         setLogin(show);

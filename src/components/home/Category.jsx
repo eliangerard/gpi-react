@@ -1,4 +1,9 @@
-import React from "react";
+import React from "react"
+import cloudsIcon from '../../assets/clouds.png'
+import hallIcon from '../../assets/hall.png'
+import bussinesIcon from '../../assets/bussines.png'
+import familyIcon from '../../assets/family.png'
+import partIcon from '../../assets/part.png'
 import './Category.css'
 
 function Category(){

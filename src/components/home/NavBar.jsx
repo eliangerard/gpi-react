@@ -1,9 +1,9 @@
 import React from 'react';
-import rightIcon from './icons/right.png';
-import homeIcon from './icons/home.svg';
-import rentarIcon from './icons/rentar.png';
-import sellerIcon from './icons/seller.png';
-import logo from './icons/gpi-w.png';
+import rightIcon from '../../assets/right.png';
+import homeIcon from '../../assets/home.svg';
+import rentarIcon from '../../assets/rentar.png';
+import sellerIcon from '../../assets/seller.png';
+import logo from '../../assets/gpi-w.png';
 import './NavBar.css';
 
 function NavBar() {

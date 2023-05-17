@@ -1,0 +1,132 @@
+.card2 {
+    display: inline-table;
+    border-radius: 1vw;
+    border:rgb(240,240,240) solid 1px;
+    display: inline-table;
+    vertical-align: top;
+    background-color: transparent;
+    padding-right: 2%;
+    padding-left: 2%;
+    padding-top: 2%;
+    padding-bottom: 1.5%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    width: 40%;
+    height: calc(100% * (3% / var(--element-width)));; 
+}
+
+.wideCard {
+    display:inline-table;
+    vertical-align: middle;
+    text-align: center;
+    width: 100%;
+    height: calc(100% * (20% / var(--element-width)));
+}
+  
+.image-container2 {
+    display: inline-table;
+    vertical-align: middle;
+    width: 12%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.details-container2 {
+    display: inline-table;
+    vertical-align: middle;
+    width: 88%;
+}
+  
+.date2 {
+    width: 100%;
+    font-size: 0.7vw;
+    color: #999;
+    font-family: 'Montserrat';
+}
+
+.name2 {
+    font-size: 1.2vw;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    margin-bottom: 2%;
+    color: rgb(60,60,60);
+}
+
+.rating2 {
+    display: inline-table;
+    margin-left: 5%;
+    width: 40%;
+    height: 10%;
+    text-align: right;
+    font-size: 1.5vw;
+}
+  
+.star2 {
+    color: orange;
+}
+  
+.starnonr2 {
+    color: black;
+}
+
+.description2 {
+    font-size: 0.9vw;
+    color: rgb(120,120,120);
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width:100%;
+    font-family: 'Montserrat';
+    text-align: justify;
+}
+
+
+.btnLike{
+    display:inline-table;
+    vertical-align: middle;
+    width:12%;
+    margin-left: 85%;
+    aspect-ratio: 4/1;
+    border-radius: 0.5vw;
+    border: 1px solid rgb(220,220,220);
+    padding-top: 0.5%;
+    padding-left: 0.5%;
+    padding-right: 0.5%;  
+}
+
+
+.likeCounter{
+    display: inline-table;
+    vertical-align: middle;
+    text-align: center;
+    width: 40%;
+    margin-left: 4%;
+    margin-right: 12%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1vw;
+    color: rgb(140,140,140);
+}
+
+.thumbup{
+    z-index: -100;
+    vertical-align: middle;
+    display: inline-table;
+    width:23%;
+    margin-right: 4%;
+  }
+
+.image-container2 img {
+    vertical-align: top;
+    width: 100%;
+    aspect-ratio: 1/1;
+  }
+
+  .miniCardReview {
+    vertical-align: middle;
+    display: inline-table;
+    text-align:left;
+    width: 50%;
+    margin-left: 5%
+  }

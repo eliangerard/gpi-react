@@ -11,6 +11,7 @@
     box-shadow: 1px 1px 15px 0px rgba(0,0,0,0.15);
     right: 0;
     display: flex;
+    justify-content: space-between;
     transition: height 1500ms;
 }
 
@@ -105,7 +106,7 @@ input:focus {
 #signLeft {
     display: flex;
     flex-direction: column;
-    width: calc(50% - 8rem);
+    width: calc(50%);
     padding: 2rem 4rem;    
     justify-content: space-between;
 }

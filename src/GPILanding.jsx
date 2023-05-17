@@ -49,7 +49,7 @@ export const GPILanding = () => {
 
         <div className="lpContainer">
           <div className="lpDivB">
-            <img id="style.lpGpi" src="./src/assets/gpi-bw.png" />
+            <img id="lpGpi" src="./src/assets/gpi-bw.png" />
             <button className="lpBtn" onClick={() => mostrarFormulario(true)}>
               Iniciar sesion</button>
           </div>

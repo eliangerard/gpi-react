@@ -1,0 +1,9 @@
+.Mapa {
+    height: 100%;
+    aspect-ratio: 20/9;
+}
+
+.map-container {
+    height: 100%;
+    aspect-ratio: 20/9;
+}

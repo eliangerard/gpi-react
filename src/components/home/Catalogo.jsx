@@ -19,6 +19,17 @@ export const Catalogo = () => {
         <LocationCard
             id={5}
         />
+        <LocationCard
+            id={5}
+        />
+        
+        <LocationCard
+            id={5}
+        />
+        
+        <LocationCard
+            id={5}
+        />
         </>   
     )
 }

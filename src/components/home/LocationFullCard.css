@@ -27,7 +27,9 @@
 }
 
 .tarjeta {
+
 }
+
 .halfImages{
     border-radius: 0.5vw;
     display: inline-table;
@@ -36,3 +38,29 @@
     background-color: black;
   }
 
+.wideCard2 {
+  display:inline-table;
+  text-align: center;
+  width: 100%;
+  height: calc(100% * (20% / var(--element-width)));
+}
+
+.wideCard {
+    display:inline-table;
+    vertical-align: middle;
+    text-align: center;
+    width: 100%;
+    height: calc(100% * (20% / var(--element-width)));
+  }
+
+.segmentHeader {
+  margin-top: 4%;
+  margin-bottom: 2%;
+  padding-top: 1%;
+  font-family: 'Montserrat';
+  text-align: left;
+  margin-right: 5%;
+  margin-left: 5%;
+  font-size: 2vw;
+  color: black;
+}

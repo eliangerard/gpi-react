@@ -1,122 +1,126 @@
-.halfCardInfo{
-    margin-top: 3%;
-    vertical-align: top;
-    display:inline-table;
-    margin-left: 5%;
-    width: 35%;
+.halfCardInfo {
+  margin-top: 3%;
+  vertical-align: top;
+  display: inline-table;
+  margin-left: 5%;
+  width: 35%;
 }
 
 .levelInfo {
-    vertical-align: center;
-    text-align: left;
-    width: 100%;
-  }
+  vertical-align: center;
+  text-align: left;
+  width: 100%;
+}
 
-  .nameInfo {
-    font-family: 'Montserrat', sans-serif;
-    font-weight:600;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    font-size: 2.5vw;
-    text-align: left;
-    width: 80%;
-    display: inline-table;
-  }
+.nameInfo {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  font-size: 2.5vw;
+  text-align: left;
+  width: 80%;
+  display: inline-table;
+}
 
-  .heartInfo{
-    display: inline-table;
-    margin-left: 2%;
-    width: 7%;
-  }
+.heartInfo {
+  display: inline-table;
+  margin-left: 2%;
+  width: 7%;
+}
 
-  .imageInfo {
-    flex-shrink: 0;
-    width: 100%;
-    height: 100%
-  }
+.imageInfo {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%
+}
 
-  .priceInfo {
-    width: 33%;
-    margin-bottom: 1%;
-    display: inline-table;
-    text-align: left;
-    font-family: 'Montserrat', sans-serif;
-    font-weight:600;
-    font-size: 4vw;
-  }
+.priceInfo {
+  width: 33%;
+  margin-bottom: 1%;
+  display: inline-table;
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 4vw;
+}
 
-  .hoursInfo {
-    display: inline-table;
-    width: 30%;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: medium;
-    margin-left: 3%;
-    font-size: 1.2vw;
-    color: rgb(120,120,120);
-  }
+.hoursInfo {
+  display: inline-table;
+  width: 30%;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: medium;
+  margin-left: 3%;
+  font-size: 1.2vw;
+  color: rgb(120, 120, 120);
+}
 
-  .infoInfo {
-    width: 100%;  
-  }
+.infoInfo {
+  width: 100%;
+}
 
-  .informationInfo {
-    display: inline-table;
-    vertical-align: center;
-    width: 90%;
-    text-align: justify;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: light;
-    margin-top: 8%;
-    margin-bottom: 8%;
-    font-size: 1.1vw;
-    color: rgb(120,120,120);
-  }
+.informationInfo {
+  display: inline-table;
+  vertical-align: center;
+  width: 90%;
+  text-align: justify;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: light;
+  margin-top: 8%;
+  margin-bottom: 8%;
+  font-size: 1.1vw;
+  color: rgb(120, 120, 120);
+}
 
-  .ratingcounterInfo {
-    text-align: right;
-    display: inline-table;
-    width: 50%;
-    margin-right: 5%;
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-    font-size: 1.2vw;
-    font-weight: 400;
-    color: rgb(220,220,220);
-  }
+.ratingcounterInfo {
+  text-align: right;
+  display: inline-table;
+  width: 50%;
+  margin-right: 5%;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-size: 1.2vw;
+  font-weight: 400;
+  color: rgb(220, 220, 220);
+}
 
-  
+
 .star2Info {
-    color: orange;
-  }
+  color: orange;
+}
 
-  .starnonr2Info {
-    color: black;
-  }
+.starnonr2Info {
+  color: black;
+}
 
-  .levelInfoRating {
-    display: inline-table;
-    width: 70%;
-  }
+.levelInfoRating {
+  display: inline-table;
+  width: 70%;
+}
 
-  .ratingstarsInfo {
-    text-align: right;
-    display: inline-table;
-    width: 30%;
-    font-size: 2vw;
-  }
+.ratingstarsInfo {
+  text-align: right;
+  display: inline-table;
+  width: 30%;
+  font-size: 2vw;
+}
 
-  .ownerPictureInfo {
-    vertical-align: top;
-    border-radius: 50%;
-    display: inline-table;
-    width: 20%;
-    aspect-ratio: 1/1;
-    margin-right: 3%;
-    overflow: hidden;
-  }
+.ownerPictureInfo {
+  vertical-align: top;
+  border-radius: 50%;
+  display: inline-table;
+  width: 20%;
+  aspect-ratio: 1/1;
+  margin-right: 3%;
+  overflow: hidden;
+}
 
-  
-  .ownerPictureInfo img{
-    width:100%;
-    height:100%;
-    object-fit: cover;
-  }
+
+.ownerPictureInfo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.box img {
+  border-radius: 0.5rem !important;
+}

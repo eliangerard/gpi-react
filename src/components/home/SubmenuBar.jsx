@@ -1,13 +1,17 @@
 import './SubmenuBar.css'
 import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
+import imagen from '../../assets/gifs/backtarjetotagif'
 
 
-export const SubmenuBar = ({id , closePopUp}) => {
-    
+export const SubmenuBar = ({id , closePopUp, moveToScroll}) => {
+    const resenas = "resenas";
+    const galeria = "galeria";
+    const ubicacion = "ubicacion";
+    const fechas = "fechas"
     const closeComponent = () => {
         closePopUp();
-    }
+    };
 
     return (
         <>
@@ -15,21 +19,20 @@ export const SubmenuBar = ({id , closePopUp}) => {
                 <div className="halfCard3" id="level">
                     <div className="btnContextSalir" id="btnReview" onClick={closeComponent}>
                         {
-                            //"Aquí va un pinchi flechón"//
+                            <img src={imagen} className="src" />
                         }
-                        {"<"}
 
                     </div>
-                    <div className="btnContextN" id="btnReview">
+                    <div className="btnContextN" id="btnReview" onClick={()=> {moveToScroll(galeria)}}>
                         Galeria
                     </div>
-                    <div className="btnContextN" id="btnReview">
+                    <div className="btnContextN" id="btnReview" onClick={()=> {moveToScroll(resenas)}}>
                         Reseñas
                     </div>
-                    <div className="btnContextN" id="btnPlace">
+                    <div className="btnContextN" id="btnPlace" onClick={()=>{moveToScroll(ubicacion)}}>
                         Ubicación
                     </div>
-                    <div className="btnContextN" id="btnCalendar">
+                    <div className="btnContextN" id="btnCalendar" onClick={()=>{moveToScroll(fechas)}}>
                         Fechas
                     </div>
                 </div>

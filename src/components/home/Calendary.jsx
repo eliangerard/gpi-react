@@ -8,10 +8,19 @@ const Calendary = () => {
     <>  
     <div className="calendarioContainerHome">
          <Datepicker
+            theme="material"
+            themeVariant="light"
+            colors = {[
+                {
+                    date: new Date('2023', '00', '18'),
+                    highlight: '#000000',
+                }
+            ]}
+            select="range"
             controls={['calendar']}
             display="inline"
             calendarType='month'
-            pages= {3}
+            pages= {4}
             touchUi={true}
         />
     </div>

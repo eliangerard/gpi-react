@@ -1,9 +1,11 @@
 .Mapa {
-    height: 100%;
-    aspect-ratio: 20/9;
+    display: inline-table;
+    width: 100%;
+    aspect-ratio: 21/9;
 }
 
 .map-container {
-    height: 100%;
-    aspect-ratio: 20/9;
+    margin: 0% 5%;
+    width: 90%;
+    aspect-ratio: 21/9;
 }

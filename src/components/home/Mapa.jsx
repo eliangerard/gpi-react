@@ -9,14 +9,11 @@ const Mapa = ({id}) => {
   const center = { lat: 28.661941, lng: -106.007422 };
   const options = {
     strokeColor: "#000000AA",
-    strokeOpacity: 1,
+    strokeOpacity: 0.4,
     fillColor: "#000000AA",
     fillOpacity: 0.4,
-    clickable: false,
-    draggable: false,
-    editable: false,
     visible: true,
-    radius: 400,
+    radius: 1000,
     zindex: 1,
   };
 
@@ -37,14 +34,15 @@ const Mapa = ({id}) => {
         <GoogleMap
           mapContainerClassName="map-container"
           center={center}
-          zoom={14}
+          zoom={13}
+          options={{maxZoom:15}}
         >
-                  <Circle
+        <Circle
         onLoad={onLoad}
         onUnmount={onUnmount}
         center={center}
         options={options}
-        />Ä
+        />
         </GoogleMap>
       </>
       )}

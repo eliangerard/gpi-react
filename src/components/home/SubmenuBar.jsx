@@ -27,7 +27,7 @@ export const SubmenuBar = ({id , closePopUp}) => {
                         Reseñas
                     </div>
                     <div className="btnContextN" id="btnPlace">
-                        Lugar
+                        Ubicación
                     </div>
                     <div className="btnContextN" id="btnCalendar">
                         Fechas

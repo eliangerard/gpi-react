@@ -4,6 +4,7 @@ import SubmenuBar from './SubmenuBar';
 import Carrousel from './Carrusel';
 import InfoCard from './InfoCard';
 import ReviewDisplay from './ReviewDisplay';
+import Calendary from './Calendary'
 import Mapa from './Mapa'
 
 export const LocationFullCard = ({ id, closePop }) => {
@@ -35,11 +36,19 @@ export const LocationFullCard = ({ id, closePop }) => {
             <div className="wideCard" id="segmentReview">
               <div className="segmentHeader">Reseñas</div>
               <ReviewDisplay
-                qty={1}
+                qty={6}
                 id={id}
               />
+            </div>
+            <div className="wideCard" id="segmentReview">
               <div className="segmentHeader">Ubicación</div>
-              <Mapa 
+              <Mapa
+                id={id}
+              />
+            </div>
+            <div className="wideCard" id="segmentReview">
+            <div className="segmentHeader">Fechas</div>
+              <Calendary
                 id={id}
               />
             </div>
@@ -47,7 +56,6 @@ export const LocationFullCard = ({ id, closePop }) => {
         </div>
       </div>
     </div>
-
   );
 };
 

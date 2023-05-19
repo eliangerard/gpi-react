@@ -39,21 +39,29 @@ const moveToScroll = (moveToString) => {
   const ubication = Ubication.current;
   const calendar = Calendar.current;
   const contenedor = scrollViewer.current;
-  if(moveToString==="galeria") {
-    contenedor.scrollTop = 0;
-    
-  } else if(moveToString==="resenas") {
-    contenedor.scrollTop = review.offsetTop-20;
 
-  } else if(moveToString==="ubicacion") {
-    contenedor.scrollTop = ubication.offsetTop-20;
-
-  } else if(moveToString==="fechas"){
-    contenedor.scrollTop = calendar.offsetTop-20;
-
+  if (moveToString === "galeria") {
+    contenedor.scrollTo({
+      top: 0,
+      behavior: "smooth" // Agregar animación suave
+    });
+  } else if (moveToString === "resenas") {
+    contenedor.scrollTo({
+      top: review.offsetTop - 20,
+      behavior: "smooth" // Agregar animación suave
+    });
+  } else if (moveToString === "ubicacion") {
+    contenedor.scrollTo({
+      top: ubication.offsetTop - 20,
+      behavior: "smooth" // Agregar animación suave
+    });
+  } else if (moveToString === "fechas") {
+    contenedor.scrollTo({
+      top: calendar.offsetTop - 20,
+      behavior: "smooth" // Agregar animación suave
+    });
   }
-}
-
+};
 const handleScroll = () => {
   const contenedor = scrollViewer.current;
   setScrollHeight2(contenedor.scrollTop);

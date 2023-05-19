@@ -8,12 +8,31 @@ import Calendary from './Calendary';
 import Mapa from './Mapa';
 
 export const LocationFullCard = ({ id, closePop }) => {
+  const [scrollHeight2, setScrollHeight2] = useState(0);
   const [show, setShow] = useState(false);
   const scrollViewer = useRef(null);
   const Gallery = useRef(null);
   const Review = useRef(null);
   const Ubication = useRef(null);
   const Calendar = useRef(null);
+
+const selectButton = (height) =>{
+  const grueso = -40;
+  const review = Review.current;
+  const ubication = Ubication.current;
+  const calendar = Calendar.current;
+  if(height < review.offsetTop+grueso){
+    //El caso donde se pinta la galeria botón
+    return ("gallery");
+  } else if(height < ubication.offsetTop+grueso){
+    return ("review");
+  } else if(height < calendar.offsetTop+grueso){
+    return ("ubication");
+  } else if(height >= calendar.offsetTop+grueso){
+    return ("calendar");
+  }
+
+}
 
 const moveToScroll = (moveToString) => {
   const review = Review.current;
@@ -22,23 +41,27 @@ const moveToScroll = (moveToString) => {
   const contenedor = scrollViewer.current;
   if(moveToString==="galeria") {
     contenedor.scrollTop = 0;
+    
   } else if(moveToString==="resenas") {
     contenedor.scrollTop = review.offsetTop-20;
+
   } else if(moveToString==="ubicacion") {
     contenedor.scrollTop = ubication.offsetTop-20;
+
   } else if(moveToString==="fechas"){
     contenedor.scrollTop = calendar.offsetTop-20;
+
   }
 }
 
+const handleScroll = () => {
+  const contenedor = scrollViewer.current;
+  setScrollHeight2(contenedor.scrollTop);
+};
+
+
   useEffect(() => {
     
-    //Este wey hace que se mueva a un punto en pantalla, manda el contenedor
-    const handleScroll = () => {
-      const contenedor = scrollViewer.current;
-      console.log(contenedor.scrollTop);
-    };
-
     scrollViewer.current.addEventListener('scroll', handleScroll);
 
     const timer = setTimeout(() => {
@@ -46,7 +69,6 @@ const moveToScroll = (moveToString) => {
     }, 10);
 
     return () => {
-      scrollViewer.current.removeEventListener('scroll', handleScroll);
       clearTimeout(timer);
     };
   }, []);
@@ -58,7 +80,10 @@ const moveToScroll = (moveToString) => {
           <SubmenuBar
             closePopUp={closePop} 
             id={id}
-            moveToScroll = {moveToScroll}  
+            moveToScroll = {moveToScroll}
+            handleSroll = {handleScroll}
+            scrollHeight2 = {scrollHeight2}
+            selectButton = {selectButton}  
           />
           <Carrousel id={id} />
           <InfoCard id={id} />

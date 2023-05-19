@@ -12,8 +12,12 @@ const Calendary = () => {
             themeVariant="light"
             colors = {[
                 {
-                    date: new Date('2023', '00', '18'),
+                    date: new Date('2023', '04', '19'),
                     highlight: '#000000',
+                },
+                {
+                  date: new Date('2023', '05', '20'),
+                  highlight: '#000000'
                 }
             ]}
             select="range"

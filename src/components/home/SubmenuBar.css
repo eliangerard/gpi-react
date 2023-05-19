@@ -1,3 +1,5 @@
+
+
 .wideCardBar{
   z-index: 1;
   display:inline-table;
@@ -61,8 +63,8 @@
 .btnContextN {
   vertical-align: middle;
   display:inline-table;
-  width: 8%;
-  margin-right: 2%;
+  width: 9%;
+  margin-right: 3%;
   margin-left: 2%;
   text-align: center;
   border-radius: 1vw;
@@ -85,15 +87,16 @@
 .btnContextSalir {
   vertical-align: middle;
   display:inline-table;
-  width:1%;
-  margin-right: 9%;
+  width:2.5%;
+  aspect-ratio: 1/1;
+  margin-right: 4%;
   margin-left: 2%;
   text-align: center;
   border-radius: 50%;
   padding-top: 1%;
   padding-bottom: 1%;
-  padding-left: 1.5%;
-  padding-right: 1.5%;
+  padding-left: 1%;
+  padding-right: 1%;
   font-size: 1vw;
   font-family: 'Montserrat Alternates', sans-serif;
   font-weight: 200;
@@ -156,7 +159,7 @@
 }
 
 .priceMessage {
-  vertical-align: middle;
+  vertical-align: bottom;
   display: inline-table;
   margin-right: 1%;
   width: 10%;
@@ -165,6 +168,9 @@
 
 
 .hourMessage {
+  margin-left: 1%;
+  text-align: left;
+  vertical-align: bottom;
   display: inline-table;
   width: 30%;
   font-size: 0.8vw;

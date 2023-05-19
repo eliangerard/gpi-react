@@ -18,11 +18,9 @@ const Mapa = ({id}) => {
   };
 
   const onLoad = (circle) => {
-    console.log("Circle onLoad circle: ", circle);
   };
 
   const onUnmount = (circle) => {
-    console.log("Circle onUnmount circle: ", circle);
   };
 
   return (

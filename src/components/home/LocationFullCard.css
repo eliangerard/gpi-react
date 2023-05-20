@@ -1,57 +1,58 @@
-.popup{
-    align-content: center;
-    vertical-align: middle;
-    padding:2% 10%;
-    transition: background-color 0.3s ease;
-    top: 0;
-    left: 0;
-    position: fixed;
-    width:100%;
-    height: 100%;
-    background-color: #00000011;
-    z-index: 1000000000;
-    overflow: hidden;
+.popup {
+  align-content: center;
+  vertical-align: middle;
+  transition: background-color 0.3s ease;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #00000011;
+  z-index: 1000000000;
+  overflow: hidden;
 }
 
-.popup.show{
-
-    background-color: #000000AA;
+.popup.show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000AA;
 }
+
 .contenedorChueco {
-    border-radius: 1rem;
-    position:relative;
-    background-color: white;
-    width: 80%;
-    aspect-ratio: 20/11;
-    overflow-y: scroll;
+  overflow: hidden;
+  border-radius: 1rem;
+  position: relative;
+  background-color: white;
+  width: 80%;
+  aspect-ratio: 20/11;
+  overflow-y: scroll;
 }
 
-.tarjeta {
+.tarjeta {}
 
+.halfImages {
+  border-radius: 0.5vw;
+  display: inline-table;
+  width: 55%;
+  aspect-ratio: 16/9;
+  background-color: black;
 }
-
-.halfImages{
-    border-radius: 0.5vw;
-    display: inline-table;
-    width: 55%;
-    aspect-ratio: 16/9;
-    background-color: black;
-  }
 
 .wideCard2 {
-  display:inline-table;
+  display: inline-table;
   text-align: center;
   width: 100%;
   height: calc(100% * (20% / var(--element-width)));
 }
 
 .wideCard {
-    display:inline-table;
-    vertical-align: middle;
-    text-align: center;
-    width: 100%;
-    height: calc(100% * (20% / var(--element-width)));
-  }
+  display: inline-table;
+  vertical-align: middle;
+  text-align: center;
+  width: 100%;
+  height: calc(100% * (20% / var(--element-width)));
+}
 
 .segmentHeader {
   margin-top: 4%;

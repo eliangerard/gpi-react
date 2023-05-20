@@ -69,13 +69,20 @@ h1 {
     display: flex;
     justify-content: space-between;
 }
-#fullName input {
+#fullName .loginInput {
     width: calc(49% - 2rem);
 }
-input {
+.loginHr {
+    margin: 1rem 0;
+    border: none;
+    border-top: #0000001a solid 2px;
+    border-radius: 1rem;
+}
+.loginInput {
     border: none;
     border-radius: 0.5rem;
     padding: 0.5rem 1rem;
+    color: black;
     background-color: #0000000a;
     outline: #0000006c solid 0px;
     transition: outline 150ms;
@@ -85,6 +92,12 @@ input {
     font-weight: 500;
     font-size: medium;
     margin-top: 1rem;
+}
+.loginDate {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 1.4rem 1rem;
 }
 input:focus {
     outline: #0000003a solid 3px;

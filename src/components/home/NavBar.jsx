@@ -1,7 +1,11 @@
 import React from 'react';
 import './NavBar.css';
 
-function NavBar() {
+function NavBar({setShowLanding}) {
+  const logOut = () => {
+    localStorage.clear();
+    setShowLanding(true);
+  }
   return (
     <aside>
       <div className="navProfileContainer">
@@ -39,9 +43,9 @@ function NavBar() {
           <img className="navIcon" src="./src/assets/img/info.png" />
           <h4 className="navText">Conocenos</h4>
         </a>
-        <a className="navIconContainer" id="iLogout" href="elian.html">
+        <a className="navIconContainer" id="iLogout" onClick={logOut}>
           <img className="navIcon" src="./src/assets/img/logout.png" />
-          <h4 className="navText" id="iLog">Cerrar sesion</h4>
+          <h4 className="navText" id="iLog" >Cerrar sesion</h4>
         </a>
       </div>
     </aside>

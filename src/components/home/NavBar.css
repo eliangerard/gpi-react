@@ -46,6 +46,7 @@
 .navIconContainer:hover {
     filter: invert(100%);
     font-weight: bold;
+    cursor: pointer;
 }
 
 .navIcon {

@@ -44,8 +44,8 @@ export const Login = ( { setShowLanding, setLogin} ) => {
             <div id="signData">
                 <img id="logoLogin" src={gpiBlack} alt=""></img>
                 <h1>Iniciar Sesión</h1>
-                <input id='username' type="email" placeholder="Correo o nombre de usuario"></input>
-                <input id='password' type="password" placeholder="Contraseña"></input>
+                <input className="loginInput" id='username' type="email" placeholder="Correo o nombre de usuario"></input>
+                <input className="loginInput" id='password' type="password" placeholder="Contraseña"></input>
                 <p className="loginOption">¿Olvidaste tu contraseña? <b>Recupérala</b></p>
             </div>
             <div id="signOptions">

@@ -14,7 +14,7 @@ export const SignupStep3 = ( { nextStep, backStep, setLogin }) => {
                     <h3>Verifica tu correo</h3>
                     <p>Te hemos enviado un código de verificación al correo que ingresaste</p>
                     
-                    <input className="verification" type="text" maxLength="6" placeholder="XXXXXX"></input>
+                    <input className="loginInput verification" type="text" maxLength="6" placeholder="XXXXXX"></input>
                     <button>Verificar</button>
                 </div>
             </div>

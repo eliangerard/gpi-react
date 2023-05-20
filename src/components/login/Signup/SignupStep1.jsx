@@ -1,11 +1,19 @@
-import { useState } from 'react';
+import { forwardRef, useState } from 'react';
 import gpiBlack from '../../../assets/logos/gpi-b.png'
-export const SignupStep1 = ( { nextStep, setLogin }) => {
-    
+
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
+export const SignupStep1 = ({ nextStep, setLogin }) => {
+    const [startDate, setStartDate] = useState();
+    const ExampleCustomInput = forwardRef(({ value, onClick, placeholder }, ref) => (
+        <button className="loginInput loginDate" onClick={onClick} ref={ref}>
+            {value || placeholder}
+        </button>
+    ));
     return (
-        <>            
+        <>
             <div id="signData">
-            <img id="logoLogin" src={gpiBlack} alt=""></img>
+                <img id="logoLogin" src={gpiBlack} alt=""></img>
                 <div id="signUpHeader">
                     <h1 id="signUpTitle">Registrate</h1>
                     <div className="flex-container">
@@ -14,16 +22,26 @@ export const SignupStep1 = ( { nextStep, setLogin }) => {
                     </div>
                 </div>
                 <div id="fullName">
-                    <input type="email" placeholder="Nombre(s)"></input>
-                    <input type="email" placeholder="Apellidos"></input>
+                    <input className="loginInput" type="text" placeholder="Nombre(s)"></input>
+                    <input className="loginInput" type="text" placeholder="Apellidos"></input>
                 </div>
-                <input type="email" placeholder="Nombre de usuario"></input>
-                <input type="email" placeholder="Correo"></input>
-                <input type="password" placeholder="Contraseña"></input>
+                <DatePicker
+                    selected={startDate}
+                    onChange={(date) => setStartDate(date)}
+                    customInput={<ExampleCustomInput />}
+                    peekNextMonth
+                    showMonthDropdown
+                    showYearDropdown
+                    dropdownMode="select"
+                    placeholderText='Fecha de nacimiento'
+                />
+                <hr className='loginHr' />
+                <input className="loginInput" type="text" />
+                <input className="loginInput" type="password" placeholder="Contraseña"></input>
             </div>
             <div id="signOptions">
-                <button onClick= { nextStep }>Siguiente</button>
-                <p className="loginOption">¿Ya tienes una cuenta? <b onClick={ () => setLogin(true) }>Inicia sesión</b></p>
+                <button onClick={nextStep}>Siguiente</button>
+                <p className="loginOption">¿Ya tienes una cuenta? <b onClick={() => setLogin(true)}>Inicia sesión</b></p>
             </div>
         </>
     )

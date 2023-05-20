@@ -1,12 +1,12 @@
 
 import { useState } from 'react';
 import gpiBlack from '../../../assets/logos/gpi-b.png'
-export const SignupStep3 = ( { nextStep, backStep }) => {
+export const SignupStep3 = ( { nextStep, backStep, setLogin }) => {
     
     return (
         <>            
             <div id="signData">
-                <img id="logo" src={gpiBlack} alt=""></img>
+                <img id="logoLogin" src={gpiBlack} alt=""></img>
                 <div id="signUpHeader">
                     <h1 id="signUpTitle">Registrate</h1>
                 </div>
@@ -25,7 +25,7 @@ export const SignupStep3 = ( { nextStep, backStep }) => {
                     </button>
                     <button onClick={nextStep}>Registrarse</button>
                 </div>
-                <p className="loginOption">¿Ya tienes una cuenta? <b>Inicia sesión</b></p>
+                <p className="loginOption">¿Ya tienes una cuenta? <b onClick={ () => setLogin(true) }>Inicia sesión</b></p>
             </div>
         </>
     )

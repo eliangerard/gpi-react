@@ -16,19 +16,21 @@ export const GPILanding = () => {
     setShowLogin(signIn);
     setShowCard(true)
   }
-  useEffect(()=> {
+  useEffect(() => {
     const lpBtn2 = document.querySelector(".lpBtn2");
-    if(lpBtn2)
+    if (lpBtn2)
       lpBtn2.addEventListener("click", change);
   }, []);
   const change = () => {
     var app = document.querySelector('#lpH4');
     var app2 = document.querySelector('#lpH40');
+    var lpHContainer = document.querySelector('#lpHContainer');
     var app3 = document.querySelector('#lpH41');
     var app4 = document.querySelector('#lpH42');
     var app5 = document.querySelector('#lpH43');
     var btn = document.querySelector('.lpBtn2');
     var lpc = document.querySelector('.lpContainer');
+    lpHContainer.style.setProperty('height', '15rem', 'important')
     app.style.setProperty('opacity', 1, 'important');
     app.style.setProperty('transition', '1s ease-in-out', 'important');
     app2.style.setProperty('opacity', 1, 'important');
@@ -51,30 +53,34 @@ export const GPILanding = () => {
           <div className="lpDivB">
             <img id="lpGpi" src="./src/assets/gpi-bw.png" />
             <button className="lpBtn" onClick={() => mostrarFormulario(true)}>
-              Iniciar sesion</button>
+              <p>Iniciar sesion</p>
+            </button>
           </div>
-          <div className="lpH">
-            GPi te ofrece una gran variedad de granjas, hacer tus eventos nunca habia
-            sido tan sencillo.
-          </div>
-          <div className="lpH" id="lpH3">
-            Esta es la oportunidad que estabas buscando. Hazla realidad.
-          </div>
-          <div className="x">
-            <button className="lpBtn2" id="lpH2">¡Quiero conocer mas!</button>
-          </div>
-          <div className="x">
-            <div className="lpH" id="lpH4">Puedes encontrar todo tipo de granjas en nuestro catalogo</div>
-            <div className="lpH" id="lpH40">Te damos informacion relevante sobre tus locaciones preferidas</div>
-            <div className="lpH" id="lpH41">Ofrecemos la facilidad de promocionar tu granja en nuestra aplicacion</div>
-            <div className="lpH" id="lpH42">Opina y califica la experiencia de tu evento</div>
-            <div className="lpH" id="lpH43">Con nuestro chat ponerte en contacto
-              con alguien nunca habia sido tan facil
+          <div className='lpMain'>
+
+            <div id='lpTitle'>
+              GPi te ofrece una gran variedad de granjas, hacer tus eventos nunca habia
+              sido tan sencillo.
+            </div>
+            <div className="lpH" id="lpH3">
+              Esta es la oportunidad que estabas buscando. Hazla realidad.
+            </div>
+            <div className="x">
+              <button className="lpBtn2" id="lpH2">¡Quiero conocer mas!</button>
+            </div>
+            <div id="lpHContainer" className="advantages">
+              <div className="lpH" id="lpH4">Puedes encontrar todo tipo de granjas en nuestro catalogo</div>
+              <div className="lpH" id="lpH40">Te damos informacion relevante sobre tus locaciones preferidas</div>
+              <div className="lpH" id="lpH41">Ofrecemos la facilidad de promocionar tu granja en nuestra aplicacion</div>
+              <div className="lpH" id="lpH42">Opina y califica la experiencia de tu evento</div>
+              <div className="lpH" id="lpH43">Con nuestro chat ponerte en contacto
+                con alguien nunca habia sido tan facil
+              </div>
             </div>
           </div>
         </div>
       </div >
-      { showCard && (<LoginCard toLogin = {showLogin} />)}
+      {showCard && (<LoginCard toLogin={showLogin} />)}
     </>
   )
 }

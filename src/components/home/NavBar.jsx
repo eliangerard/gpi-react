@@ -1,10 +1,4 @@
 import React from 'react';
-import rightIcon from '../../assets/right.png';
-import homeIcon from '../../assets/home.svg';
-import rentarIcon from '../../assets/rentar.png';
-import sellerIcon from '../../assets/seller.png';
-import logo from '../../assets/gpi-w.png';
-
 import './NavBar.css';
 
 function NavBar() {
@@ -26,7 +20,7 @@ function NavBar() {
 
       <div className="navContainer">
         <a className="navIconContainer" href="adan.html">
-          <img className="navIcon" id="iPlace" src="./src/assets/img/place.png" />
+          <img className="navIcon" src="./src/assets/img/place.png" />
           <h4 className="navText">Catalogo</h4>
         </a>
         <a className="navIconContainer" href="elian.html">

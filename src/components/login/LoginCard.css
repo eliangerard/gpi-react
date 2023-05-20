@@ -42,7 +42,7 @@ html {
     align-items: center;
     height: 100%;
 }
-#logo {
+#logoLogin {
     height: 1.8rem;
     border-radius: 0.5rem;
     object-fit: cover;
@@ -93,20 +93,22 @@ input:focus {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 2rem 0;
+    margin: 2rem;
+    margin-left: 0;
+    padding-left: 2rem;
     border-left: #00000011 solid 2px;
     width: 50%;
 }
 #signImg img {
-    width: 80%;
-    height: 100%;
+    width: calc(100% - 4rem);
+    height: calc(100% - 4rem);
     object-fit: cover;
     border-radius: 0.5rem;
 }
 #signLeft {
     display: flex;
     flex-direction: column;
-    width: calc(50%);
+    width: calc(50% - 5rem);
     padding: 2rem 4rem;    
     justify-content: space-between;
 }
@@ -242,8 +244,12 @@ button:hover {
     font-size: small;
     font-weight: 800;
 }
-
-@media (max-width: 1249px) {
+@media (max-width: 1349px) {
+    #loginCard {
+        width: 90%;
+    }
+}
+@media (max-width: 1049px) {
     #signImg {
         display: none;
     }
@@ -252,9 +258,6 @@ button:hover {
     }
 }
 @media (max-width: 599px) {
-    #loginCard {
-        width: 90%;
-    }
     #signLeft {
         width: calc(100% - 4rem);
         padding: 2rem 2rem;

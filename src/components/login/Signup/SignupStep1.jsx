@@ -5,7 +5,7 @@ export const SignupStep1 = ( { nextStep, setLogin }) => {
     return (
         <>            
             <div id="signData">
-                <img id="logo" src={gpiBlack} alt=""></img>
+            <img id="logoLogin" src={gpiBlack} alt=""></img>
                 <div id="signUpHeader">
                     <h1 id="signUpTitle">Registrate</h1>
                     <div className="flex-container">

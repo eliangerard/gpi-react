@@ -1,6 +1,7 @@
-import { useState } from 'react';
-
-
+import { useState, useEffect } from 'react';
+import { Login } from './Login'
+import { Signup } from './Signup'
+import exampleLocation from '../../assets/locations/portada.jpg'
 export const LoginCard = ( { toLogin } ) => {
     useEffect(() => {
         import('./LoginCard.css');

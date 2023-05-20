@@ -42,7 +42,7 @@ export const Login = ( {setLogin} ) => {
     return (
         <>
             <div id="signData">
-                <img id="logo" src={gpiBlack} alt=""></img>
+                <img id="logoLogin" src={gpiBlack} alt=""></img>
                 <h1>Iniciar Sesión</h1>
                 <input id='username' type="email" placeholder="Correo o nombre de usuario"></input>
                 <input id='password' type="password" placeholder="Contraseña"></input>

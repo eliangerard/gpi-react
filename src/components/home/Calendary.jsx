@@ -1,36 +1,26 @@
-import React, { useEffect, useRef } from 'react';
-import { Datepicker, Button, Page, setOptions, localeEs } from '@mobiscroll/react';
-import '@mobiscroll/react/dist/css/mobiscroll.min.css';
+import React, { useState } from 'react';
+import DatePicker, {registerLocale} from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 import './Calendary.css'
+import es from 'date-fns/locale/es'
+registerLocale("es", es);
 
 const Calendary = () => {
-  return (
-    <>  
-    <div className="calendarioContainerHome">
-         <Datepicker
-            theme="material"
-            themeVariant="light"
-            colors = {[
-                {
-                    date: new Date('2023', '04', '19'),
-                    highlight: '#000000',
-                },
-                {
-                  date: new Date('2023', '05', '20'),
-                  highlight: '#000000'
-                }
-            ]}
-            select="range"
-            controls={['calendar']}
-            display="inline"
-            calendarType='month'
-            pages= {4}
-            touchUi={true}
-        />
-    </div>
-    </>
+  const [startDate, setStartDate] = useState(new Date());
 
-  )
+  return (
+    <div className="calendarioContainerHome">
+      <DatePicker
+        locale={es}
+        wrapperclassName="custom-datepicker"
+        selected={startDate}
+        onChange={(date) => setStartDate(date)}
+        monthsShown={3}
+        inline
+        excludeDates={[new Date("2023/06/21"), new Date()]}
+      />
+    </div>
+  );
 };
 
-export default Calendary
+export default Calendary;

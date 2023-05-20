@@ -1,6 +1,6 @@
 import { Carousel } from 'react-carousel-minimal';
 import './Carrusel.css'
-function Carrusel() {
+function Carrusel({id}) {
  const data = [
     {
       image: "https://www.tusktravel.com/blog/wp-content/uploads/2020/07/Best-Time-to-Visit-Darjeeling-for-Honeymoon.jpg",
@@ -17,6 +17,18 @@ function Carrusel() {
     {
       image: "https://www.oyorooms.com/travel-guide/wp-content/uploads/2019/02/summer-7.jpg",
       caption: "Darjeeling"
+    },
+    {
+      image: "https://www.oyorooms.com/travel-guide/wp-content/uploads/2019/02/summer-7.jpg",
+      caption: "Darjeeling"
+    },
+    {
+      image: "https://www.omm.com/~/media/images/site/locations/san_francisco_780x520px.ashx",
+      caption: "San Francisco"
+    },
+    {
+      image: "https://www.omm.com/~/media/images/site/locations/san_francisco_780x520px.ashx",
+      caption: "San Francisco"
     }
   ];
 
@@ -35,8 +47,8 @@ function Carrusel() {
           <Carousel
             data={data}
             time={5000}
-            width="40vw"
-            height="25vw"
+            width="37vw"
+            height="23vw"
             captionStyle={captionStyle}
             radius="0.5vw"
             slideNumber={false}
@@ -49,7 +61,7 @@ function Carrusel() {
             slideBackgroundColor="transparent"
             slideImageFit="cover"
             thumbnails={true}
-            thumbnailWidth="150vw"
+            thumbnailWidth="80vw"
             style={{
               display: "inline-table",
               textAlign: "center",

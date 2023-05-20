@@ -8,7 +8,7 @@ import './App.css'
 
 
 
-export const GPILanding = () => {
+export const GPILanding = ({setShowLanding}) => {
   const [showCard, setShowCard] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
 
@@ -80,7 +80,7 @@ export const GPILanding = () => {
           </div>
         </div>
       </div >
-      {showCard && (<LoginCard toLogin={showLogin} />)}
+      {showCard && (<LoginCard setShowLanding = {setShowLanding} toLogin={showLogin} />)}
     </>
   )
 }

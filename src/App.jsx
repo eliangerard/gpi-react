@@ -6,7 +6,7 @@ export const App = () => {
     const [showLanding, setShowLanding] = useState(true);
     return(
         <>
-        { showLanding && <GPILanding/>}
+        { showLanding && <GPILanding setShowLanding = {setShowLanding}/>}
         { !showLanding && <Home/>}
         </>
     )

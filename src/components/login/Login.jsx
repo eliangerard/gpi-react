@@ -4,7 +4,7 @@ import gpiBlack from '../../assets/logos/gpi-b.png';
 import './LoginCard.css';
 import { useLogin } from '../../hooks/useLogin';
 
-export const Login = ( {setLogin} ) => {
+export const Login = ( { setShowLanding, setLogin} ) => {
     let loged = false;
 
     const login = async () => {
@@ -33,10 +33,10 @@ export const Login = ( {setLogin} ) => {
             return loged = false;
         }
         btnLogin.innerHTML = "¡Listo!";
-
         localStorage.setItem("access", result.AccessToken);
         localStorage.setItem("id", result.IdToken);
         localStorage.setItem("refresh", result.RefreshToken);
+        setShowLanding(false);
     }
     //hola
     return (

@@ -18,9 +18,9 @@ export const SignupStep2 = ({ nextStep, backStep, setLogin }) => {
         console.log(response);
 
         if (response.message == "Success") {
-            localStorage.setItem("access", response[1].AccessToken);
-            localStorage.setItem("id", response[1].IdToken);
-            localStorage.setItem("refresh", response[1].RefreshToken);
+            localStorage.setItem("access", response.result[1].AccessToken);
+            localStorage.setItem("id", response.result[1].IdToken);
+            localStorage.setItem("refresh", response.result[1].RefreshToken);
             return nextStep();
         }
         return setLoadingStatus(false);

@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import gpiBlack from '../../assets/logos/gpi-b.png';
 import './LoginCard.css';
-import { useLogin } from '../../hooks/useLogin';
+import { useLogin } from '../../helpers/js/useLogin';
 
 export const Login = ( { setShowLanding, setLogin} ) => {
     let loged = false;

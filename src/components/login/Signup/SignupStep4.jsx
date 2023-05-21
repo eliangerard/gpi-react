@@ -8,6 +8,12 @@ export const SignupStep4 = ({ nextStep, backStep, setLogin }) => {
                 <img id="logoLogin" src={gpiBlack} alt=""></img>
                 <div id="signUpHeader">
                     <h1 id="signUpTitle">Registrate</h1>
+                    <div className="flex-container">
+                        <div className="circle"></div>
+                        <div className="circle"></div>
+                        <div className="circle"></div>
+                        <div className="circle selected"></div>
+                    </div>
                 </div>
                 <div id="inputCode">
                     <h3>Seguridad</h3>

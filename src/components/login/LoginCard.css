@@ -73,9 +73,9 @@ h1 {
     width: calc(49% - 2rem);
 }
 .loginHr {
-    margin: 1rem 0;
+    margin: 0.5rem 0;
     border: none;
-    border-top: #0000001a solid 2px;
+    border-top: #0000001a solid 1px;
     border-radius: 1rem;
 }
 .loginInput {
@@ -91,7 +91,10 @@ h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: medium;
-    margin-top: 1rem;
+    margin-top: 0.75rem;
+}
+.firstInput {
+    margin-top: 0;
 }
 .loginDate {
     display: flex;
@@ -99,7 +102,7 @@ h1 {
     width: 100%;
     padding: 1.4rem 1rem;
 }
-input:focus {
+.loginInput:focus {
     outline: #0000003a solid 3px;
 }
 #signImg {

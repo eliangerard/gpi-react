@@ -12,7 +12,6 @@ const Calendary = () => {
     <div className="calendarioContainerHome">
       <DatePicker
         locale={es}
-        wrapperclassName="custom-datepicker"
         selected={startDate}
         onChange={(date) => setStartDate(date)}
         monthsShown={3}

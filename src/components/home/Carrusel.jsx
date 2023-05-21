@@ -47,8 +47,8 @@ function Carrusel({id}) {
           <Carousel
             data={data}
             time={5000}
-            width="37vw"
-            height="23vw"
+            width="39vw"
+            height="24vw"
             captionStyle={captionStyle}
             radius="0.5vw"
             slideNumber={false}
@@ -61,7 +61,7 @@ function Carrusel({id}) {
             slideBackgroundColor="transparent"
             slideImageFit="cover"
             thumbnails={true}
-            thumbnailWidth="80vw"
+            thumbnailWidth="120vw"
             style={{
               display: "inline-table",
               textAlign: "center",

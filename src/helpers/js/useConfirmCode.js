@@ -1,9 +1,10 @@
-export const useConfirmCode = async (code, username) => {
+export const useConfirmCode = async (code, password, username) => {
     let myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
     let raw = JSON.stringify({
         username,
+        password,
         code
     });
 

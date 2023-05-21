@@ -4,9 +4,11 @@ import gpiBlack from '../../../assets/logos/gpi-b.png'
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { useRegister } from '../../../helpers/js/useRegister';
+import { Loading } from '../../util/Loading';
 
 export const SignupStep1 = ({ nextStep, setLogin }) => {
     const [startDate, setStartDate] = useState();
+    const [loading, setLoadingStatus] = useState(false);
 
     const inputName = useRef(null);
     const inputFamily = useRef(null);
@@ -15,6 +17,16 @@ export const SignupStep1 = ({ nextStep, setLogin }) => {
     const inputPass = useRef(null);
 
     const signUp = async () => {
+        setLoadingStatus(true);
+
+        inputName.current.disabled = true
+        inputFamily.current.disabled = true
+        inputUser.current.disabled = true
+        inputEmail.current.disabled = true
+        inputPass.current.disabled = true
+            
+
+
         const name = inputName.current.value.trim()
         const family = inputFamily.current.value.trim()
         const user = inputUser.current.value.trim()
@@ -22,10 +34,20 @@ export const SignupStep1 = ({ nextStep, setLogin }) => {
         const pass = inputPass.current.value.trim()
         const birthdate = `${startDate.getFullYear()}-${(startDate.getMonth() + 1).toString().padStart(2, '0')}-${startDate.getDate().toString().padStart(2, '0')}`;
 
-        if (name == 0 || family == 0 || user == 0 || email == 0 || pass == 0 || !birthdate)
+        if (name.length == 0 || family.length == 0 || user.length == 0 || email.length == 0 || pass.length == 0 || !birthdate){
+            setLoadingStatus(true);
+
+        inputName.current.disabled = true
+        inputFamily.current.disabled = true
+        inputUser.current.disabled = true
+        inputEmail.current.disabled = true
+        inputPass.current.disabled = true
+            
             return console.log("Los datos no están completos");
-        const response = await useRegister(name,family, birthdate, user, email, pass)
+        }
+        const response = await useRegister(name, family, birthdate, user, email, pass)
         sessionStorage.setItem("username", user);
+        sessionStorage.setItem("xAA", pass);
         console.log(response);
         nextStep();
     }
@@ -68,7 +90,7 @@ export const SignupStep1 = ({ nextStep, setLogin }) => {
                 <input ref={inputPass} className="loginInput" type="password" placeholder="Contraseña"></input>
             </div>
             <div id="signOptions">
-                <button onClick={signUp}>Registrarse</button>
+                <button onClick={signUp}>{loading ? <Loading white={true} showStatus={false}/> : "Registrarse"}</button>
                 <p className="loginOption">¿Ya tienes una cuenta? <b onClick={() => setLogin(true)}>Inicia sesión</b></p>
             </div>
         </>

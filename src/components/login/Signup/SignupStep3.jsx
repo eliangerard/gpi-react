@@ -4,7 +4,7 @@ import { validateId } from '../../../helpers/js/useGetData';
 import { render } from 'react-dom';
 import { Loading } from '../../util/Loading';
 export const SignupStep3 = ({ nextStep, backStep, setLogin }) => {
-    const [loading, setLoading] = useState(true)
+    const [loading, setLoading] = useState(false)
     const [loadingStatus, setLoadingStatus] = useState("Cargando")
     const fileInputRef = useRef(null);
 
@@ -17,7 +17,9 @@ export const SignupStep3 = ({ nextStep, backStep, setLogin }) => {
         const reader = new FileReader();
         reader.onloadend = async () => {
             console.log("#1", reader.result);
+            setLoading(true);
             if (await validateId(reader.result, localStorage.getItem("id"), setLoadingStatus)) {
+                setLoading(false);
                 nextStep();
             }
         };

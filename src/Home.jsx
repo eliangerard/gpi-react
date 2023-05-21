@@ -10,6 +10,10 @@ function Home({ setShowLanding }) {
   const [currentView, setCurrentView] = useState('home');
 
   const changeView = (view) => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth" // Agregar animación suave
+    });
     setCurrentView(view);
   }
 

@@ -51,7 +51,7 @@ export const InfoCard = () => {
                 </div>
                 <div className="levelInfoRating">
                     <div className="ownerPictureInfo">
-                        <img src="https://i.redd.it/46fvg6u7r8151.jpg" />
+                        <img src="/src/assets/pendejo.jpg" />
                     </div>
                     <div className="ratingcounterInfo">
                         40 Opiniones

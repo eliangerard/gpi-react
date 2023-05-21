@@ -7,10 +7,10 @@
     width: var(--uib-size);
     filter: url('#uib-jelly-ooze');
     animation: rotate72317 calc(var(--uib-speed) * 2) linear infinite;
-   }
-   
-   .jelly::before,
-   .jelly::after {
+}
+
+.jelly::before,
+.jelly::after {
     content: '';
     position: absolute;
     top: 0%;
@@ -19,54 +19,69 @@
     height: 100%;
     background: var(--uib-color);
     border-radius: 100%;
-   }
-   
-   .jelly::before {
+}
+
+.jelly::before {
     animation: shift-left var(--uib-speed) ease infinite;
-   }
-   
-   .jelly::after {
+}
+
+.jelly::after {
     animation: shift-right var(--uib-speed) ease infinite;
-   }
-   
-   .jelly-maker {
+}
+
+.jelly-maker {
     width: 0;
     height: 0;
     position: absolute;
-   }
-   
-   @keyframes rotate72317 {
+}
+
+@keyframes rotate72317 {
+
     0%,
-     49.999%,
-     100% {
-     transform: none;
+    49.999%,
+    100% {
+        transform: none;
     }
-   
+
     50%,
-     99.999% {
-     transform: rotate(90deg);
+    99.999% {
+        transform: rotate(90deg);
     }
-   }
-   
-   @keyframes shift-left {
+}
+
+@keyframes shift-left {
+
     0%,
-     100% {
-     transform: translateX(0%);
+    100% {
+        transform: translateX(0%);
     }
-   
+
     50% {
-     transform: scale(0.65) translateX(-75%);
+        transform: scale(0.65) translateX(-75%);
     }
-   }
-   
-   @keyframes shift-right {
+}
+
+@keyframes shift-right {
+
     0%,
-     100% {
-     transform: translateX(0%);
+    100% {
+        transform: translateX(0%);
     }
-   
+
     50% {
-     transform: scale(0.65) translateX(75%);
+        transform: scale(0.65) translateX(75%);
     }
-   }
-   
+}
+.loadingContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.loadingStatus {
+    font-weight: 900;
+    color: #2c2b2b;
+    margin-top: 1rem;
+}

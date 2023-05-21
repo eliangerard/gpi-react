@@ -8,6 +8,7 @@ export const App = () => {
         <>
         { showLanding && <GPILanding setShowLanding = {setShowLanding}/>}
         { !showLanding && <Home/>}
+        { !showLanding && <Home setShowLanding={setShowLanding}/>}
         </>
     )
 }

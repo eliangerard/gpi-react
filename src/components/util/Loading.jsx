@@ -3,7 +3,7 @@ import './Loading.css';
 export const Loading = ({ status = "Cargando" }) => {
     return (
         <>
-            <div id='loadingContainer'>
+            <div class='loadingContainer'>
                 <div className="jelly"></div>
                 <svg width="0" height="0" className="jelly-maker">
                     <defs>
@@ -14,7 +14,7 @@ export const Loading = ({ status = "Cargando" }) => {
                         </filter>
                     </defs>
                 </svg>
-                <div>
+                <div className='loadingStatus'>
                     {status}
                 </div>
             </div>

@@ -8,7 +8,7 @@ import SignupStep4 from './Signup/SignupStep4'
 import { Loading } from '../util/Loading';
 
 export const Signup = ( { setLogin } ) => {
-    const [step, setStep] = useState(10);
+    const [step, setStep] = useState(2);
     const nextStep = () => {
         setStep(step + 1);
     }

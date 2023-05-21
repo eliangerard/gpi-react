@@ -28,9 +28,6 @@
   aspect-ratio: 20/11;
   overflow-y: scroll;
 }
-
-.tarjeta {}
-
 .halfImages {
   border-radius: 0.5vw;
   display: inline-table;

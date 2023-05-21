@@ -6,7 +6,73 @@ body {
     height: 100%;
     width: 100%;
     margin: 0;
+    background-color: rgb(250, 250, 250);
 }
 #root {
     height: 100%;
+}
+nav {
+    display: none;
+}
+@media (max-width: 1000px) {
+    .topCard {
+        width: 80%;
+    }
+}
+@media (max-width: 750px) {
+    aside {
+        display: none;
+    }
+    header {
+        width: 100%;
+    }
+    #searchBar {
+        width: calc(100% - 2rem);
+    }
+    #logo {
+        display: none;
+    }
+    .categories {
+        padding: 0 1rem;
+        width: calc(100% - 2rem);
+        justify-content: space-around;
+    }
+    .category {
+        margin: 0;
+    }
+    #content {
+        margin: 0;
+        width: 100%;
+    }
+    .h5 {
+        display: none;
+    }
+    nav {
+        display: flex;
+        width: 100%;
+        height: 5rem;
+        background-color: black;
+        position: fixed;
+        bottom: 0;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .mobIconContainer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .mobIcon {
+        height: 2rem;
+        width: 2rem;
+        filter: invert(100%);
+    }
+    .mobPerfil {
+        height: 2rem;
+        width: 2rem;
+        border-radius: 100%;
+        border: black solid 1px;
+        outline: white solid 2px;
+    }
 }

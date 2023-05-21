@@ -5,6 +5,7 @@ import HomeDisplay from './components/home/HomeDisplay'
 import About from './components/about/About'
 import Notifications from './components/notifications/Notifications'
 import Panel from './components/panel/Panel'
+import { MobileNavBar } from './components/home/MobileNavBar';
 
 function Home({ setShowLanding }) {
   const [currentView, setCurrentView] = useState('home');
@@ -19,10 +20,11 @@ function Home({ setShowLanding }) {
 
   return (
     <div id="content">
+      <MobileNavBar/>
       <NavBar
         setShowLanding={setShowLanding}
         changeView={changeView}
-      />
+        />
       {currentView === 'home' && <HomeDisplay />}
       {currentView === 'about' && <About />}
       {currentView === 'panel' && <Panel />}

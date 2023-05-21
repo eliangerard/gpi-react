@@ -166,7 +166,7 @@ aside {
     font-size: 1em;
 }
 
-#content {
+#lpContent {
     display: block;
     width: calc(100% - 5rem);
     height: fit-content;

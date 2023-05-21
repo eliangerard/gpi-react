@@ -1,5 +1,7 @@
 import { useState, useRef } from 'react';
 import gpiBlack from '../../../assets/logos/gpi-b.png'
+import { validateId } from '../../../helpers/js/useGetData';
+import { render } from 'react-dom';
 export const SignupStep3 = ({ nextStep, backStep, setLogin }) => {
     const fileInputRef = useRef(null);
 
@@ -12,6 +14,9 @@ export const SignupStep3 = ({ nextStep, backStep, setLogin }) => {
         const reader = new FileReader();
         reader.onloadend = async () => {
             console.log("#1", reader.result);
+            if (await validateId(reader.result, localStorage.getItem("id"))) {
+                nextStep();
+            }
         };
         reader.readAsDataURL(file);
     };

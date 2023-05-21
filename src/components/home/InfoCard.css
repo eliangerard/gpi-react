@@ -2,7 +2,20 @@
   margin-top: 3%;
   vertical-align: top;
   display: inline-table;
-  margin-left: 5%;
+  margin-left: 4%;
+  width: 40%;
+}
+
+.levelInfoTimeCapacity{
+  margin-top: 5%;
+}
+
+.aforoInfo{
+  display: inline-table;
+  width: 40%;
+}
+.horarioInfo{
+  display: inline-table;
   width: 40%;
 }
 
@@ -13,6 +26,7 @@
 }
 
 .nameInfo {
+  vertical-align: middle;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   margin-top: 5%;
@@ -21,12 +35,6 @@
   text-align: left;
   width: 85%;
   display: inline-table;
-}
-
-.heartInfo {
-  display: inline-table;
-  margin-left: 2%;
-  width: 7%;
 }
 
 .imageInfo {
@@ -51,13 +59,13 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: medium;
   margin-left: 3%;
-  font-size: 1.2vw;
+  font-size: 1.5vw;
   color: rgb(120, 120, 120);
 }
 
 .infoInfo {
   width: 100%;
-  margin: 2% 0%;
+  margin: 3% 0%;
 }
 
 .informationInfo {
@@ -74,12 +82,14 @@
 }
 
 .ratingcounterInfo {
+  vertical-align: middle;
   text-align: right;
   display: inline-table;
-  width: 50%;
+  width: 35%;
+  margin-left: 5%;
   margin-right: 5%;
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-  font-size: 1.2vw;
+  font-size: 1.3vw;
   font-weight: 400;
   color: rgb(220, 220, 220);
 }
@@ -95,10 +105,12 @@
 
 .levelInfoRating {
   display: inline-table;
-  width: 70%;
+  width: 100%;
+  padding-bottom: 3%;
 }
 
 .ratingstarsInfo {
+  vertical-align: middle;
   text-align: right;
   display: inline-table;
   width: 30%;
@@ -106,10 +118,10 @@
 }
 
 .ownerPictureInfo {
-  vertical-align: top;
+  vertical-align: middle;
   border-radius: 50%;
   display: inline-table;
-  width: 10%;
+  width: 12%;
   aspect-ratio: 1/1;
   margin-right: 3%;
   overflow: hidden;
@@ -125,4 +137,73 @@
 
 .box img {
   border-radius: 0.5rem !important;
+}
+
+.heartInfo {
+  text-align: center;
+  vertical-align: middle;
+  display: inline-table;
+  width: 10%;
+  aspect-ratio: 1/1;
+}
+.heartInfoContainer {
+  overflow:hidden;
+  vertical-align: middle;
+  display: inline-table;
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+
+.heartContainerInfoCard {
+  width: 100%;
+  aspect-ratio: 1/1;
+  margin: 0%;
+  font-size: 2rem;
+  cursor:pointer;
+  background:#fff;
+  border-radius:50%;
+  display:inline-table;
+  color:#aaa;
+  transition:.2s;
+}
+
+.heartContainerInfoCard:hover {
+  color:#666;
+}
+
+.heartContainerInfoCard:before {
+  font-family:fontawesome;
+  content:'\f004';
+  font-style:normal;
+}
+
+.heartContainerInfoCard.press {
+  animation: size .4s;
+  color:#e23b3b;
+}
+
+.heartContainerSpanCard{
+  display: inline-table;
+  position:relative;
+  width: 100%;
+  aspect-ratio: 20/1;
+  font-size: 0.3rem;
+  overflow:hidden;
+  visibility: hidden;
+  transition:.6s;
+  z-index:0;
+  color:transparent;
+  font-weight:400;
+  top: 0;
+}
+
+
+@keyframes fade {
+  0% {color:transparent;}
+  50% {color:#e23b3b;}
+  100% {color:transparent;}
+}
+
+@keyframes size {
+
 }

@@ -125,3 +125,33 @@
     text-align: center;
     vertical-align: middle;
 }
+
+
+.heartContainerInfoCardMini {
+    width: 100%;
+    aspect-ratio: 1/1;
+    margin: 0%;
+    font-size: 1.5rem;
+    cursor:pointer;
+    border-radius:50%;
+    display:inline-table;
+    color:#aaa;
+    transition:.2s;
+  }
+  
+  .heartContainerInfoCardMini:hover {
+    color:#666;
+  }
+  
+  .heartContainerInfoCardMini:before {
+    vertical-align: middle;
+    font-family:fontawesome;
+    content:'\f004';
+    font-style:normal;
+  }
+  
+  .heartContainerInfoCardMini.press {
+    animation: size .4s;
+    color:#e23b3b;
+  }
+  

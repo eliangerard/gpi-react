@@ -1,7 +1,16 @@
-import React from "react";
+import React, {useRef} from "react";
 import './InfoCard.css'
 
 export const InfoCard = () => {
+
+    const btnHeart = useRef(null);
+
+    const addFavorite = () => {
+        const btnfavorite = btnHeart.current;
+        console.log("Add Favorite");
+        btnfavorite.classList.toggle( "press");
+    }
+
     return (
         <>
             <div className="halfCardInfo">
@@ -10,7 +19,10 @@ export const InfoCard = () => {
                         Granja la pascualita
                     </div>
                     <div className="heartInfo">
-                        <img src="https://www.freeiconspng.com/uploads/love-heart-icon-14.png" className="imageInfo" />
+                        <div className="heartInfoContainer">
+                            <i className="heartContainerInfoCard" onClick={addFavorite} ref={btnHeart}>
+                            </i>
+                        </div>
                     </div>
                 </div>
                 <div className="levelInfo">
@@ -21,6 +33,14 @@ export const InfoCard = () => {
                         / 5 horas
                     </div>
                 </div>
+                <div className="levelInfoTimeCapacity">
+                    <div className="aforoInfo">
+                        🚹 70 personas
+                    </div>
+                    <div className="horarioInfo">
+                        ⌛ 19:00 - 5:00
+                    </div>
+                </div>
                 <div className="levelInfo infoInfo">
                     <div className="informationInfo">
                         Granja en renta, ubicada en zona rural. Ideal para la producción de cultivos o
@@ -29,10 +49,10 @@ export const InfoCard = () => {
                         ¡Contáctanos para más información!
                     </div>
                 </div>
-                <div className="ownerPictureInfo">
-                    <img src="https://i.redd.it/46fvg6u7r8151.jpg"/>
-                </div>
                 <div className="levelInfoRating">
+                    <div className="ownerPictureInfo">
+                        <img src="https://i.redd.it/46fvg6u7r8151.jpg" />
+                    </div>
                     <div className="ratingcounterInfo">
                         40 Opiniones
                     </div>

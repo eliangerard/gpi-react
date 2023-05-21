@@ -31,10 +31,6 @@ function NavBar({setShowLanding}) {
           <img className="navIcon" src="./src/assets/img/panel.png" />
           <h4 className="navText">Panel</h4>
         </a>
-        <a className="navIconContainer" href="elian.html">
-          <img className="navIcon" src="./src/assets/img/fav.png" />
-          <h4 className="navText">Favoritos</h4>
-        </a>
         <a className="navIconContainer">
           <img className="navIcon" src="./src/assets/img/not.png" />
           <h4 className="navText">Notificaciones</h4>

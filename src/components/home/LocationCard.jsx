@@ -46,8 +46,8 @@ export const LocationCard = ({ id }) => {
 					<p className="granjaUbi">Alamo Gordo #1014, Los Alamos 32900, Juan Aldama, Chihuahua</p>
 				</div>
 				<div className="cardActions">
-					<button className="btnSave">
-					<i className="heartContainerInfoCardMini" onClick={addFavorite} ref={btnHeart}></i>
+					<button className="btnSave" onClick={addFavorite}>
+					<i className="heartContainerInfoCardMini"ref={btnHeart}></i>
 					</button>
 					<button className="btnReservar" onClick={showPopUp}>
 						Ver detalles

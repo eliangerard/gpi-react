@@ -5,7 +5,7 @@ import HomeDisplay from './components/home/HomeDisplay'
 import About from './components/about/About'
 
 
-function Home() {
+function Home({setShowLanding}) {
   const [currentView, setCurrentView] = useSate('home');
 
   const onClickChangeView = () => {
@@ -15,7 +15,9 @@ function Home() {
 
   return (
     <div id="content">
-      <NavBar/>
+      <NavBar
+      setShowLanding={setShowLanding}
+      />
       <HomeDisplay/>
       <About/>
 

@@ -1,10 +1,10 @@
 import './Loading.css';
 
-export const Loading = ({ status = "Cargando" }) => {
+export const Loading = ({ status = "Cargando", white = false, showStatus = true }) => {
     return (
         <>
-            <div class='loadingContainer'>
-                <div className="jelly"></div>
+            <div className='loadingContainer'>
+                <div className={white ? "jellyWhite" : "jellyBlack"}></div>
                 <svg width="0" height="0" className="jelly-maker">
                     <defs>
                         <filter id="uib-jelly-ooze">
@@ -14,9 +14,11 @@ export const Loading = ({ status = "Cargando" }) => {
                         </filter>
                     </defs>
                 </svg>
-                <div className='loadingStatus'>
-                    {status}
-                </div>
+                {showStatus && <>
+                    <div className='loadingStatus'>
+                        {status}
+                    </div>
+                </>}
             </div>
         </>
     );

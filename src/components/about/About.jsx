@@ -11,7 +11,6 @@ export const About = () => {
     return (
         <>
     <div id="contentAboutMenuAboutComponent">
-        <NavBar/>
         <div className="aboutAboutComponent">
             <div className="aboutDivBAboutComponent">
                 <img id="aboutGpiAboutComponent" src={GPIImage1}/>

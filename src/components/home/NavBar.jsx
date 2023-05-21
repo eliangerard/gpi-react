@@ -1,14 +1,10 @@
 import React from 'react';
 import './NavBar.css';
 
-function NavBar({setShowLanding, onClickChangeView}) {
+function NavBar({setShowLanding, changeView }) {
   const logOut = () => {
     localStorage.clear();
     setShowLanding(true);
-  };
-
-  const handleViewChange = (view) => {
-    onClickChangeView(view);
   };
 
   return (
@@ -28,19 +24,19 @@ function NavBar({setShowLanding, onClickChangeView}) {
       </div>
 
       <div className="navContainer">
-        <a className="navIconContainer" onClick={handleViewChange('home')}>
+        <a className="navIconContainer" onClick={() => {changeView('home')}}>
           <img className="navIcon" src="./src/assets/img/place.png" />
           <h4 className="navText">Catalogo</h4>
         </a>
-        <a className="navIconContainer" onClick={handleViewChange('panel')}>
+        <a className="navIconContainer" onClick={() => {changeView('panel')}}>
           <img className="navIcon" src="./src/assets/img/panel.png" />
           <h4 className="navText">Panel</h4>
         </a>
-        <a className="navIconContainer" onClick={handleViewChange('notifications')}>
+        <a className="navIconContainer" onClick={() => {changeView('notifications')}}>
           <img className="navIcon" src="./src/assets/img/not.png" />
           <h4 className="navText">Notificaciones</h4>
         </a>
-        <a className="navIconContainer" onClick={handleViewChange('about')}>
+        <a className="navIconContainer" onClick={() => {changeView('about')}}>
           <img className="navIcon" src="./src/assets/img/info.png" />
           <h4 className="navText">Conocenos</h4>
         </a>

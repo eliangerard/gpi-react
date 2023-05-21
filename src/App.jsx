@@ -7,7 +7,6 @@ export const App = () => {
     return(
         <>
         { showLanding && <GPILanding setShowLanding = {setShowLanding}/>}
-        { !showLanding && <Home/>}
         { !showLanding && <Home setShowLanding={setShowLanding}/>}
         </>
     )

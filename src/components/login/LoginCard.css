@@ -130,12 +130,20 @@ h1 {
 }
 #signData {
     width: 100%;
-    margin-bottom: 1rem;
+}
+#signData h3 {
+    margin: 0.5rem 0;
+}
+#signData p {
+    margin: 0.5rem 0;
+}
+.authentication  {
+    margin-top: 0;
 }
 #signUpHeader {
     display: flex;
     justify-content: space-between;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 .flex-container {
     display: flex;
@@ -259,6 +267,12 @@ button:hover {
     font-family: 'Montserrat', sans-serif ;
     font-size: small;
     font-weight: 800;
+}
+
+#qrContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 @media (max-width: 1349px) {
     #loginCard {

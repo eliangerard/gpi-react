@@ -14,6 +14,7 @@
         "@mobiscroll/react-lite": "^4.10.9",
         "@react-google-maps/api": "^2.18.1",
         "google-map-react": "^2.2.1",
+        "qrcode.react": "^3.1.0",
         "react": "^18.2.0",
         "react-carousel-minimal": "^1.4.1",
         "react-datepicker": "^4.11.0",

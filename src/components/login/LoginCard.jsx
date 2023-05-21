@@ -16,7 +16,7 @@ export const LoginCard = ( { setShowLanding, toLogin } ) => {
             <div id='opaquer'>
                 <section id='loginCard'>
                     <div id="signLeft">
-                        { !login && (<Signup setLogin = {setShowLogin}/>)}
+                        { !login && (<Signup setLogin = {setShowLogin} setShowLanding= {setShowLanding}/>)}
                         { login && (<Login setShowLanding = {setShowLanding} setLogin = {setShowLogin}/>)}
                     </div>
                     <div id="signImg">

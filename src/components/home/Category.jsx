@@ -4,11 +4,18 @@ import hallIcon from '../../assets/hall.png'
 import bussinesIcon from '../../assets/bussines.png'
 import familyIcon from '../../assets/family.png'
 import partIcon from '../../assets/part.png'
+import heartIcon from '../../assets/heart.png'
 import './Category.css'
 
 function Category(){
     return (
         <ul className="categories">
+        <li className="category">
+          <div className="catContent">
+            <img className="headIcon" src={heartIcon} alt="Favoritos" />
+          </div>
+          <div className="h5">Favoritos</div>
+        </li>
         <li className="category">
           <div className="catContent">
             <img className="headIcon" src={cloudsIcon} alt="Aire libre" />

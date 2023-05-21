@@ -43,6 +43,7 @@
     display: flex;
 }
 .btnSave {
+    vertical-align: middle;
     background-color: #00000018;
     border: none;
     border-radius: 0.5rem;
@@ -126,12 +127,23 @@
     vertical-align: middle;
 }
 
+i.heartContainerInfoCardMini{
+    width: 70%;
+    aspect-ratio: 1/1;
+    margin: 0%;
+    font-size: 1.25rem;
+    cursor:pointer;
+    border-radius:50%;
+    display:inline-table;
+    color:#aaa;
+    transition:.2s;
+}
 
 .heartContainerInfoCardMini {
     width: 100%;
     aspect-ratio: 1/1;
     margin: 0%;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     cursor:pointer;
     border-radius:50%;
     display:inline-table;

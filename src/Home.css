@@ -1,0 +1,19 @@
+#content {
+    display: block;
+    width: calc(100%-5rem);
+    justify-content: center;
+    height: auto;
+    background-color: white;
+    margin-left: 5rem;
+}
+
+
+h2 {
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+hr {
+    margin-left: 3%;
+    margin-right: 3%;
+	border-top: 1px solid #00000011;
+}
+

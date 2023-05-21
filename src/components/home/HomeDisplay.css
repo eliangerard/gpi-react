@@ -1,0 +1,19 @@
+#mostrarBusqueda {
+    margin-left: 3%;
+    width: calc(100% - 5rem);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#mbIzq {
+    display: flex;
+    align-items: center;
+}
+
+#catalogo {
+    justify-content:center;
+    flex-wrap: wrap;
+    display: flex;
+    padding: 0.5rem 1rem;    
+}

@@ -1,3 +1,4 @@
+import { postFavorites } from '../../helpers/js/postFavorites';
 import './LocationCard.css';
 import { LocationFullCard } from './LocationFullCard';
 import React, { useState, useRef } from 'react';
@@ -10,15 +11,18 @@ function formatCurrency(value) {
 	}).format(value);
 }
 
-export const LocationCard = ({ id, nombre, costo, ruta, ubicacion, tiempo }) => {
+export const LocationCard = ({ id, nombre, costo, ruta, ubicacion, tiempo, enFavoritos }) => {
 	const [show, setShow] = useState(false);
 
 	const btnHeart = useRef(null);
 
-	const addFavorite = () => {
+	const addFavorite = async () => {
 		const btnfavorite = btnHeart.current;
 		console.log("Add Favorite");
 		btnfavorite.classList.toggle("press");
+
+		const result = await postFavorites(id, localStorage.getItem("id"));
+		console.log(result);
 	}
 
 	const showPopUp = () => {
@@ -60,9 +64,9 @@ export const LocationCard = ({ id, nombre, costo, ruta, ubicacion, tiempo }) => 
 				</div>
 				<div className="cardActions">
 					<button className="btnSave" onClick={addFavorite}>
-						<i className="heartContainerInfoCardMini" ref={btnHeart}></i>
+						<i className={"heartContainerInfoCardMini " + (enFavoritos == 1 ? "press" : "")} ref={btnHeart}></i>
 					</button>
-					<button className="btnReservar" onClick={showPopUp}>
+					<button id={'location'+id} className="btnReservar" onClick={showPopUp}>
 						Ver detalles
 					</button>
 				</div>

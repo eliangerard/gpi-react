@@ -7,19 +7,26 @@ import 'slick-carousel/slick/slick-theme.css';
 export const MainCards = () => {
     const settings = {
         dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
+        className: "center",
         centerMode: true,
-        centerPadding: '100px',
+        infinite: true,
+        slidesToShow: 1.6,
+        speed: 500
       };
     return (
         <Slider {...settings}>
-            <Top />
-            <Top />
-            <Top />
-            <Top />
+            <div>
+                <Top />
+            </div>
+            <div>
+                <Top />
+            </div>
+            <div>
+                <Top />
+            </div>
+            <div>
+                <Top />
+            </div>
           {/* Agrega más divs con tarjetas según sea necesario */}
         </Slider>
       );

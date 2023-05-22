@@ -9,7 +9,9 @@ export const HomeDisplay = () => {
         <>
         <Header/>
         <hr />
+        <div className="contenedorHomeDisplayMainCardsSlider">
         <MainCards/>
+        </div>
         <div id="mostrarBusqueda">
           <div id="mbIzq">    
             <h2 id="busqueda">Populares</h2>

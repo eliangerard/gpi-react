@@ -6,6 +6,7 @@ export const MainCards = () => {
             <div id="mainCardsContainer">
                 <Top />
                 <Top />
+                <Top />
 
             </div>
         </>

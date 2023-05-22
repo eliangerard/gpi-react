@@ -16,7 +16,9 @@
 .granja p {
     margin-top: 0.5rem;
 }
-
+.name, .granjaUbi {
+    font-size: 1rem!important;
+}
 .granjaImg {
     width: 100%;
     height: 40%;
@@ -68,7 +70,7 @@
 
 .btnReservar {
     width: calc(100% - 3.5rem);
-    background-color: rgb(241, 157, 0);
+    background-color: rgba(0, 0, 0, 0.753);
     color: white;
     border-radius: 0.5rem;
     border: none;
@@ -85,7 +87,7 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
     font-size: larger;
-    color: #0000006e;
+    color: #000000;
     font-family: 'Montserrat';
     margin: 0;
 }
@@ -94,7 +96,7 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 2.4rem;
     font-weight: 900;
-    margin-top: 0.2rem;
+    margin-top: 0.4rem;
     margin-bottom: 0.2rem;
 }
 
@@ -147,7 +149,6 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    text-align: center;
     vertical-align: middle;
 }
 

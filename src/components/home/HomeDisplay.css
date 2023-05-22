@@ -15,11 +15,12 @@
     justify-content:center;
     flex-wrap: wrap;
     display: flex;
-    padding: 0.5rem 1rem;    
+    padding: 0.5rem;    
     background-color: transparent!important;
 }
 #busqueda {
+    font-family: clear-sans-bold!important;
     color: #838383;
     font-size: 2rem;
-    margin: 2rem 0 1rem 0;
+    margin: 1rem 0 ;
 }

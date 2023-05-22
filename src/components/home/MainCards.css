@@ -1,4 +1,6 @@
 #mainCardsContainer {
     display: flex;
     overflow-x: hidden;
+    justify-content: center;
+    margin-top: 1rem;
 }

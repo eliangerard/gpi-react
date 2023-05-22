@@ -1,6 +1,17 @@
 #mainCardsContainer {
     display: flex;
-    overflow-x: hidden;
+    overflow-x:visible;
     justify-content: center;
     margin-top: 1rem;
 }
+
+/* Agregamos un ancho fijo y margen entre las tarjetas */
+.topCard {
+    flex-shrink: 0; /* Evita que las tarjetas se ajusten automáticamente al contenedor */
+  }
+  
+  /* Ajustamos el tamaño de la imagen para que se ajuste al ancho de la tarjeta */
+  .topImg {
+    width: 100%;
+    height: auto;
+  }

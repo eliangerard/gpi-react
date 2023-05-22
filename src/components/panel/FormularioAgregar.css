@@ -3,8 +3,14 @@ html.FormularioAgregar {
     font-family: 'Montserrat', sans-serif;
     }
     
+    .cabezaFormularioAgregar{
+        width: 100%;
+        display: flex;
+    }
     .formFormularioAgregar {
-    width: 60%;
+    display: flex;
+    flex-wrap:wrap;
+    width: 70%;
     margin: 10% 10% 10% 10%;
     padding: 4%;
     border: 2px solid rgba(255, 255, 255, 0.5);
@@ -13,16 +19,17 @@ html.FormularioAgregar {
     }
     
     .tituloFormularioAgregar {
+    padding-top: 3%;
     font-size: 2rem;
     font-weight: bold;
-    border-bottom: solid gray 2px;
-    margin-bottom: 2%;
-    padding: 0 0 2% 0;
-    margin-left: 10%;
-    width: 88%;
+    border-bottom: solid gray 1px;
+    padding-bottom: 1%;
+    margin-bottom: 4%;
+    width: 90%;
     }
     
     .button-backFormularioAgregar {
+    width: 7%;
     float: left;
     padding: 1% 1% 0 0;
     }
@@ -32,21 +39,26 @@ html.FormularioAgregar {
     }
     
     .backFormularioAgregar {
-    height: 2rem;
+        width: 100%;
     }
     
     .dataFormularioAgregar {
-    margin-left: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 45%;
+    margin-left: 2%;
+    margin-right: 2%;
     }
     
     .input-infoFormularioAgregar {
-    width: 100%;
+    width: 98%;
     height: fit-content;
     padding: 1%;
     }
     
     .input-lblFormularioAgregar {
-    font-size: 1.2rem;
+    width: 50%;
+    font-size: 1.1rem;
     }
     
     .checkbox-lblFormularioAgregar {
@@ -54,17 +66,19 @@ html.FormularioAgregar {
     }
     
     .input-dataFormularioAgregar input {
+    margin-bottom: 0%;
     font-size: 0.8rem;
     border: 1px solid lightgray;
     }
     
     .input-nameFormularioAgregar {
-    margin-bottom: 1%;
+    width: 100%;
+    margin-bottom: 3%;
     font-weight: 500;
     }
     
     .in-txtFormularioAgregar {
-    width:95%;
+    width:97.5%;
     padding: 0.5% 1% 0.5% 1%;
     border-radius: 0.8vw;
     }
@@ -114,13 +128,13 @@ html.FormularioAgregar {
     }
     
     .costosFormularioAgregar {
-    width: 40%;
+    width: 50%;
     display: inline-block;
     }
     
     .personasFormularioAgregar {
     display: inline-block;
-    width: 30%;
+    width: 40%;
     margin-left: 5%;
     }
     
@@ -129,12 +143,14 @@ html.FormularioAgregar {
     }
     
     .btnFormularioAgregar {
+    text-align: center;
     font-family: 'Montserrat', sans-serif;
     font-size: 0.8rem;
     background-color: black;
     color: white;
     border: solid white 1px;
-    padding: 1vh 1vw;
+    margin-top: 4%;
+    padding: 1.5%;
     border-radius: 1vw;
     font-weight: 500;
     }
@@ -192,4 +208,35 @@ html.FormularioAgregar {
     
     .buttonsFormularioAgregar {
     margin-top: 3%;
+    }
+
+    .halfCardFormularioAgregar{
+        display: flex;
+        flex-wrap: wrap;
+        width: 40%;
+    }
+
+    .labelFormularioAgregar {
+        font-size: 1vw;
+    }
+
+    .btn-submitFormularioAgregar{
+        background-color: black;
+        color: white;
+        padding: 1%;
+        vertical-align: middle;
+        text-align: center;
+        width: 95%;
+        font-size: 1.2rem;
+        border-radius: 1rem;
+    }
+
+    .button-submitFormularioAgregar{
+        text-align:center;
+        margin-top: 5%;
+        width: 100%;
+    }
+
+    .btnsFormularioAgregar{
+        width:100%;
     }

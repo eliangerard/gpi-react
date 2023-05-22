@@ -37,7 +37,6 @@ export const FormularioAgregar = () => {
   };
 
   const handleSubmit = () => {
-    // Aquí puedes realizar la llamada a la API para enviar el formData
     console.log(formData);
   };
 

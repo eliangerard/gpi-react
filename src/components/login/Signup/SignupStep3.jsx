@@ -1,7 +1,6 @@
 import { useState, useRef } from 'react';
 import gpiBlack from '../../../assets/logos/gpi-b.png'
 import { validateId } from '../../../helpers/js/useGetData';
-import { render } from 'react-dom';
 import { Loading } from '../../util/Loading';
 export const SignupStep3 = ({ nextStep, backStep, setLogin }) => {
     const [loading, setLoading] = useState(false)

@@ -1,0 +1,242 @@
+html.FormularioAgregar {
+    font-size: 2vw;
+    font-family: 'Montserrat', sans-serif;
+    }
+    
+    .cabezaFormularioAgregar{
+        width: 100%;
+        display: flex;
+    }
+    .formFormularioAgregar {
+    display: flex;
+    flex-wrap:wrap;
+    width: 70%;
+    margin: 10% 10% 10% 10%;
+    padding: 4%;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 2vw;
+    box-shadow: 0 0 0.5em 0.1em #c5c5c5;
+    }
+    
+    .tituloFormularioAgregar {
+    padding-top: 3%;
+    font-size: 2rem;
+    font-weight: bold;
+    border-bottom: solid gray 1px;
+    padding-bottom: 1%;
+    margin-bottom: 4%;
+    width: 90%;
+    }
+    
+    .button-backFormularioAgregar {
+    width: 7%;
+    float: left;
+    padding: 1% 1% 0 0;
+    }
+    
+    .button-backFormularioAgregar:hover {
+    cursor: pointer;
+    }
+    
+    .backFormularioAgregar {
+        width: 100%;
+    }
+    
+    .dataFormularioAgregar {
+    display: flex;
+    flex-wrap: wrap;
+    width: 45%;
+    margin-left: 2%;
+    margin-right: 2%;
+    }
+    
+    .input-infoFormularioAgregar {
+    width: 98%;
+    height: fit-content;
+    padding: 1%;
+    }
+    
+    .input-lblFormularioAgregar {
+    width: 50%;
+    font-size: 1.1rem;
+    }
+    
+    .checkbox-lblFormularioAgregar {
+    font-size: 1rem;
+    }
+    
+    .input-dataFormularioAgregar input {
+    margin-bottom: 0%;
+    font-size: 0.8rem;
+    border: 1px solid lightgray;
+    }
+    
+    .input-nameFormularioAgregar {
+    width: 100%;
+    margin-bottom: 3%;
+    font-weight: 500;
+    }
+    
+    .in-txtFormularioAgregar {
+    width:97.5%;
+    padding: 0.5% 1% 0.5% 1%;
+    border-radius: 0.8vw;
+    }
+    
+    .in-numFormularioAgregar {
+    width: 25%;
+    text-align: right;
+    padding: 0.5% 0 0.5% 1%;
+    border-radius: 0.7vw;
+    }
+    
+    .in-fileFormularioAgregar {
+    width: fit-content;
+    display: none;
+    }
+    
+    .categoriasFormularioAgregar {
+    width: 90%;
+    }
+    
+    .chck-catFormularioAgregar {
+    width: fit-content;
+    display: inline-block;
+    margin: 0 2% 1% 0;
+    }
+    
+    .tagsFormularioAgregar {
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+    }
+    
+    .tagFormularioAgregar {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 2% 1% 0;
+    }
+    
+    .descrFormularioAgregar {
+    width: 95%;
+    resize: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    border: 1px solid lightgray;
+    border-radius: 0.8vw;
+    padding: 1%;
+    }
+    
+    .costosFormularioAgregar {
+    width: 50%;
+    display: inline-block;
+    }
+    
+    .personasFormularioAgregar {
+    display: inline-block;
+    width: 40%;
+    margin-left: 5%;
+    }
+    
+    .buttonFormularioAgregar {
+    float: right;
+    }
+    
+    .btnFormularioAgregar {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    background-color: black;
+    color: white;
+    border: solid white 1px;
+    margin-top: 4%;
+    padding: 1.5%;
+    border-radius: 1vw;
+    font-weight: 500;
+    }
+    
+    .btnFormularioAgregar:hover {
+    cursor: pointer;
+    }
+    
+    #btn-cancelFormularioAgregar {
+    margin-right: 1%;
+    }
+    
+    .clearFormularioAgregar {
+    clear: both;
+    height: 1vw;
+    }
+    
+    aFormularioAgregar {
+    text-decoration: none;
+    color:white;
+    }
+    
+    aFormularioAgregar:visited {
+    text-decoration: none;
+    color:white;
+    }
+    
+    .ayudaFormularioAgregar {
+    font-weight: lighter;
+    font-size: 0.7rem;
+    margin-left: 5%;
+    }
+    
+    .ayuda2FormularioAgregar {
+    font-weight: lighter;
+    font-size: 0.7rem;
+    margin-bottom: 1%;
+    }
+    
+    .uploaderFormularioAgregar {
+    display: inline-block;
+    margin: 1% 0 0 30%;
+    overflow: hidden;
+    background-color: #e2e2e2;
+    border: 1px solid gray;
+    border-radius: 1vw;
+    font-weight: 500;
+    padding: 1vw;
+    cursor: pointer;
+    }
+    
+    .uploaderFormularioAgregar input[type="file"] {
+    display: none;
+    }
+    
+    .buttonsFormularioAgregar {
+    margin-top: 3%;
+    }
+
+    .halfCardFormularioAgregar{
+        display: flex;
+        flex-wrap: wrap;
+        width: 40%;
+    }
+
+    .labelFormularioAgregar {
+        font-size: 1vw;
+    }
+
+    .btn-submitFormularioAgregar{
+        background-color: black;
+        color: white;
+        padding: 1%;
+        vertical-align: middle;
+        text-align: center;
+        width: 95%;
+        font-size: 1.2rem;
+        border-radius: 1rem;
+    }
+
+    .button-submitFormularioAgregar{
+        text-align:center;
+        margin-top: 5%;
+        width: 100%;
+    }
+
+    .btnsFormularioAgregar{
+        width:100%;
+    }

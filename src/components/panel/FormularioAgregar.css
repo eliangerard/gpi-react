@@ -22,16 +22,18 @@ html.FormularioAgregar {
     padding-top: 3%;
     font-size: 2rem;
     font-weight: bold;
-    border-bottom: solid gray 1px;
-    padding-bottom: 1%;
+    border-bottom: solid rgb(177, 177, 177) 1px;
+    padding-bottom: 1.5%;
     margin-bottom: 4%;
     width: 90%;
+    opacity: 80%;
     }
     
     .button-backFormularioAgregar {
     width: 7%;
     float: left;
     padding: 1% 1% 0 0;
+    filter: opacity(80%);
     }
     
     .button-backFormularioAgregar:hover {
@@ -63,24 +65,30 @@ html.FormularioAgregar {
     
     .checkbox-lblFormularioAgregar {
     font-size: 1rem;
+    margin-top: 1rem;
     }
     
     .input-dataFormularioAgregar input {
     margin-bottom: 0%;
     font-size: 0.8rem;
-    border: 1px solid lightgray;
+    border: none;
     }
     
     .input-nameFormularioAgregar {
     width: 100%;
     margin-bottom: 3%;
     font-weight: 500;
+    order: none;
     }
     
     .in-txtFormularioAgregar {
     width:97.5%;
     padding: 0.5% 1% 0.5% 1%;
     border-radius: 0.8vw;
+    padding: 4%;
+    background-color: #0000000A;
+    border: none;
+    color: black;
     }
     
     .in-numFormularioAgregar {
@@ -88,6 +96,9 @@ html.FormularioAgregar {
     text-align: right;
     padding: 0.5% 0 0.5% 1%;
     border-radius: 0.7vw;
+    background-color: #0000000A;
+    border: none;
+    color: black;
     }
     
     .in-fileFormularioAgregar {
@@ -122,9 +133,10 @@ html.FormularioAgregar {
     resize: none;
     font-family: 'Montserrat', sans-serif;
     font-size: 0.8rem;
-    border: 1px solid lightgray;
+    border: none;
     border-radius: 0.8vw;
-    padding: 1%;
+    padding: 4%;
+    background-color: #0000000A;
     }
     
     .costosFormularioAgregar {
@@ -146,10 +158,10 @@ html.FormularioAgregar {
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     font-size: 0.8rem;
-    background-color: black;
+    background-color: rgb(29, 29, 29);
     color: white;
-    border: solid white 1px;
-    margin-top: 4%;
+    border: outset white 1px;
+    margin-top: 3.5%;
     padding: 1.5%;
     border-radius: 1vw;
     font-weight: 500;
@@ -157,6 +169,10 @@ html.FormularioAgregar {
     
     .btnFormularioAgregar:hover {
     cursor: pointer;
+    background-color: #0000000A;
+    color: black;
+    border: none;
+    transition: .2s;
     }
     
     #btn-cancelFormularioAgregar {
@@ -195,7 +211,7 @@ html.FormularioAgregar {
     margin: 1% 0 0 30%;
     overflow: hidden;
     background-color: #e2e2e2;
-    border: 1px solid gray;
+    border: 1px solid rgb(206, 206, 206);
     border-radius: 1vw;
     font-weight: 500;
     padding: 1vw;

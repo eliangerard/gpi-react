@@ -10,7 +10,12 @@ export const Panel = () => {
     return (
         <>
             <div className="panelBodyContainerMain">
-                <HeaderPanel />
+                {
+                    /* <FormularioAgregar/>*/
+                }
+                
+                
+                    <HeaderPanel />
                 <div className="panelBodyPanelStyle">
                     <div className="panel1PanelStyle">
                         <ResumenPanel />
@@ -23,6 +28,7 @@ export const Panel = () => {
                         <OpinionesPanel />
                     </div>
                 </div>
+
             </div>
         </>
     )

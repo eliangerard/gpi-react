@@ -1,5 +1,5 @@
 .panelBodyContainerMain{
-    width: calc(100%-5rem);
+    width: calc(100%);
 }
 
 @font-face {
@@ -24,8 +24,7 @@
     display: flex;
     border-bottom: inset 5px;
     padding-bottom: .2rem;
-    margin-left: 4.5rem;
-    margin-top: 2rem;
+    margin: 1%;
     position: sticky;
     top: 0;
 }
@@ -41,11 +40,9 @@
 
 .panelBodyPanelStyle{
     display: flex;
-    width: 100%;
-    height: 100%;
-    margin-left: 6rem;
-    margin-top: 1rem;
-
+    width: 98%;
+    height: 98%;
+    margin: 1%;
     flex-direction: row;
 }
 
@@ -72,8 +69,8 @@
     flex-direction: column;
     width: 45%;
     height: 90%;
-    margin-left: 3rem;
-    margin-top: 4.5rem;
+    margin-left: 3%;
+    margin-top: 4.25%;
 }
 
 .itemWelcomePanelStyle{
@@ -119,10 +116,9 @@
     text-align: center;
     color:white;
     background-color: black;
-    padding: .75rem;
+    padding: 10%;
     border-radius: .6rem;
-    margin: 1rem;
-    width: 10%;
+    margin:15% 30%;
     text-shadow: 0.1rem 0.1rem 0rem black;
 }
 
@@ -216,12 +212,12 @@
 
 .itemPreguntaCardPanelStyle{
     border-radius: 1.25rem;
-    margin-top: 1.25rem;
-    margin-bottom: 2rem;
+    margin-top: 2.4%;
+    margin-bottom: 3%;
     padding-bottom: 1rem;
     box-shadow: 1px 1px 8px 1px rgba(70, 70, 71, 0.4);
     padding: 1rem;
-    width: 50rem;
+    width: 90%;
     height: 8rem;
     display: flex;
     flex-direction: column;

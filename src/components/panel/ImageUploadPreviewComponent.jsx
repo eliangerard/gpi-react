@@ -4,20 +4,20 @@ import './Sliders.css'
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { useEffect } from 'react';
 
-const ImageUploadPreviewComponent = ({onImagesUploaded}) => {
+const ImageUploadPreviewComponent = ({handleImagesUploaded}) => {
   const [fileArray, setFileArray] = useState([]);
 
   const uploadMultipleFiles = (e) => {
-    const files = Array.from(e.target.files);
     const fileURLs = files.map((file) => URL.createObjectURL(file));
-    setFileArray((prevFileArray) => [...prevFileArray, ...fileURLs]);
+    //setFileArray((prevFileArray) => [...prevFileArray, ...fileURLs]);
   };
 
-  const uploadFiles = (e) => {
-    e.preventDefault();
-    onImagesUploaded(fileArray);
-  };
+  handleImagesUploaded(fileArray);
+  useEffect(() => {
+
+  }, [fileArray]);
 
   const settings = {
     dots: true,

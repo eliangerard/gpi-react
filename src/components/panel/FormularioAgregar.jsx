@@ -31,6 +31,8 @@ export const FormularioAgregar = () => {
   };
 
   const handleImagesUploaded = (images) => {
+    console.log("Subiendon");
+  
     setFormData({ ...formData, imagenes: images });
   };
 
@@ -304,7 +306,7 @@ export const FormularioAgregar = () => {
               <label className="ayudaFormularioAgregar">Agregue imágenes de su lugar</label>
             </div>
             <div className="imagenesFormularioAgregar">
-              <ImageUploadPreviewComponent onImagesUploaded={handleImagesUploaded} />
+              <ImageUploadPreviewComponent handleImagesUploaded={handleImagesUploaded} />
             </div>
           </div>
         </div>

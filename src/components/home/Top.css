@@ -1,12 +1,12 @@
 #topContainer {
-    width: fit-content;
+    width: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .topCard {
     min-width: 40rem;
-    width: 60%;
+    width: 70%;
     height: calc(90% - 2rem);
     background-color: white;
     border-radius: 0.5rem;

@@ -1,0 +1,719 @@
+.panelBodyContainerMain{
+    width: calc(100%-5rem);
+}
+
+@font-face {
+    font-family: clear-sans-light;
+    src: url("assets/clear-sans.light.ttf");
+    
+ }
+ @font-face {
+    font-family: clear-sans-bold;
+    src: url("assets/clear-sans.bold.ttf");
+    
+ }
+ @font-face {
+    font-family: clear-sans-thin;
+    src: url("assets/clear-sans.thin.ttf");
+ }
+
+/* Panel */
+.panelHeaderPanelStyle{
+    width: calc(100% - 5rem);
+    height: 4rem;
+    display: flex;
+    border-bottom: inset 5px;
+    padding-bottom: .2rem;
+    margin-left: 4.5rem;
+    margin-top: 2rem;
+    position: sticky;
+    top: 0;
+}
+
+.panelItemPanelStyle{
+    font-family: clear-sans-bold;
+    font-size: 2vh;
+    width: fit-content;
+    padding-top: 1.25rem;
+    margin-left: 3rem;
+    flex-direction: row;
+}
+
+.panelBodyPanelStyle{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin-left: 6rem;
+    margin-top: 1rem;
+
+    flex-direction: row;
+}
+
+.panelPanelStyle{
+    display: flex;
+    width: 100%;
+    height: 90%;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+}
+
+.panel1PanelStyle{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    height: 90%;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+.panel2PanelStyle{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    height: 90%;
+    margin-left: 3rem;
+    margin-top: 4.5rem;
+}
+
+.itemWelcomePanelStyle{
+    font-family: clear-sans-bold;
+    font-size: 2rem;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 1rem;
+}
+
+.itemResumenPanelStyle{
+    font-family: clear-sans-bold;
+    font-size: 1.15rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column; 
+    margin-bottom: 2rem;
+}
+
+.itemResumenBodyPanelStyle{
+    margin-top: .5rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.itemResumenCardPanelStyle{
+    height:100%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    box-shadow: 1px 1px 8px 1px rgba(70, 70, 71, 0.4);
+    border-radius: 1rem;
+}
+
+.itemResumenCardNumberPanelStyle{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:white;
+    background-color: black;
+    padding: .75rem;
+    border-radius: .6rem;
+    margin: 1rem;
+    width: 10%;
+    text-shadow: 0.1rem 0.1rem 0rem black;
+}
+
+.itemReservacionPanelStyle{
+    font-family: clear-sans-bold;
+    font-size: 1.15rem;
+    margin-bottom: 1rem;
+}
+
+.itemReservacionCardPanelStyle{
+    border-radius: 1.25rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2rem;
+    width: 100%;
+    height: 5rem;
+    box-shadow: 1px 1px 8px 1px rgba(70, 70, 71, 0.4);
+}
+
+.itemReservacionCardPhotoPanelStyle{
+    width: 10%;
+    height: 100%;
+    padding-top: .5rem;
+    padding-left: 4rem;
+    padding-right: .65rem;
+}
+
+.imgReservacionCardPanelStyle{
+    z-index: 1;
+    width: 90%;
+    height: 75%;
+    object-fit: cover;
+    border-radius: .5rem;
+}
+
+.imgReservacionCard2PanelStyle{
+    z-index: 1;
+    width: 58%;
+    height: 60%;
+    object-fit: cover;
+    border-radius: 2rem;
+    margin-top: .4rem;
+    margin-left: -2rem;
+    opacity: 90%;
+}
+
+.itemReservacionCardNamePanelStyle{
+    font-size: 1vw;
+    padding-right: 1.5rem;
+    padding-top: 1.4rem;
+}
+
+.itemReservacionCardNameProfilePanelStyle{
+    font-size: 1vw;
+    padding-right: 4.5rem;
+    padding-top: 1.5rem;
+    margin-left: -3.5rem;
+}
+
+.itemReservacionCardDatePanelStyle{
+    font-size: 1vw;
+    padding-right: 3.6rem;
+    padding-top: 1.5rem;
+}
+
+.btnReservacionCardPanelStyle{
+    border-radius: 1rem;
+    font-family: clear-sans-light;
+    font-size: .7vw;
+    border-radius: 1rem;
+    background-color: #000000;
+    color: white;
+    border: 0;
+    border: outset;
+    width: 10%;
+    height: 60%;
+    margin-top: 1rem;
+}
+
+.btnReservacionCardPanelStyle:hover{
+    background-color: #f7f7f79a;
+    color: rgb(134, 134, 134);
+}
+
+.itemPreguntaPanelStyle{
+    font-family: clear-sans-bold;
+    font-size: 1.15rem;
+    margin-bottom: 5rem;
+}
+
+.itemPreguntaCardPanelStyle{
+    border-radius: 1.25rem;
+    margin-top: 1.25rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    box-shadow: 1px 1px 8px 1px rgba(70, 70, 71, 0.4);
+    padding: 1rem;
+    width: 50rem;
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.itemPreguntaPhotoPanelStyle{
+    padding-top: .1rem;
+    padding-left: 1rem;
+    padding-right: .5rem;
+    width: 5rem;
+    height: 100%;
+}
+
+
+#preguntaPhotoPanelStyle{
+    object-fit: cover;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 5rem;
+}
+
+.itemPreguntaBodyPanelStyle{
+    display: flex;
+    height:100%;
+    align-items: stretch;
+    position: relative;
+    margin-bottom: -.4rem;
+}
+
+.itemPreguntaBodyTextPanelStyle{
+    width: 100%;
+    height: 3rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.itemPreguntaTextHeaderPanelStyle{
+    width: fit-content;
+    height: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    padding-left: .5rem;
+    padding-top: .4rem;
+    padding-bottom: .3rem;
+}
+
+.itemPreguntaTextQuestionPanelStyle{
+    display: flex;
+    width: 70%;
+    height: calc(100% - 2.5rem);
+    padding-left: .3rem;
+}
+
+.itemPreguntaTextPerfilPanelStyle{
+    padding-right: .3rem;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    font-family: clear-sans-bold;
+}
+
+.itemPreguntaTextDatePanelStyle{
+    padding-right: .3rem;
+    width: fit-content;
+    height: fit-content;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.itemPreguntaTextPlacePanelStyle{
+    padding-right: .3rem;
+    width: fit-content;
+    height: fit-content;
+}
+
+.itemPreguntaBodyInputPanelStyle{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: .5rem;
+    margin-top: .6rem;
+}
+
+.itemPreguntaInputPanelStyle{
+    height: fit-content;
+    width: 85%;
+    margin-right: 3.5rem;
+}
+
+.inputRespuestaPanelStyle{
+    font-size: clear-sans-thin;
+    width: 100%;
+    height: 2rem;
+    margin: .25rem;
+    margin-left: 1rem;
+    padding: .3rem;
+    padding-left: 1rem;
+    border-radius: .85rem;
+    background-color: #0000000A;
+    border: none;
+    outline: #0000000A solid 2px;
+}
+
+.btnRespuestaEnviarPanelStyle{
+    border: none;
+    width: 3rem;
+    height: 3rem;
+    background-color: transparent;
+}
+
+#btnRespuestaPanelStyle{
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 45px;
+    height: 45px;
+    filter: invert(60%);
+}
+
+.itemOpinionPanelStyle{
+    margin-top: -5rem;
+    font-family: clear-sans-bold;
+    font-size: 1.15rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.itemOpinionCardPanelStyle{
+    border-radius: 1rem;
+    margin-top: 1.25rem;
+    padding-bottom: 1rem;
+    box-shadow: 1px 1px 8px 1px rgba(70, 70, 71, 0.4);
+    padding: 1rem;
+    width: 50rem;
+}
+
+.itemOpinionPhotoPanelStyle{
+    padding-top: .1rem;
+    padding-left: 1rem;
+    width: 5rem;
+    height: 100%;
+}
+
+#opinionPhotoPanelStyle{
+    object-fit: cover;
+    width: 4.2rem;
+    height: 4.2rem;
+    border-radius: 5rem;
+}
+
+.itemOpinionBodyPanelStyle{
+    display: flex;
+    height:100%;
+    flex-direction: row;
+    align-items: stretch;
+    position: relative;
+    margin-bottom: -.4rem;
+}
+
+.itemOpinionBodyTextPanelStyle{
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+}
+
+.itemOpinionTextHeaderPanelStyle{
+    width: fit-content;
+    height: 1rem;
+    display: flex;
+    flex-direction: row;
+    padding-left: .2rem;
+    padding-top: .5rem;
+    padding-bottom: .3rem;
+}
+
+.itemOpinionTextDatePanelStyle{
+    padding-right: .3rem;
+    width: fit-content;
+    height: fit-content;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.itemOpinionTextPlacePanelStyle{
+    padding-right: .3rem;
+    width: fit-content;
+    height: fit-content;
+}
+
+.itemOpinionTextHeader2PanelStyle{
+    position: relative;
+    width: 100%;
+    height: 1rem;
+    display: flex;
+    flex-direction: row;
+    padding-left: .3rem;
+    padding-top: .35rem;
+    padding-bottom: .3rem;
+}
+
+.itemOpinionTextPerfilPanelStyle{
+    padding-right: .3rem;
+    width: 80%;
+    height: fit-content;
+    display: flex;
+    font-family: clear-sans-bold;
+}
+
+.itemOpinionStarsPanelStyle{
+    margin-top: -.3rem;
+    margin-right: 2rem;
+    display: flex;
+    width: 20%;
+    height: fit-content;
+}
+
+.itemBodyReseñaPanelStyle{
+    width: 100%;
+    height: fit-content;
+}
+
+.itemOpinionTextReseñaPanelStyle{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    width: fit-content;
+    height: calc(100% - 2.5rem);
+    padding-left: 1.5rem;
+    margin-top: .8rem;
+    text-align: justify;
+    padding-right: 1.5rem;
+}
+
+.itemLikeBodyPanelStyle{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: .5rem;
+    margin-top: 1.25rem;
+}
+
+.btnLikePanelStyle, .btnDislikePanelStyle{
+    font-family: clear-sans-bold;
+    margin-left: 1.4rem;
+    height: 2rem;
+    border: none;
+    width: 6rem;
+}
+
+.btnDislikePanelStyle{
+    margin-left: .5rem;
+}
+
+.btnDislikePanelStyle:hover, .btnLikePanelStyle:hover{
+    border: outset;
+}
+
+
+.panelItemPanelStyle:hover{
+    background-color: black;
+    color: white;
+    border-radius: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    transition: .7s;
+}
+
+#aPanelPanelStyle{
+    text-decoration: none;
+    color:#000000;
+}
+
+#aPanelPanelStyle:hover{
+    color: white;
+}
+
+
+/* Barra lateral */
+
+#asideHeaderPanelStyle {
+    width:100%
+}
+
+#navPreviewPanelStyle {
+    position:absolute;
+    filter: invert(100%);
+    right: 1.4rem;
+    height: 1.5rem;
+    z-index: 2;
+}
+
+.navProfileContainerPanelStyle {
+    position: inline-table;
+    flex: auto;
+    align-items: center;
+    margin-top: 1.5rem;
+    border-radius: 0.75vw;
+    height: 9.5rem;
+    width: calc(100% - 2.6rem);
+    overflow: hidden;
+}
+
+#navProfilePanelStyle {
+    position: absolute;
+    float: left;
+    z-index: 0;
+    border-radius: 50%;
+    object-fit: cover;
+    height: 5.5rem;
+    width: 5.5rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding-top: 1rem;
+    padding-left: 1.5rem;
+}
+
+#navPPanelStyle #navPiPanelStyle {
+    display: inline-table;
+    position:absolute;
+    background: linear-gradient(90deg, rgba(36,0,13,0) 0%, rgba(0,0,0,1) 14%, rgba(0,0,0,1) 100%);
+    width: 4rem;
+    right: 0;
+    height: 2rem;
+    z-index: 1;
+}
+
+.navPPanelStyle{
+    display: inline-table;
+    position: flex;
+    width: 6.8rem;
+    height: 8rem;
+}
+
+.navNamePanelStyle{
+    font-family: clear-sans-bold;
+    font-size: 1rem;
+    text-shadow: 0rem .5rem .5rem black;
+    display: inline-table;
+    position: absolute;
+    flex: auto;
+    width: calc(50% - 2.6rem);
+    height: calc(8% - 1.5rem);
+    margin-top: .5rem;
+    padding-left: 1.5rem;
+    padding-top: 1.5rem;
+}
+
+.navRatePanelStyle{
+    font-family: clear-sans-bold;
+    font-size: .75rem;
+    text-shadow: 0.1rem 0.1rem 0rem black;
+    display: inline-block;
+    height: 2rem;
+    margin-top: 5rem;
+    padding-left: 1.5rem;
+    position: absolute;
+}
+
+.navEditPanelStyle{
+    font-family: clear-sans-light;
+    font-size: .7rem;
+    text-shadow: 0.1rem 0.1rem 0rem black;
+    display: inline-block;
+    height: 2rem;
+    margin-top: 6.1rem;
+    padding-left: 1.5rem;
+    position: absolute;
+}
+
+.navContainerPanelStyle{
+    height: 100%;
+}
+
+.navIconContainerPanelStyle {
+    display:flex;
+    align-items: center;
+    background-color: #000000;
+    margin: 1rem;
+    border-radius: 0.75vw;
+    height: 2.75rem;
+    overflow: hidden;
+    transition: filter 0.15s;
+}
+
+.navIconContainerPanelStyle:hover {
+    filter: invert(100%);
+    font-weight: bold;
+}
+
+.navIconPanelStyle {
+    filter: invert(100%);
+    margin: .75rem 1rem 0.6rem 0rem;
+    height: 2rem;
+}
+
+#iPlacePanelStyle{
+    margin-left: -0.1rem;
+    margin-right: 1.05rem;
+}
+
+#iPencilPanelStyle{
+    margin: 0.35rem 0rem -0.1rem 0.25rem;
+    height: .75rem;
+}
+
+#iLogoutPanelStyle{
+    bottom: 0;
+    margin-bottom: 2rem;
+    position: absolute;
+    width: 2rem;
+}   
+
+.navTextPanelStyle {
+    font-family: clear-sans-bold;
+    font-size: 1em;
+}
+
+.aPanelStyle{
+    text-decoration: none;
+    color:white;
+}
+
+aside .navProfileContainerPanelStyle{
+    height: 5rem;
+}
+
+aside:hover .navProfileContainerPanelStyle{
+    height: 9rem;
+    transition: 1.15s;
+}
+
+aside:hover .navIconContainerPanelStyle{
+    margin-left: 1.8rem;
+}
+
+aside #iLogPanelStyle{
+    opacity: 0;
+    background-color: transparent;
+}
+
+aside:hover #iLogoutPanelStyle{
+    width: 12rem;
+    transition: .5s;
+}
+
+aside:hover #iLogPanelStyle{
+    opacity: 1;
+    transition: .1s;
+}
+
+aside:hover {
+    width: 15rem;
+}
+
+aside:hover #navPiPanelStyle{
+    opacity:0;
+    transition: 1s;
+}
+
+aside #navProfilePanelStyle{
+    opacity: 0;
+}
+
+aside:hover #navProfilePanelStyle{
+    opacity: 1;
+    transition: 1.45s;
+}
+
+aside .navNamePanelStyle{
+    opacity:0;
+}
+
+aside:hover .navNamePanelStyle{
+    opacity:1;
+    transition: 2s;
+}
+
+aside .navRatePanelStyle{
+    opacity:0;
+}
+
+aside:hover .navRatePanelStyle{
+    opacity:1;
+    transition: 2s;
+}
+
+aside .navEditPanelStyle{
+    opacity:0;
+}
+
+aside:hover .navEditPanelStyle   {
+    opacity:1;
+    transition: 2s;
+}

@@ -18,8 +18,8 @@ function NavBar({setShowLanding, changeView }) {
         </div>
         <div className="navName">Misael Álvarez</div>
         <div className="navRate">4.95 ⭐</div>
-        <div className="navEdit">Editar perfil<a href="elian.html">
-          <img className="navIcon" id="iPencil" src="./src/assets/img/pencil.png"/></a>
+        <div className="navEdit" onClick={()=> {changeView('profile')}}>Editar perfil
+          <img className="navIcon" id="iPencil" src="./src/assets/img/pencil.png"/>
         </div>
       </div>
 

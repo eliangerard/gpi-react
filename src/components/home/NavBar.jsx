@@ -18,8 +18,8 @@ function NavBar({setShowLanding, changeView, nombre, promedioPuntuacion, fotoPer
         </div>
         <div className="navName">{nombre}</div>
         { promedioPuntuacion && <div className="navRate"> {promedioPuntuacion} ⭐</div>} 
-        <div className="navEdit">Editar perfil<a href="elian.html">
-          <img className="navIcon" id="iPencil" src="./src/assets/img/pencil.png"/></a>
+        <div className="navEdit" onClick={()=> {changeView('profile')}}>Editar perfil
+          <img className="navIcon" id="iPencil" src="./src/assets/img/pencil.png"/>
         </div>
       </div>
 

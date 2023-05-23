@@ -1,29 +1,29 @@
 import './SubmenuBar.css'
-import React, {useState, useRef, useEffect} from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import imagen from '../../assets/gifs/images.png'
 
 
-export const SubmenuBar = ({id , closePopUp, moveToScroll, handleScroll, scrollHeight2, selectButton}) => {
-    useEffect(()=>{
+export const SubmenuBar = ({ id, closePopUp, moveToScroll, handleScroll, scrollHeight2, selectButton, promedioPuntuacion, costo, tiempo }) => {
+    useEffect(() => {
         selectButtonIntermediate(scrollHeight2);
     }, [scrollHeight2]);
     const [claseActiva, setClaseActiva] = useState(false);
-    
-    
+
+
     const btnResenas = useRef(null);
     const btnGaleria = useRef(null);
     const btnUbicacion = useRef(null);
     const btnFechas = useRef(null);
 
-    
+
     const resenas = "resenas";
     const galeria = "galeria";
     const ubicacion = "ubicacion";
     const fechas = "fechas";
 
     const closeComponent = () => {
-        closePopUp();   
+        closePopUp();
     };
 
     const selectButtonIntermediate = (height) => {
@@ -34,22 +34,22 @@ export const SubmenuBar = ({id , closePopUp, moveToScroll, handleScroll, scrollH
         const btnfechas = btnFechas.current;
 
         const relativePosition = selectButton(height);
-        if(relativePosition === "gallery"){
+        if (relativePosition === "gallery") {
             btngaleria.classList.add('btnContext');
             btnubicacion.classList.remove('btnContext');
             btnfechas.classList.remove('btnContext');
             btnresenas.classList.remove('btnContext');
-        } else if(relativePosition === "review"){
+        } else if (relativePosition === "review") {
             btngaleria.classList.remove('btnContext');
             btnubicacion.classList.remove('btnContext');
             btnfechas.classList.remove('btnContext');
             btnresenas.classList.add('btnContext');
-        } else if(relativePosition === "ubication"){
+        } else if (relativePosition === "ubication") {
             btngaleria.classList.remove('btnContext');
             btnubicacion.classList.add('btnContext');
             btnfechas.classList.remove('btnContext');
             btnresenas.classList.remove('btnContext');
-        } else if(relativePosition === "calendar") {
+        } else if (relativePosition === "calendar") {
             btngaleria.classList.remove('btnContext');
             btnubicacion.classList.remove('btnContext');
             btnfechas.classList.add('btnContext');
@@ -59,29 +59,29 @@ export const SubmenuBar = ({id , closePopUp, moveToScroll, handleScroll, scrollH
 
 
     const actualizarBotones = (StringReceived) => {
-        
+
         const btnresenas = btnResenas.current;
         const btngaleria = btnGaleria.current;
         const btnubicacion = btnUbicacion.current;
         const btnfechas = btnFechas.current;
-        
 
-        if(StringReceived==="resenas"){
+
+        if (StringReceived === "resenas") {
             btngaleria.classList.remove('btnContext');
             btnubicacion.classList.remove('btnContext');
             btnfechas.classList.remove('btnContext');
             btnresenas.classList.add('btnContext');
-        } else if(StringReceived==="galeria"){
+        } else if (StringReceived === "galeria") {
             btngaleria.classList.add('btnContext');
             btnubicacion.classList.remove('btnContext');
             btnfechas.classList.remove('btnContext');
             btnresenas.classList.remove('btnContext');
-        } else if(StringReceived==="ubicacion"){
+        } else if (StringReceived === "ubicacion") {
             btngaleria.classList.remove('btnContext');
             btnubicacion.classList.add('btnContext');
             btnfechas.classList.remove('btnContext');
             btnresenas.classList.remove('btnContext');
-        } else if(StringReceived==="fechas"){
+        } else if (StringReceived === "fechas") {
             btngaleria.classList.remove('btnContext');
             btnubicacion.classList.remove('btnContext');
             btnfechas.classList.add('btnContext');
@@ -89,46 +89,56 @@ export const SubmenuBar = ({id , closePopUp, moveToScroll, handleScroll, scrollH
         }
     }
 
+    function formatCurrency(value) {
+        return new Intl.NumberFormat('es-MX', {
+            style: 'currency', currency: 'MXN',
+            minimumFractionDigits: 0,
+            maximumFractionDigits: 0
+        }).format(value);
+    }
     return (
         <>
             <div className="wideCardBar navBar" id="navBar">
                 <div className="halfCard3" id="level">
-                    <img src={imagen} className="btnContextSalir" onClick={closeComponent}/>
-                    <div className="btnContextN" ref={btnGaleria} onClick={()=> {
+                    <img src={imagen} className="btnContextSalir" onClick={closeComponent} />
+                    <div className="btnContextN" ref={btnGaleria} onClick={() => {
                         moveToScroll(galeria),
-                        actualizarBotones(galeria)}
-                        }>
+                            actualizarBotones(galeria)
+                    }
+                    }>
                         Galeria
                     </div>
-                    <div className="btnContextN" ref={btnResenas} onClick={()=> {
+                    <div className="btnContextN" ref={btnResenas} onClick={() => {
                         moveToScroll(resenas),
-                        actualizarBotones(resenas)}
-                        }>
+                            actualizarBotones(resenas)
+                    }
+                    }>
                         Reseñas
                     </div>
-                    <div className="btnContextN" ref={btnUbicacion} onClick={()=>{
+                    <div className="btnContextN" ref={btnUbicacion} onClick={() => {
                         moveToScroll(ubicacion),
-                        actualizarBotones(ubicacion)}
-                        }>
+                            actualizarBotones(ubicacion)
+                    }
+                    }>
                         Ubicación
                     </div>
-                    <div className="btnContextN" ref={btnFechas} onClick={()=>{
+                    <div className="btnContextN" ref={btnFechas} onClick={() => {
                         moveToScroll(fechas),
-                        actualizarBotones(fechas)
-                        }}>
+                            actualizarBotones(fechas)
+                    }}>
                         Fechas
                     </div>
                 </div>
                 <div className="halfCard2" id="level2">
                     <div className="message" id="message">
                         <div className="ratingMessage">
-                            4.7<span className="starMessage">&#9733;</span>
+                            {promedioPuntuacion}<span className="starMessage">&#9733;</span>
                         </div>
                         <div className="priceMessage">
-                            $14,000
+                            {formatCurrency(parseInt(costo))}
                         </div>
                         <div className="hourMessage">
-                            / 5 horas
+                            / {parseInt(tiempo)/60} horas
                         </div>
                     </div>
                     <div className="btnLaunch" id="btnGo">

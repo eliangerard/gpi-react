@@ -1,12 +1,12 @@
 import { GoogleMap, Circle, useLoadScript } from "@react-google-maps/api";
 import "./Mapa.css";
 
-const Mapa = ({id}) => {
+const Mapa = ({id, lat = 28.661941, lng = -106.007422}) => {
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: "AIzaSyACbRlZvZFxy7YlH_G9JVzqxKKaJtURMBI",
   });
 
-  const center = { lat: 28.661941, lng: -106.007422 };
+  const center = { lat: parseFloat(lat), lng: parseFloat(lng) };
   const options = {
     strokeColor: "#000000AA",
     strokeOpacity: 0.4,

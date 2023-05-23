@@ -13,7 +13,6 @@ function formatCurrency(value) {
 
 export const LocationCard = ({ id, nombre, costo, ruta, ubicacion, tiempo, enFavoritos }) => {
 	const [show, setShow] = useState(false);
-
 	const btnHeart = useRef(null);
 
 	const addFavorite = async () => {
@@ -25,7 +24,7 @@ export const LocationCard = ({ id, nombre, costo, ruta, ubicacion, tiempo, enFav
 		console.log(result);
 	}
 
-	const showPopUp = () => {
+	const showPopUp = async () => {
 		setShow(true);
 	};
 

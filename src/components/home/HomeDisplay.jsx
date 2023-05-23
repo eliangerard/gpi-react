@@ -10,16 +10,24 @@ import { getLocations } from '../../helpers/js/getLocations'
 export const HomeDisplay = () => {
 	const [locations, setLocations] = useState([]);
 	const [category, setCategory] = useState(-1);
+	const [searched, setSearched] = useState(false);
 
 	const fetchLocations = async () => {
 		const { result } = await getLocations(localStorage.getItem("id"), category);
 		console.log(result);
+		setSearched(false);
 		setLocations(result);
 	}
 	const fetchFavorites = async () => {
 		const { result } = await getFavorites(localStorage.getItem("id"));
 		console.log(result);
+		setSearched(false);
 		setLocations(result);
+	}
+	const search = async (precioMin, precioMax) => {
+		const { result } = await getLocations(localStorage.getItem("id"), category, precioMin, precioMax);
+		setLocations(result);
+		setSearched(true);
 	}
 	useEffect(() => {
 		if(category == 0)
@@ -28,10 +36,10 @@ export const HomeDisplay = () => {
 	}, [category]);
 	return (
 		<>
-			<Header locations={locations} setCategory={setCategory} />
+			<Header locations={locations} setCategory={setCategory} search={search} />
 			<hr />
 			<div className="contenedorHomeDisplayMainCardsSlider">
-				{category == -1 && <MainCards />}
+				{(category == -1 && !searched) && <MainCards />}
 			</div>
 			<div id="mostrarBusqueda">
 				<div id="mbIzq">

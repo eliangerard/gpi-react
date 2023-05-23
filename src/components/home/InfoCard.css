@@ -121,8 +121,8 @@
   vertical-align: middle;
   border-radius: 50%;
   display: inline-table;
-  width: 12%;
-  aspect-ratio: 1/1;
+  width: 4rem;
+  height: 4rem;
   margin-right: 3%;
   overflow: hidden;
 }
@@ -132,7 +132,7 @@
   vertical-align: bottom;
   width: 100%;
   height: auto;
-  object-fit:cover;
+  object-fit: contain;
 }
 
 .box img {

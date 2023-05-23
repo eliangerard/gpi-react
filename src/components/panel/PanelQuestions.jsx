@@ -1,19 +1,35 @@
 import PreguntasSelfPanel from './PreguntasSelfPanel'
+import {getOwnPreguntas} from '../../helpers/js/getOwnPreguntas'
 import './PanelQuestions.css'
+import { useState, useEffect } from 'react'
 
 export const PanelQuestions = () => {
+    const [locations, setLocations] = useState ([]);
+
+    const fetchOwnPreguntas = async () => {
+        const {result} = await getOwnPreguntas(localStorage.getItem("id"));
+        console.log(result);
+        setLocations(result);
+    }
+
+    useEffect(()=>{
+        fetchOwnPreguntas();
+    },[])
     return(
         <>
-        <div className="panelBodyContainerMain">    
+        <div className="panelBodyContainerMainQuestion">    
                  <div class="itemWelcomePanelStyle">
                     Estas son las preguntas que has realizado
                 </div>           
-            <div className="panelBodyPanelStyle">
+            <div className="panelBodyPanelStyleQuestions">
                 <div className="panel3PanelStyle">
-                <PreguntasSelfPanel/>
-                <PreguntasSelfPanel/>
-                <PreguntasSelfPanel/>
-                <PreguntasSelfPanel/>
+                    {locations.map(location => (
+                            <PreguntasSelfPanel
+                            location={location}
+                            key={location.id}
+                            />
+                        ))
+                    }
                 </div>
             </div>
         </div>

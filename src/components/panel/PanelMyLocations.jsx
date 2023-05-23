@@ -14,10 +14,6 @@ export const PanelMyLocations = () => {
             <div className="agregarMasGranjasMyLocations">
                 <FormularioAgregar/>
             </div>
-            {/*
-            <Catalogo
-                locations={locations}
-            />*/}
         </div>
         </>
     )

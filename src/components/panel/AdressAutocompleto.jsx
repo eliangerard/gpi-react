@@ -1,7 +1,7 @@
 import React, {useRef} from 'react';
 import {StandaloneSearchBox, LoadScript} from '@react-google-maps/api';
 
-export const AdressAutocompleto = () => {
+export const AdressAutocompleto = ( {handleAddLocation} ) => {
   const inputRef = useRef();
 
   const handleLocationSelect = () => {
@@ -10,14 +10,15 @@ export const AdressAutocompleto = () => {
       console.log(place.formatted_address);
       console.log(place.geometry.location.lat());
       console.log(place.geometry.location.lng());
+      handleAddLocation(place.formatted_address, place.geometry.location.lat(), place.geometry.location.lng())
     }
   };
-
+  const places = ["places"]
   return (
     <>
     <LoadScript
       googleMapsApiKey='AIzaSyACbRlZvZFxy7YlH_G9JVzqxKKaJtURMBI'
-      libraries={["places"]}
+      libraries={places}
     >
 
     <StandaloneSearchBox

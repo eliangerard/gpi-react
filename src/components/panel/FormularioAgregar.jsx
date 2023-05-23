@@ -5,7 +5,7 @@ import imgBackButton from '../../assets/gifs/images.png';
 import ImageUploadPreviewComponent from './ImageUploadPreviewComponent';
 
 export const FormularioAgregar = () => {
-  const [formData, setFormData] = useState({
+  let formData = {
     nombre: '',
     costo: '',
     tiempo: '',
@@ -15,11 +15,13 @@ export const FormularioAgregar = () => {
     categorias: [],
     etiquetas: [],
     imagenes: [],
-  });
+  };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    const newFormData = { ...formData, [name]: value };
+    const categorias = ["Aire libre", "Salón", "Elegante", "Familiar", "Fiestas"];
+    formData = newFormData;
   };
 
   const handleCheckboxChange = (e) => {
@@ -27,16 +29,32 @@ export const FormularioAgregar = () => {
     const updatedValues = checked
       ? [...formData[name], name]
       : formData[name].filter((item) => item !== name);
-    setFormData({ ...formData, [name]: updatedValues });
+    const newFormData = { ...formData, [name]: updatedValues };
+    formData = newFormData;
   };
 
   const handleImagesUploaded = (images) => {
     console.log("Subiendon");
-  
-    setFormData({ ...formData, imagenes: images });
+    const newFormData = { ...formData, imagenes: images };
+    console.log(newFormData);
+    formData = newFormData;
   };
 
+  const handleAddLocation = (formatted, lat, lgt) => {
+    const newFormData = {
+      ...formData, ubicacion: {
+        formatted,
+        lat,
+        lgt
+      }
+    };
+    formData = newFormData;
+  }
+
   const handleSubmit = () => {
+    const { aforo, categorias, costo, descripcion, etiquetas, imagenes, nombre, tiempo, ubicacion } = formData;
+    if( aforo.length == 0 || categorias.length == 0 || costo.length == 0 || descripcion.length == 0 || etiquetas.length == 0 || imagenes.length == 0 || nombre.length == 0 || tiempo.length == 0 || ubicacion == 0 )
+      return console.log("No están todos los datos llenados");
     console.log(formData);
   };
 
@@ -62,7 +80,7 @@ export const FormularioAgregar = () => {
                 name="nombre"
                 className="in-txtFormularioAgregar"
                 placeholder="Nombre distintivo del lugar"
-                value={formData.nombre}
+
                 onChange={handleInputChange}
               />
             </div>
@@ -82,7 +100,6 @@ export const FormularioAgregar = () => {
                   className="in-numFormularioAgregar"
                   placeholder="6500"
                   min="1"
-                  value={formData.costo}
                   onChange={handleInputChange}
                 />
                 <label htmlFor="tiempo" className="input-lblFormularioAgregar interFormularioAgregar labelFormularioAgregar">
@@ -94,7 +111,6 @@ export const FormularioAgregar = () => {
                   className="in-numFormularioAgregar"
                   placeholder="5"
                   min="1"
-                  value={formData.tiempo}
                   onChange={handleInputChange}
                 />
                 <label className="input-lblFormularioAgregar interFormularioAgregar labelFormularioAgregar">horas</label>
@@ -113,7 +129,6 @@ export const FormularioAgregar = () => {
                   className="in-numFormularioAgregar"
                   placeholder="50"
                   min="1"
-                  value={formData.aforo}
                   onChange={handleInputChange}
                 />
                 <label className="input-lblFormularioAgregar labelFormularioAgregar">personas</label>
@@ -133,7 +148,6 @@ export const FormularioAgregar = () => {
                 cols="80"
                 rows="4"
                 placeholder="Descripción de los servicios ofrecidos en el lugar"
-                value={formData.descripcion}
                 onChange={handleInputChange}
               ></textarea>
             </div>
@@ -145,10 +159,7 @@ export const FormularioAgregar = () => {
               </label>
             </div>
             <div className="input-dataFormularioAgregar">
-              <AdressAutocompleto
-                value={formData.ubicacion}
-                onChange={(e) => setFormData({ ...formData, ubicacion: e.target.value })}
-              />
+              <AdressAutocompleto handleAddLocation={handleAddLocation}/>
             </div>
           </div>
           <div className="input-infoFormularioAgregar">
@@ -161,9 +172,8 @@ export const FormularioAgregar = () => {
                 <input
                   type="checkbox"
                   name="categorias"
-                  value="Categoría 1"
+                  value={categorias[0]}
                   className="in-catFormularioAgregar"
-                  checked={formData.categorias.includes('Categoría 1')}
                   onChange={handleCheckboxChange}
                 />
                 <label htmlFor="categoria1" className="checkbox-lblFormularioAgregar">
@@ -174,9 +184,7 @@ export const FormularioAgregar = () => {
                 <input
                   type="checkbox"
                   name="categorias"
-                  value="Categoría 2"
                   className="in-catFormularioAgregar"
-                  checked={formData.categorias.includes('Categoría 2')}
                   onChange={handleCheckboxChange}
                 />
                 <label htmlFor="categoria2" className="checkbox-lblFormularioAgregar">
@@ -187,9 +195,7 @@ export const FormularioAgregar = () => {
                 <input
                   type="checkbox"
                   name="categorias"
-                  value="Categoría 3"
                   className="in-catFormularioAgregar"
-                  checked={formData.categorias.includes('Categoría 3')}
                   onChange={handleCheckboxChange}
                 />
                 <label htmlFor="categoria3" className="checkbox-lblFormularioAgregar">
@@ -200,9 +206,8 @@ export const FormularioAgregar = () => {
                 <input
                   type="checkbox"
                   name="categorias"
-                  value="Categoría 4"
+
                   className="in-catFormularioAgregar"
-                  checked={formData.categorias.includes('Categoría 4')}
                   onChange={handleCheckboxChange}
                 />
                 <label htmlFor="categoria4" className="checkbox-lblFormularioAgregar">
@@ -213,9 +218,7 @@ export const FormularioAgregar = () => {
                 <input
                   type="checkbox"
                   name="categorias"
-                  value="Categoría 5"
                   className="in-catFormularioAgregar"
-                  checked={formData.categorias.includes('Categoría 5')}
                   onChange={handleCheckboxChange}
                 />
                 <label htmlFor="categoria5" className="checkbox-lblFormularioAgregar">
@@ -236,9 +239,7 @@ export const FormularioAgregar = () => {
                 <input
                   type="checkbox"
                   name="etiquetas"
-                  value="Etiqueta 1"
                   className="in-tagFormularioAgregar"
-                  checked={formData.etiquetas.includes('Etiqueta 1')}
                   onChange={handleCheckboxChange}
                 />
                 <label htmlFor="etiqueta1" className="checkbox-lblFormularioAgregar">
@@ -249,9 +250,7 @@ export const FormularioAgregar = () => {
                 <input
                   type="checkbox"
                   name="etiquetas"
-                  value="Etiqueta 2"
                   className="in-tagFormularioAgregar"
-                  checked={formData.etiquetas.includes('Etiqueta 2')}
                   onChange={handleCheckboxChange}
                 />
                 <label htmlFor="etiqueta2" className="checkbox-lblFormularioAgregar">
@@ -262,9 +261,7 @@ export const FormularioAgregar = () => {
                 <input
                   type="checkbox"
                   name="etiquetas"
-                  value="Etiqueta 3"
                   className="in-tagFormularioAgregar"
-                  checked={formData.etiquetas.includes('Etiqueta 3')}
                   onChange={handleCheckboxChange}
                 />
                 <label htmlFor="etiqueta3" className="checkbox-lblFormularioAgregar">
@@ -275,9 +272,7 @@ export const FormularioAgregar = () => {
                 <input
                   type="checkbox"
                   name="etiquetas"
-                  value="Etiqueta 4"
                   className="in-tagFormularioAgregar"
-                  checked={formData.etiquetas.includes('Etiqueta 4')}
                   onChange={handleCheckboxChange}
                 />
                 <label htmlFor="etiqueta4" className="checkbox-lblFormularioAgregar">
@@ -288,9 +283,7 @@ export const FormularioAgregar = () => {
                 <input
                   type="checkbox"
                   name="etiquetas"
-                  value="Etiqueta 5"
                   className="in-tagFormularioAgregar"
-                  checked={formData.etiquetas.includes('Etiqueta 5')}
                   onChange={handleCheckboxChange}
                 />
                 <label htmlFor="etiqueta5" className="checkbox-lblFormularioAgregar">

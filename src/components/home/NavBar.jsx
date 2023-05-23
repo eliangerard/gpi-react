@@ -1,7 +1,7 @@
 import React from 'react';
 import './NavBar.css';
 
-function NavBar({setShowLanding, changeView }) {
+function NavBar({setShowLanding, changeView, nombre, promedioPuntuacion, fotoPerfil }) {
   const logOut = () => {
     localStorage.clear();
     setShowLanding(true);
@@ -11,13 +11,13 @@ function NavBar({setShowLanding, changeView }) {
     <aside>
       <div className="navProfileContainer">
         <div className="navP">
-          <img id="navProfile" src="./src/assets/img/yo.jpg" />
+          <img id="navProfile" src={fotoPerfil} />
           <div id="navPi">
             <img id="navPreview" src="./src/assets/img/right.png" />
           </div>
         </div>
-        <div className="navName">Misael Álvarez</div>
-        <div className="navRate">4.95 ⭐</div>
+        <div className="navName">{nombre}</div>
+        { promedioPuntuacion && <div className="navRate"> {promedioPuntuacion} ⭐</div>} 
         <div className="navEdit">Editar perfil<a href="elian.html">
           <img className="navIcon" id="iPencil" src="./src/assets/img/pencil.png"/></a>
         </div>

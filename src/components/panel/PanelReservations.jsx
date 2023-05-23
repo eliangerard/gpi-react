@@ -4,7 +4,7 @@ import PreguntasPanel from './PreguntasPanel'
 import OpinionesPanel from './OpinionesPanel'
 import {getReservaciones} from '../../helpers/js/getReservaciones'
 import { useState, useEffect } from 'react'
-import CatalogoOpiniones from '../home/CatalogoOpinar.jsx'
+import CatalogoOpiniones from './CatalogoOpinar.jsx'
 import './PanelReservations.css'
 
 
@@ -29,7 +29,8 @@ export const PanelReservations = () => {
                 <div className="panelBodyPanelStyle">
                     <div className="contenedor"></div>
                     <CatalogoOpiniones
-                        locations = {locations}  />
+                        locations = {locations}
+                        key = {location.id}  />
                 </div>
             </div>
         </>

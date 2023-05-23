@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
-import './Catalogo.css'
-import LocationCardReservated from './LocationCardReservated.jsx'
+import '../home/Catalogo.css'
+import LocationCardReservated from '../home/LocationCardReservated.jsx'
 
 export const Catalogo = ({locations}) => {
     

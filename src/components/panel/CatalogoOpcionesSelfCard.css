@@ -6,9 +6,10 @@
     box-shadow: 1px 1px 8px 1px rgba(70, 70, 71, 0.4);
     padding: 2% 3%;
     margin: 2%;
-    width: 40%;
+    width: 100%;
 }
 
 .contenedorSelfOpinionesCatalogo {
     display: flex;
+    width: 50%;
 }

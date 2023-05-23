@@ -1,6 +1,19 @@
 import CatalogoOpinionesSelfCard from './CatalogoOpinionesSelfCard.jsx'
+import {getOwnOpiniones} from '../../helpers/js/getOwnOpiniones.js'
+import { useState, useEffect } from 'react';
 
 export const PanelReview = () => {
+    const [locations, setLocations] = useState([]);
+
+    const fetchOwnOpiniones = async () => {
+        const { result } = await getOwnOpiniones(localStorage.getItem("id"));
+        console.log(result);
+        setLocations(result);
+    }
+    
+    useEffect(() => {
+        fetchOwnOpiniones();
+    },[])
     return(
         <>
         <div className="panelBodyContainerMain">
@@ -9,8 +22,13 @@ export const PanelReview = () => {
                     </div>
                 <div className="panelBodyPanelStyle">
                     <div className="contenedorSelfOpinionesCatalogo">
-                        <CatalogoOpinionesSelfCard/>
-                        <CatalogoOpinionesSelfCard/>
+                        {locations.map(location => (
+                                <CatalogoOpinionesSelfCard
+                                location={location}
+                                key={location.id}
+                                />
+                            ))
+                        }
                     </div>
                 </div>
             </div>

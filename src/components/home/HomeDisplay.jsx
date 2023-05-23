@@ -29,6 +29,9 @@ export const HomeDisplay = () => {
 		setLocations(result);
 		setSearched(true);
 	}
+	const atras = () => {
+		setCategory(-1);
+	}
 	useEffect(() => {
 		if(category == 0)
 			fetchFavorites();
@@ -43,6 +46,7 @@ export const HomeDisplay = () => {
 			</div>
 			<div id="mostrarBusqueda">
 				<div id="mbIzq">
+				{(category != -1) && <button onClick={atras}>Atrás</button>}
 					<h2 id="busqueda">
 						{
 							category == 0 ? "Favoritos" :
@@ -50,7 +54,8 @@ export const HomeDisplay = () => {
 									category == 2 ? "Salón" :
 										category == 3 ? "Elegante" :
 											category == 4 ? "Familiar" :
-												"Fiestas"
+												category == 5 ? "Fiestas" :
+												"Locaciones"
 						}
 					</h2>
 				</div>

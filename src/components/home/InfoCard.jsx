@@ -1,7 +1,8 @@
 import React, { useRef, useState } from "react";
 import './InfoCard.css'
+import { postFavorites } from "../../helpers/js/postFavorites";
 
-export const InfoCard = ({ nombre, enFavoritos, costo, tiempo, ubicacion, aforo, descripcion, promedioPuntuacion, cantidadOpiniones, fotoPerfil }) => {
+export const InfoCard = ({ idLocacion, nombre, enFavoritos, costo, tiempo, ubicacion, aforo, descripcion, promedioPuntuacion, cantidadOpiniones, fotoPerfil }) => {
     const [stars, setStars] = useState([1, 1, 1, 1, 1]);
     function formatCurrency(value) {
         return new Intl.NumberFormat('es-MX', {
@@ -13,11 +14,14 @@ export const InfoCard = ({ nombre, enFavoritos, costo, tiempo, ubicacion, aforo,
 
     const btnHeart = useRef(null);
 
-    const addFavorite = () => {
-        const btnfavorite = btnHeart.current;
-        console.log("Add Favorite");
-        btnfavorite.classList.toggle("press");
-    }
+    const addFavorite = async () => {
+		const btnfavorite = btnHeart.current;
+		console.log("Add Favorite");
+		btnfavorite.classList.toggle("press");
+
+		const result = await postFavorites(idLocacion, localStorage.getItem("id"));
+		console.log(result);
+	}
 
     return (
         <>

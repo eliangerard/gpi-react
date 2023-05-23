@@ -1,35 +1,46 @@
-import FormularioAgregar from "./FormularioAgregar"
+import {useState} from 'react';
 import HeaderPanel from './HeaderPanel'
-import ResumenPanel from './ResumenPanel'
-import ReservacionesPanel from './ReservacionesPanel'
-import PreguntasPanel from './PreguntasPanel'
-import OpinionesPanel from './OpinionesPanel'
+import PanelHome from './PanelHome'
+
+// Por hacer voy a comer jiji
+import PanelReservations from './PanelReservations'
+import PanelQuestions from './PanelQuestions'
+import PanelReviews from './PanelReview'
+import PanelMyLocations from './PanelMyLocations'
+
 import './Panel.css'
 
 export const Panel = () => {
+
+    const [currentView, setCurrentView] = useState('PanelHome');
+
+    const changeView = (view) => {
+        setCurrentView(view);
+    }
+
+    const renderCurrentView = () => {
+        switch (currentView) {
+            case 'PanelHome':
+                return <PanelHome />
+            case 'PanelReservations':
+                return <PanelReservations />
+            case 'PanelQuestions':
+                return <PanelQuestions />
+            case 'PanelReviews':
+                return <PanelReviews />
+            case 'PanelMyLocations':
+                return <PanelMyLocations />
+            default:
+                return null;
+        }
+    };
+
     return (
         <>
-            <div className="panelBodyContainerMain">
-                {
-                    /* <FormularioAgregar/>*/
-                }
-                
-                
-                    <HeaderPanel />
-                <div className="panelBodyPanelStyle">
-                    <div className="panel1PanelStyle">
-                        <ResumenPanel />
-                        <ReservacionesPanel />
-                    </div>
-                    <div className="panel2PanelStyle">
-                        <PreguntasPanel />
-                    </div>
-                    <div className="panel3PanelStyle">
-                        <OpinionesPanel />
-                    </div>
-                </div>
-
-            </div>
+            <HeaderPanel 
+            setAdministrationView={changeView}
+            />
+            {renderCurrentView()}
         </>
     )
 }

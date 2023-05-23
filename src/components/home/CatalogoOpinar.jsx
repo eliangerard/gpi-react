@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import './Catalogo.css'
-import LocationCard from './LocationCard'
+import LocationCardReservated from './LocationCardReservated.jsx'
 
 export const Catalogo = ({locations}) => {
     
@@ -8,7 +8,7 @@ export const Catalogo = ({locations}) => {
         <>
             {
                 locations.map(location => {
-                    return <LocationCard
+                    return <LocationCardReservated
                         id={location.idLocacion}
                         key={location.idLocacion}
                         {...location}

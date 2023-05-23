@@ -1,3 +1,6 @@
+import Image1 from '../../assets/img/avatar.jpg'
+import Image3 from '../../assets/img/send.png'
+
 
 export const PreguntasTarjetaPanel = () => {
     return (
@@ -5,14 +8,13 @@ export const PreguntasTarjetaPanel = () => {
             <div className="itemPreguntaCardPanelStyle">
                 <div className="itemPreguntaBodyPanelStyle">
                     <div className="itemPreguntaPhotoPanelStyle">
-                        <img src="src/avatar.jpg" id="preguntaPhotoPanelStyle" />
+                        <img src={Image1} id="preguntaPhotoPanelStyle" />
                     </div>
 
                     <div className="itemPreguntaBodyTextPanelStyle">
                         <div className="itemPreguntaTextHeaderPanelStyle">
                             <div className="itemPreguntaTextPerfilPanelStyle">Elian Gerard,</div>
-                            <div className="itemPreguntaTextDatePanelStyle">15 de Mayo en</div>
-                            <div className="itemPreguntaTextPlacePanelStyle">Casa Lucía</div>
+                            <div className="itemPreguntaTextDatePanelStyle">15 de Mayo en Casa Lucía</div>
                         </div>
                         <div className="itemPreguntaTextQuestionPanelStyle">¿Me compras las flores mas bonitas del
                             condado?</div>
@@ -25,7 +27,7 @@ export const PreguntasTarjetaPanel = () => {
                             name="inputRespuestaPanelStyle" />
                     </div>
                     <button className="btnRespuestaEnviarPanelStyle">
-                        <img src="assets/img/send.png" id="btnRespuestaPanelStyle" />
+                        <img src={Image3} id="btnRespuestaPanelStyle" />
                     </button>
                 </div>
             </div>

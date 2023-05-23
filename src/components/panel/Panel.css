@@ -19,22 +19,25 @@
 
 /* Panel */
 .panelHeaderPanelStyle{
-    width: calc(100% - 5rem);
-    height: 4rem;
+    width: calc(100%-5rem);
+    height: 30%;
     display: flex;
     border-bottom: inset 5px;
-    padding-bottom: .2rem;
+    padding-bottom: 1%;
     margin: 1%;
     position: sticky;
     top: 0;
 }
 
 .panelItemPanelStyle{
-    font-family: clear-sans-bold;
-    font-size: 2vh;
+    color: black;
+    font-family: 'Montserrat';
+    font-size: 0.9rem;
     width: fit-content;
-    padding-top: 1.25rem;
-    margin-left: 3rem;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-top: 1%;
+    margin-left: 3%;
     flex-direction: row;
 }
 
@@ -46,31 +49,22 @@
     flex-direction: row;
 }
 
-.panelPanelStyle{
-    display: flex;
-    width: 100%;
-    height: 90%;
-    margin-top: 1rem;
-    margin-left: 1rem;
-    margin-bottom: 2rem;
-}
 
 .panel1PanelStyle{
     display: flex;
     flex-direction: column;
-    width: 45%;
-    height: 90%;
-    margin-top: 1rem;
-    margin-left: 1rem;
+    width: 48%;
+    height: 80%;
+    margin-top: 1%;
+    margin-left: 1%;
 }
 
 .panel2PanelStyle{
     display: flex;
     flex-direction: column;
-    width: 45%;
-    height: 90%;
+    width: 50%;
+    height:80%;
     margin-left: 3%;
-    margin-top: 4.25%;
 }
 
 .itemWelcomePanelStyle{
@@ -78,7 +72,7 @@
     font-size: 2rem;
     width: 100%;
     height: 100%;
-    margin-bottom: 1rem;
+    margin-bottom: 2%;
 }
 
 .itemResumenPanelStyle{
@@ -88,115 +82,123 @@
     height: 100%;
     display: flex;
     flex-direction: column; 
-    margin-bottom: 2rem;
+    margin-bottom: 2%;
 }
 
 .itemResumenBodyPanelStyle{
-    margin-top: .5rem;
+    margin-top: 0.5%;
     display: flex;
     flex-direction: row;
 }
 
 .itemResumenCardPanelStyle{
-    height:100%;
-    width: 20%;
+    font-size: 1rem;
+    width: 15%;
+    aspect-ratio: 1/1;
     display: flex;
     flex-direction: column;
-    margin: 1rem;
+    margin: 2%;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
+    padding: 1.5% 3%;
     box-shadow: 1px 1px 8px 1px rgba(70, 70, 71, 0.4);
     border-radius: 1rem;
 }
 
 .itemResumenCardNumberPanelStyle{
+    font-size: 1rem;
     justify-content: center;
     align-items: center;
     text-align: center;
     color:white;
     background-color: black;
-    padding: 10%;
+    padding: 12% 20%;
     border-radius: .6rem;
     margin:15% 30%;
     text-shadow: 0.1rem 0.1rem 0rem black;
 }
 
 .itemReservacionPanelStyle{
+    display: flex;
+    flex-direction:column;
+    height: fit-content;
     font-family: clear-sans-bold;
     font-size: 1.15rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1%;
 }
 
 .itemReservacionCardPanelStyle{
+    text-align: center;
+    align-items: center;
     border-radius: 1.25rem;
-    margin-top: 2rem;
+    margin-top: 2%;
+    margin-left: 1.5%;
+    padding: 0.5%;
     display: flex;
     flex-direction: row;
-    margin-bottom: 2rem;
-    width: 100%;
-    height: 5rem;
+    margin-bottom: 2%;
+    width: 95%;
+    height: 10%;
     box-shadow: 1px 1px 8px 1px rgba(70, 70, 71, 0.4);
 }
 
 .itemReservacionCardPhotoPanelStyle{
-    width: 10%;
+    width: 8%;
     height: 100%;
-    padding-top: .5rem;
-    padding-left: 4rem;
-    padding-right: .65rem;
+    margin-left: 5%;
 }
 
 .imgReservacionCardPanelStyle{
+    align-items: center;
+    display: block;
     z-index: 1;
-    width: 90%;
-    height: 75%;
+    width: 100%;
+    margin-right: 20%;
+    height: 100%;
     object-fit: cover;
     border-radius: .5rem;
 }
 
 .imgReservacionCard2PanelStyle{
+    display:block;
     z-index: 1;
-    width: 58%;
-    height: 60%;
+    width: 80%;
+    aspect-ratio: 1/1;
     object-fit: cover;
-    border-radius: 2rem;
-    margin-top: .4rem;
-    margin-left: -2rem;
+    border-radius: 50%;
     opacity: 90%;
 }
 
 .itemReservacionCardNamePanelStyle{
-    font-size: 1vw;
-    padding-right: 1.5rem;
-    padding-top: 1.4rem;
+    margin-left: 4%;
+    height: fit-content;
+    display: inline-table;
+    width: 20%;
+    font-size: 1rem;
 }
 
 .itemReservacionCardNameProfilePanelStyle{
-    font-size: 1vw;
-    padding-right: 4.5rem;
-    padding-top: 1.5rem;
-    margin-left: -3.5rem;
+    width: 30%;
+    font-size: 1rem;
+    margin-left: 0%;
 }
 
 .itemReservacionCardDatePanelStyle{
-    font-size: 1vw;
-    padding-right: 3.6rem;
-    padding-top: 1.5rem;
+    font-size: 1rem;
+    margin-right: 5%;
 }
 
 .btnReservacionCardPanelStyle{
     border-radius: 1rem;
     font-family: clear-sans-light;
-    font-size: .7vw;
+    font-size: .7rem;
     border-radius: 1rem;
     background-color: #000000;
     color: white;
     border: 0;
     border: outset;
     width: 10%;
-    height: 60%;
-    margin-top: 1rem;
+    height: 90%;
 }
 
 .btnReservacionCardPanelStyle:hover{
@@ -207,73 +209,69 @@
 .itemPreguntaPanelStyle{
     font-family: clear-sans-bold;
     font-size: 1.15rem;
-    margin-bottom: 5rem;
 }
 
 .itemPreguntaCardPanelStyle{
     border-radius: 1.25rem;
     margin-top: 2.4%;
     margin-bottom: 3%;
-    padding-bottom: 1rem;
     box-shadow: 1px 1px 8px 1px rgba(70, 70, 71, 0.4);
-    padding: 1rem;
-    width: 90%;
-    height: 8rem;
+    padding: 2% 3%;
+    width: 85%;
+    height: fit-content;
     display: flex;
     flex-direction: column;
 }
 
 .itemPreguntaPhotoPanelStyle{
-    padding-top: .1rem;
-    padding-left: 1rem;
-    padding-right: .5rem;
-    width: 5rem;
-    height: 100%;
+    display: flex;
+    width: 10%;
+    aspect-ratio: 1/1;
 }
 
 
 #preguntaPhotoPanelStyle{
     object-fit: cover;
-    width: 4rem;
-    height: 4rem;
-    border-radius: 5rem;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
 }
 
 .itemPreguntaBodyPanelStyle{
     display: flex;
     height:100%;
-    align-items: stretch;
+    align-items:center;
     position: relative;
-    margin-bottom: -.4rem;
 }
 
 .itemPreguntaBodyTextPanelStyle{
-    width: 100%;
-    height: 3rem;
-    margin-bottom: 1rem;
+    align-items: center;
+    margin-left: 5%;
+    width: 85%;
     display: flex;
     flex-direction: column;
 }
 
 .itemPreguntaTextHeaderPanelStyle{
-    width: fit-content;
-    height: 1.5rem;
+    align-items: center;
+    font-size: 1rem;
+    width: 100%;
     display: flex;
     flex-direction: row;
-    padding-left: .5rem;
-    padding-top: .4rem;
-    padding-bottom: .3rem;
 }
 
 .itemPreguntaTextQuestionPanelStyle{
+    margin-top: 2%;
+    align-items: center;
+    font-size: 1rem;
     display: flex;
-    width: 70%;
-    height: calc(100% - 2.5rem);
-    padding-left: .3rem;
+    width: 100%;
 }
 
 .itemPreguntaTextPerfilPanelStyle{
-    padding-right: .3rem;
+    margin-right: 2%;
+    align-items: center;
+    font-size: 1rem;
     width: fit-content;
     height: fit-content;
     display: flex;
@@ -281,6 +279,9 @@
 }
 
 .itemPreguntaTextDatePanelStyle{
+    margin-right: 2%;
+    display: flex;
+    font-size: 0.8rem;
     padding-right: .3rem;
     width: fit-content;
     height: fit-content;
@@ -288,192 +289,170 @@
 }
 
 .itemPreguntaTextPlacePanelStyle{
+    display: flex;
+    font-size: 0.8rem;
     padding-right: .3rem;
     width: fit-content;
     height: fit-content;
 }
 
 .itemPreguntaBodyInputPanelStyle{
+    margin-top: 3%;
+    align-items: center;
     display: flex;
     flex-direction: row;
-    margin-bottom: .5rem;
-    margin-top: .6rem;
 }
 
 .itemPreguntaInputPanelStyle{
+    display:flex;
     height: fit-content;
-    width: 85%;
-    margin-right: 3.5rem;
+    width: 94%;
 }
 
 .inputRespuestaPanelStyle{
     font-size: clear-sans-thin;
     width: 100%;
-    height: 2rem;
-    margin: .25rem;
-    margin-left: 1rem;
     padding: .3rem;
-    padding-left: 1rem;
-    border-radius: .85rem;
+    padding-left: 4%;
+    border-radius: 1rem;
     background-color: #0000000A;
     border: none;
     outline: #0000000A solid 2px;
 }
 
 .btnRespuestaEnviarPanelStyle{
-    border: none;
-    width: 3rem;
-    height: 3rem;
+    display: flex;
+    align-items: center;
+    margin-left: 1%;
+    width: 5%;
+    aspect-ratio: 1/1;
+    height:auto;
     background-color: transparent;
 }
 
 #btnRespuestaPanelStyle{
-    object-fit: cover;
-    background-repeat: no-repeat;
     background-position: center;
-    width: 45px;
-    height: 45px;
+    width: 150%;
     filter: invert(60%);
 }
 
 .itemOpinionPanelStyle{
-    margin-top: -5rem;
     font-family: clear-sans-bold;
     font-size: 1.15rem;
-    width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
 }
 
 .itemOpinionCardPanelStyle{
     border-radius: 1rem;
-    margin-top: 1.25rem;
-    padding-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     box-shadow: 1px 1px 8px 1px rgba(70, 70, 71, 0.4);
-    padding: 1rem;
-    width: 50rem;
+    padding: 2% 3%;
+    width: 85%;
 }
 
 .itemOpinionPhotoPanelStyle{
-    padding-top: .1rem;
-    padding-left: 1rem;
-    width: 5rem;
-    height: 100%;
+    align-items: center;
+    display: flex;
+    aspect-ratio: 1/1;
+    width: 10%;
 }
 
 #opinionPhotoPanelStyle{
+    display: block;
     object-fit: cover;
-    width: 4.2rem;
-    height: 4.2rem;
-    border-radius: 5rem;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
 }
 
 .itemOpinionBodyPanelStyle{
     display: flex;
-    height:100%;
-    flex-direction: row;
-    align-items: stretch;
-    position: relative;
-    margin-bottom: -.4rem;
+    width:100%;
 }
 
 .itemOpinionBodyTextPanelStyle{
-    width: 100%;
-    height: 5rem;
+    align-items: center;
+    margin-left: 5%;
+    width: 80%;
     display: flex;
-    flex-direction: column;
-    padding-left: 1rem;
+    flex-wrap: wrap;
 }
 
 .itemOpinionTextHeaderPanelStyle{
-    width: fit-content;
-    height: 1rem;
+    width: 100%;
     display: flex;
     flex-direction: row;
-    padding-left: .2rem;
-    padding-top: .5rem;
-    padding-bottom: .3rem;
 }
 
 .itemOpinionTextDatePanelStyle{
-    padding-right: .3rem;
+    font-family: clear-sans-bold;
+    font-size: 0.9rem;
     width: fit-content;
     height: fit-content;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .itemOpinionTextPlacePanelStyle{
-    padding-right: .3rem;
     width: fit-content;
     height: fit-content;
 }
 
 .itemOpinionTextHeader2PanelStyle{
-    position: relative;
+    align-items: center;
     width: 100%;
-    height: 1rem;
     display: flex;
     flex-direction: row;
-    padding-left: .3rem;
-    padding-top: .35rem;
-    padding-bottom: .3rem;
 }
 
 .itemOpinionTextPerfilPanelStyle{
-    padding-right: .3rem;
-    width: 80%;
+    font-size: 0.8rem;
+    width: 60%;
     height: fit-content;
     display: flex;
-    font-family: clear-sans-bold;
 }
 
 .itemOpinionStarsPanelStyle{
-    margin-top: -.3rem;
-    margin-right: 2rem;
+    margin-left: 50%;
     display: flex;
-    width: 20%;
+    width: 30%;
     height: fit-content;
+    font-size: 1rem;
 }
 
 .itemBodyReseñaPanelStyle{
+    padding: 2%;
     width: 100%;
     height: fit-content;
 }
 
 .itemOpinionTextReseñaPanelStyle{
+    font-size: 0.7rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
-    width: fit-content;
-    height: calc(100% - 2.5rem);
-    padding-left: 1.5rem;
-    margin-top: .8rem;
     text-align: justify;
-    padding-right: 1.5rem;
 }
 
 .itemLikeBodyPanelStyle{
+    padding: 1%;
+    width: 100%;
     display: flex;
     flex-direction: row;
-    margin-bottom: .5rem;
-    margin-top: 1.25rem;
 }
 
 .btnLikePanelStyle, .btnDislikePanelStyle{
+    margin-left: 3%;
+    font-size: 0.7rem;
+    width: 20%;
     font-family: clear-sans-bold;
-    margin-left: 1.4rem;
-    height: 2rem;
     border: none;
-    width: 6rem;
 }
 
 .btnDislikePanelStyle{
     margin-left: .5rem;
 }
 
-.btnDislikePanelStyle:hover, .btnLikePanelStyle:hover{
-    border: outset;
-}
 
 
 .panelItemPanelStyle:hover{
@@ -483,11 +462,6 @@
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     transition: .7s;
-}
-
-#aPanelPanelStyle{
-    text-decoration: none;
-    color:#000000;
 }
 
 #aPanelPanelStyle:hover{

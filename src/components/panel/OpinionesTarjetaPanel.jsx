@@ -1,27 +1,27 @@
+import avatar from '../../assets/img/avatar.jpg'
 
 export const OpinionesTarjetaPanel = () => {
     return (
         <>
-            <div className="itemOpinionCard">
-                <div className="itemOpinionBody">
-                    <div className="itemOpinionPhoto">
-                        <img src="src/avatar.jpg" id="opinionPhoto" />
+            <div className="itemOpinionCardPanelStyle">
+                <div className="itemOpinionBodyPanelStyle">
+                    <div className="itemOpinionPhotoPanelStyle">
+                        <img src={avatar} id="opinionPhotoPanelStyle" />
                     </div>
 
-                    <div className="itemOpinionBodyText">
-                        <div className="itemOpinionTextHeader">
-                            <div className="itemOpinionTextDate">15 de Mayo en</div>
-                            <div className="itemOpinionTextPlace">Casa Lucía</div>
-                        </div>
-                        <div className="itemOpinionTextHeader2">
-                            <div className="itemOpinionTextPerfil">Elian Gerard</div>
-                            <div className="itemOpinionStars">⭐⭐⭐⭐⭐</div>
+                    <div className="itemOpinionBodyTextPanelStyle">
+                        <div className="itemOpinionTextHeaderPanelStyle">
+                        <div className="itemOpinionTextDatePanelStyle">Elian Gerard</div>
+                        <div className="itemOpinionStarsPanelStyle">⭐⭐⭐⭐⭐</div>
+                    </div>
+                        <div className="itemOpinionTextHeader2PanelStyle">
+                            <div className="itemOpinionTextPerfilPanelStyle">15 de Mayo en Casa Lucía</div>
                         </div>
                     </div>
                 </div>
 
-                <div className="itemBodyReseña">
-                    <div className="itemOpinionTextReseña">La doble moral es, a mi parecer, el problema ético más grave de la
+                <div className="itemBodyReseñaPanelStyle">
+                    <div className="itemOpinionTextReseñaPanelStyle">La doble moral es, a mi parecer, el problema ético más grave de la
                         sociedad cubana.
                         ¿Sabemos en verdad qué es la doble moral? Al menos sé que no se trata de una moral de uso
                         y otra de repuesto, como una muda de ropa. Más bien hablamos de la que adopta dos –o más-
@@ -29,9 +29,9 @@ export const OpinionesTarjetaPanel = () => {
                     </div>
                 </div>
 
-                <div className="itemLikeBody">
-                    <button className="btnLike"> 55 Likes </button>
-                    <button className="btnDislike"> 30 Dislikes </button>
+                <div className="itemLikeBodyPanelStyle">
+                    <div className="btnLikePanelStyle"> 55 Likes </div>
+                    <div className="btnDislikePanelStyle"> 30 Dislikes </div>
                 </div>
 
             </div>

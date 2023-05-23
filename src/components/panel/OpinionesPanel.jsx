@@ -1,13 +1,13 @@
 import { OpinionesTarjetaPanel } from "./OpinionesTarjetaPanel"
 
 export const OpinionesPanel = () => {
+    return (
     <>
-        <div class="itemOpinionPanelStyle">
-            Opiniones
-            <OpinionesTarjetaPanel/>
+        <div className="itemOpinionPanelStyle">
             <OpinionesTarjetaPanel/>
         </div>
     </>
+    )
 }
 
 export default OpinionesPanel

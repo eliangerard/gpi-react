@@ -24,6 +24,10 @@
     z-index: 1;
 }
 
+#iLogout {
+    width: 60%;
+}
+
 #navRight {
     position:absolute;
     filter: invert(100%);
@@ -87,4 +91,8 @@ aside:hover {
 a{
     text-decoration: none;
     color:white;
+}
+
+#navPreview{
+    right: 35%;
 }

@@ -8,7 +8,7 @@ export const PanelQuestions = () => {
 
     const fetchOwnPreguntas = async () => {
         const {result} = await getOwnPreguntas(localStorage.getItem("id"));
-        console.log(result);
+        console.log("qwedqweqw"+result);
         setLocations(result);
     }
 
@@ -18,8 +18,8 @@ export const PanelQuestions = () => {
     return(
         <>
         <div className="panelBodyContainerMainQuestion">    
-                 <div class="itemWelcomePanelStyle">
-                    Estas son las preguntas que has realizado
+                 <div className="itemWelcomePanelStyle">
+                    Estas son las preguntas que te han realizado
                 </div>           
             <div className="panelBodyPanelStyleQuestions">
                 <div className="panel3PanelStyle">

@@ -1,5 +1,4 @@
 import { useEffect } from 'react'
-import './Catalogo.css'
 import LocationCard from './LocationCard'
 
 export const Catalogo = ({locations}) => {

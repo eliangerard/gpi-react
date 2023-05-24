@@ -6,70 +6,81 @@ import ImageUploadPreviewComponent from './ImageUploadPreviewComponent';
 import { postLocation } from '../../helpers/js/postLocation';
 
 export const FormularioAgregar = () => {
-	let formData = {
-		nombre: '',
-		costo: '',
-		tiempo: '',
-		aforo: '',
-		descripcion: '',
-		ubicacion: '',
-		categorias: [],
-		etiquetas: [],
-		imagenes: [],
-	};
-	const categorias = ["Aire libre", "Salón", "Elegante", "Familiar", "Fiestas"];
+  const [formData, setFormData] = useState({
+    nombre: '',
+    costo: '',
+    tiempo: '',
+    aforo: '',
+    descripcion: '',
+    ubicacion: '',
+    categorias: [],
+    imagenes: [],
+  });
 
-	const handleInputChange = (e) => {
-		const { name, value } = e.target;
-		const newFormData = { ...formData, [name]: value };
-		formData = newFormData;
-	};
+  const categorias = ["Aire libre", "Salón", "Elegante", "Familiar", "Fiestas"];
 
-	const handleCheckboxChange = (e) => {
-		const { name, checked } = e.target;
-		console.log(e);
-		const updatedValues = checked
-			? [...formData[name], name]
-			: formData[name].filter((item) => item !== name);
-		const newFormData = { ...formData, [name]: updatedValues };
-		formData = newFormData;
-	};
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: value,
+    }));
+  };
 
-	const handleImagesUploaded = async (images) => {
-		console.log("Subiendon");
-		const newFormData = { ...formData, imagenes: images };
-		console.log(newFormData);
-	};
+  const handleCheckboxChange = (e) => {
+    const { name, checked } = e.target;
+    setFormData((prevFormData) => {
+      const updatedValues = checked
+        ? [...prevFormData[name], name]
+        : prevFormData[name].filter((item) => item !== name);
+      return {
+        ...prevFormData,
+        [name]: updatedValues,
+      };
+    });
+  };
 
-	const handleAddLocation = (formatted, lat, lgt) => {
-		const newFormData = {
-			...formData, ubicacion: {
-				formatted,
-				lat,
-				lgt
-			}
-		};
-		formData = newFormData;
-	}
+  const handleImagesUploaded = async (images) => {
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      imagenes: images,
+    }));
+  };
 
-	const handleSubmit = async () => {
-		const { aforo, categorias, costo, descripcion, etiquetas, imagenes, nombre, tiempo, ubicacion } = formData;
-		if (aforo.length == 0 || categorias.length == 0 || costo.length == 0 || descripcion.length == 0 || etiquetas.length == 0 || imagenes.length == 0 || nombre.length == 0 || tiempo.length == 0 || ubicacion == 0)
-			return console.log("No están todos los datos llenados");
+  const handleAddLocation = (formatted, lat, lgt) => {
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      ubicacion: {
+        formatted,
+        lat,
+        lgt,
+      },
+    }));
+  };
 
-		const result = await postLocation(localStorage.getItem("id"), formData);
-		console.log(result);
-	};
+  const handleSubmit = async () => {
+    const { aforo, categorias, costo, descripcion, imagenes, nombre, tiempo, ubicacion } = formData;
+    if (
+      aforo.length !== 0 &&
+      categorias.length &&
+      costo.length !== 0 &&
+      descripcion.length !== 0 &&
+      imagenes.length !== 0 &&
+      nombre.length !== 0 &&
+      tiempo.length !== 0 &&
+      ubicacion !== 0
+    ) {
+      console.log("ERES LA MAMADA");
+      const result = await postLocation(localStorage.getItem("id"), formData);
+    }
+	console.log(formData)
+  };
 
-	return (
-		<>
-
-			<div className='formContainer'>
-				<div className="formFormularioAgregar">
-					<div className="cabezaFormularioAgregar">
-						<div className="button-backFormularioAgregar">
-							<img src={imgBackButton} className="backFormularioAgregar" alt="Back Button" />
-						</div>
+  return (
+    <>
+      <div className='formContainer'>
+        <div className="formFormularioAgregar">
+		<div className="cabezaFormularioAgregar">
 						<div className="tituloFormularioAgregar">Registre su lugar</div>
 					</div>
 					<div className="dataFormularioAgregar">
@@ -166,7 +177,10 @@ export const FormularioAgregar = () => {
 								<AdressAutocompleto handleAddLocation={handleAddLocation} />
 							</div>
 						</div>
-						<div className="input-infoFormularioAgregar">
+					</div>
+					
+					<div className="dataFormularioAgregar">
+					<div className="input-infoFormularioAgregar">
 							<div className="input-nameFormularioAgregar">
 								<label className="input-lblFormularioAgregar">Categorías:</label>
 								<label className="ayudaFormularioAgregar">¿En qué categorías se encuentra su lugar?</label>
@@ -181,7 +195,7 @@ export const FormularioAgregar = () => {
 										onChange={handleCheckboxChange}
 									/>
 									<label htmlFor="categoria1" className="checkbox-lblFormularioAgregar">
-										Categoría 1
+										Aire Libre
 									</label>
 								</div>
 								<div className="chck-catFormularioAgregar">
@@ -192,7 +206,7 @@ export const FormularioAgregar = () => {
 										onChange={handleCheckboxChange}
 									/>
 									<label htmlFor="categoria2" className="checkbox-lblFormularioAgregar">
-										Categoría 2
+										Salón
 									</label>
 								</div>
 								<div className="chck-catFormularioAgregar">
@@ -203,7 +217,7 @@ export const FormularioAgregar = () => {
 										onChange={handleCheckboxChange}
 									/>
 									<label htmlFor="categoria3" className="checkbox-lblFormularioAgregar">
-										Categoría 3
+										Elegante
 									</label>
 								</div>
 								<div className="chck-catFormularioAgregar">
@@ -214,7 +228,7 @@ export const FormularioAgregar = () => {
 										onChange={handleCheckboxChange}
 									/>
 									<label htmlFor="categoria4" className="checkbox-lblFormularioAgregar">
-										Categoría 4
+										Familiar
 									</label>
 								</div>
 								<div className="chck-catFormularioAgregar">
@@ -225,72 +239,7 @@ export const FormularioAgregar = () => {
 										onChange={handleCheckboxChange}
 									/>
 									<label htmlFor="categoria5" className="checkbox-lblFormularioAgregar">
-										Categoría 5
-									</label>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div className="dataFormularioAgregar">
-						<div className="input-infoFormularioAgregar">
-							<div className="input-nameFormularioAgregar">
-								<label className="input-lblFormularioAgregar">Etiquetas:</label>
-								<label className="ayudaFormularioAgregar">¿Cuáles etiquetas describen mejor lo que ofrece su lugar?</label>
-							</div>
-							<div className="tagsFormularioAgregar">
-								<div className="tagFormularioAgregar">
-									<input
-										type="checkbox"
-										name="etiquetas"
-										className="in-tagFormularioAgregar"
-										onChange={handleCheckboxChange}
-									/>
-									<label htmlFor="etiqueta1" className="checkbox-lblFormularioAgregar">
-										Etiqueta 1
-									</label>
-								</div>
-								<div className="tagFormularioAgregar">
-									<input
-										type="checkbox"
-										name="etiquetas"
-										className="in-tagFormularioAgregar"
-										onChange={handleCheckboxChange}
-									/>
-									<label htmlFor="etiqueta2" className="checkbox-lblFormularioAgregar">
-										Etiqueta 2
-									</label>
-								</div>
-								<div className="tagFormularioAgregar">
-									<input
-										type="checkbox"
-										name="etiquetas"
-										className="in-tagFormularioAgregar"
-										onChange={handleCheckboxChange}
-									/>
-									<label htmlFor="etiqueta3" className="checkbox-lblFormularioAgregar">
-										Etiqueta 3
-									</label>
-								</div>
-								<div className="tagFormularioAgregar">
-									<input
-										type="checkbox"
-										name="etiquetas"
-										className="in-tagFormularioAgregar"
-										onChange={handleCheckboxChange}
-									/>
-									<label htmlFor="etiqueta4" className="checkbox-lblFormularioAgregar">
-										Etiqueta 4
-									</label>
-								</div>
-								<div className="tagFormularioAgregar">
-									<input
-										type="checkbox"
-										name="etiquetas"
-										className="in-tagFormularioAgregar"
-										onChange={handleCheckboxChange}
-									/>
-									<label htmlFor="etiqueta5" className="checkbox-lblFormularioAgregar">
-										Etiqueta 5
+										Fiestas
 									</label>
 								</div>
 							</div>
@@ -310,10 +259,10 @@ export const FormularioAgregar = () => {
 							Guardar
 						</div>
 					</div>
-				</div>
-			</div>
-		</>
-	);
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default FormularioAgregar;

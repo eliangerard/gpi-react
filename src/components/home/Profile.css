@@ -7,16 +7,13 @@
     background-color: white;
     /* border-radius: 0.5rem;
     border: #00000016 solid 3px; */
-    height: fit-content;
-    width: 50%;
+    width: 0%;
 }
 
 #profileHeaderProfileComponent {
-    position: relative;
-    /* z-index: -2; */
     display: flex;
     flex-direction: column;
-    width: calc(100%);
+    width: 100%;
     align-items: center;
     justify-content: space-between;
 }
@@ -36,14 +33,25 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem 2rem 1rem 2rem;
-    width: calc(100% - 4rem);
-    background-color: white;
+    padding: 2% 3%;
+    width: 94%;
+    background-color: transparent;
 }
 
 .avatarContainerProfileComponent {
-    position: relative;
-    margin: 1rem;
+    display: flex;
+    border-radius: 50%;
+    border: #00000057 solid 3px;
+    width: 20%;
+    aspect-ratio: 1;
+    margin-bottom: 5%;
+
+}
+
+.bProfileComponent {
+    font-size: 1rem;
+    font-weight: 700;
+    font-size: 2rem;
 }
 
 #userActiveProfileComponent {
@@ -66,6 +74,7 @@
     justify-content: center;
     color: #00000080;
     font-weight: bold;
+    font-size: 0.7rem;
 }
 #userRatingProfileComponent svg {
     fill: orange;
@@ -74,11 +83,9 @@
     margin-left: 0.3rem;
 }
 .userProfileProfileComponent{
-    height: 8rem;
-    width: 8rem;
+    height: 100%;
+    width: 100%;
     border-radius: 100%;
-    padding: 0.2rem;
-    border: #00000057 solid 3px;
     overflow: hidden;
     aspect-ratio: 1;
 }
@@ -87,7 +94,6 @@
     text-align: justify;
     font-size: .8vw;
     color: #000000A0;
-    padding: 0 2.5rem;
 }
 
 .opacProfileComponent {
@@ -107,28 +113,25 @@
 }
 
 #profileSectionsProfileComponent {
-    position: sticky;
-    top: 0;
     background-color: transparent;
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    height: 3rem;
-    margin-top: 1rem;
+    align-items: top;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .profileSectionProfileComponent {
     border-bottom: #00000000 solid 4px;
     transition: border 150ms;
-    width: 20%;
+    width: 100%;
     font-weight: bolder;
     height: 2rem;
     text-align: center;
-    margin: 0;
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin-bottom: 1rem;
+    justify-content: left;
+    flex-wrap: wrap;
 }
 
 .pfSelectedProfileComponent {
@@ -140,38 +143,44 @@
 #profileContentProfileComponent {
     background-color: #00000016;
     display:flex;
-    height: calc(100% - 4rem);
     width: 100%;
     border-radius: 0.5rem;
-    margin: 0 1rem 1rem 0;
-    overflow: hidden;
+    margin: 0;
 }
 
-#profileContainerProfileComponent, #opinionContainerProfileComponent {
+#profileContainerProfileComponent {
     background-color: white;
-    width: 55rem;
-    margin-top: 5rem;
-    margin-bottom: 2rem;
-    margin-right: 2rem;
-    margin-left: 1.5rem;
-    height: fit-content;
+    width: 80%;
+    aspect-ratio: 2/1;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-right: 6%;
+    margin-left: 6%;
+    padding: 2% 4%;
     border-radius: 1rem;
     box-shadow: 1px 1px 8px 1px rgba(70, 70, 71, 0.5);
-    position: relative;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #opinionContainerProfileComponent{
-    margin-top: 3rem;
-    position: absolute;
-    width: 29rem;
-    margin-left: 0;
+    background-color: white;
+    width: 80%;
+    height: 35%;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    margin-right: 6%;
+    margin-left: 6%;
+    padding: 2% 4%;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 8px 1px rgba(70, 70, 71, 0.5);
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .tagsProfileComponent {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 2rem;
-    margin-bottom: 3rem;
 }
 
 .tagsProfileComponent div {
@@ -212,7 +221,6 @@
     flex-wrap: wrap;
     justify-content: center;
     overflow-y: scroll;
-    height: 100%;
     width: 100%;
 }
 
@@ -321,7 +329,7 @@
 }
 
 .verifiedProfileComponent {
-    height: 1.5rem;
+    height: 3vh;
     width: 2rem;
     fill: orange;
 }
@@ -329,9 +337,11 @@
 #usernameProfileComponent {
     color: #00000080;
     font-weight: 600;
+    font-size: 1rem;
 }
 
 .languageProfileComponent {
+    font-size: 0.7rem;
     position: relative;
     z-index: 0;
     background-color: #00000016;
@@ -353,4 +363,38 @@
     height: 1.2rem;
     width: 1.2rem;
 
+}
+
+#catalogoProfileComponent{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 95vh;
+}
+
+#profileContainerProfileComponentLocations{
+    background-color: white;
+    width: 88%;
+    height: 92%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-right: 2%;
+    margin-left: 2%;
+    padding: 2% 4%;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 8px 1px rgba(70, 70, 71, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.catalogoMitadProfileComponent{
+    width: 50%;
+    height: 100%;
+}
+
+.contenedorSelfOpinionesCatalogo{
+    width: 100%;
+    height: 75%;
+    display: flex;
+    overflow-y: scroll;
 }

@@ -32,10 +32,6 @@ function NavBar({setShowLanding, changeView, nombre, promedioPuntuacion, fotoPer
           <img className="navIcon" src="./src/assets/img/panel.png" />
           <h4 className="navText">Panel</h4>
         </a>
-        <a className="navIconContainer" onClick={() => {changeView('notifications')}}>
-          <img className="navIcon" src="./src/assets/img/not.png" />
-          <h4 className="navText">Notificaciones</h4>
-        </a>
         <a className="navIconContainer" onClick={() => {changeView('about')}}>
           <img className="navIcon" src="./src/assets/img/info.png" />
           <h4 className="navText">Conocenos</h4>

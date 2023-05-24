@@ -19,6 +19,7 @@
 
 /* Panel */
 .panelHeaderPanelStyle{
+    z-index: 1;
     width: calc(100%-5rem);
     height: 30%;
     display: flex;
@@ -26,6 +27,7 @@
     padding-bottom: 1%;
     margin: 1%;
     position: sticky;
+    background-color: white;
     top: 0;
 }
 

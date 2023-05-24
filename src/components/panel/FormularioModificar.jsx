@@ -4,30 +4,25 @@ import './FormularioAgregar.css';
 import imgBackButton from '../../assets/gifs/images.png';
 import ImageUploadPreviewComponent from './ImageUploadPreviewComponent';
 
-export const FormularioModificar = () => {
+export const FormularioModificar = ({id, closePop}) => {
+
+  // Método para obtener datos de la pinche granja
+
+  
+
+
   const [formData, setFormData] = useState({
     nombre: '',
     costo: '',
     tiempo: '',
     aforo: '',
     descripcion: '',
-    ubicacion: '',
-    categorias: [],
-    etiquetas: [],
     imagenes: [],
   });
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
-  };
-
-  const handleCheckboxChange = (e) => {
-    const { name, checked } = e.target;
-    const updatedValues = checked
-      ? [...formData[name], name]
-      : formData[name].filter((item) => item !== name);
-    setFormData({ ...formData, [name]: updatedValues });
   };
 
   const handleImagesUploaded = (images) => {
@@ -37,6 +32,7 @@ export const FormularioModificar = () => {
   };
 
   const handleSubmit = () => {
+    //Aqui se llama el fetch pa actualizar la info a la verga puta
     console.log(formData);
   };
 
@@ -45,9 +41,9 @@ export const FormularioModificar = () => {
       <div className="formFormularioAgregar">
         <div className="cabezaFormularioAgregar">
           <div className="button-backFormularioAgregar">
-            <img src={imgBackButton} className="backFormularioAgregar" alt="Back Button" />
+            <img src={imgBackButton} className="backFormularioAgregar" alt="Back Button" onClick={closePop}/>
           </div>
-          <div className="tituloFormularioAgregar">Registre su lugar</div>
+          <div className="tituloFormularioAgregar">Modifique su lugar</div>
         </div>
         <div className="dataFormularioAgregar">
           <div className="input-infoFormularioAgregar">
@@ -138,7 +134,7 @@ export const FormularioModificar = () => {
               ></textarea>
             </div>
           </div>
-          <div className="input-infoFormularioAgregar">
+          {/* <div className="input-infoFormularioAgregar">
             <div className="input-nameFormularioAgregar">
               <label htmlFor="ubicacion" className="input-lblFormularioAgregar">
                 Ubicación del lugar:
@@ -150,8 +146,8 @@ export const FormularioModificar = () => {
                 onChange={(e) => setFormData({ ...formData, ubicacion: e.target.value })}
               />
             </div>
-          </div>
-          <div className="input-infoFormularioAgregar">
+          </div> */}
+          {/* <div className="input-infoFormularioAgregar">
             <div className="input-nameFormularioAgregar">
               <label className="input-lblFormularioAgregar">Categorías:</label>
               <label className="ayudaFormularioAgregar">¿En qué categorías se encuentra su lugar?</label>
@@ -223,10 +219,10 @@ export const FormularioModificar = () => {
                 </label>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="dataFormularioAgregar">
-          <div className="input-infoFormularioAgregar">
+          {/* <div className="input-infoFormularioAgregar">
             <div className="input-nameFormularioAgregar">
               <label className="input-lblFormularioAgregar">Etiquetas:</label>
               <label className="ayudaFormularioAgregar">¿Cuáles etiquetas describen mejor lo que ofrece su lugar?</label>
@@ -298,7 +294,7 @@ export const FormularioModificar = () => {
                 </label>
               </div>
             </div>
-          </div>
+          </div> */}
           <div className="input-infoFormularioAgregar">
             <div className="input-nameFormularioAgregar">
               <label className="input-lblFormularioAgregar">Imágenes:</label>

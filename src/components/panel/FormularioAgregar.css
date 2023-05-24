@@ -23,13 +23,13 @@ html.FormularioAgregar {
     }
     
     .tituloFormularioAgregar {
-    padding-top: 3%;
+    padding-top: 1%;
     font-size: 2rem;
     font-weight: bold;
-    border-bottom: solid rgb(177, 177, 177) 1px;
+    border-bottom: solid rgb(210, 210, 210) 1px;
     padding-bottom: 1.5%;
     margin-bottom: 4%;
-    width: 90%;
+    width: 100%;
     opacity: 80%;
     }
     

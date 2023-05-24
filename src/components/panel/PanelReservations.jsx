@@ -4,12 +4,13 @@ import PreguntasPanel from './PreguntasPanel'
 import OpinionesPanel from './OpinionesPanel'
 import {getReservaciones} from '../../helpers/js/getReservaciones'
 import { useState, useEffect } from 'react'
-import CatalogoOpiniones from './CatalogoOpinar.jsx'
+import CatalogoReservacionesEditar from './CatalogoOpinar.jsx'
 import './PanelReservations.css'
 
 
 export const PanelReservations = () => {
     const [locations, setLocations] = useState([]);
+
 
 	const fetchReservaciones = async () => {
 		const { result } = await getReservaciones(localStorage.getItem("id"));
@@ -24,11 +25,11 @@ export const PanelReservations = () => {
         <>
             <div className="panelBodyContainerMain">
                     <div className="itemWelcomePanelStyle">
-                        Aqui están tus reservaciones pendientes y por calificar
+                        Aqui están tus locaciones
                     </div>
                 <div className="panelBodyPanelStyle">
                     <div className="contenedor"></div>
-                    <CatalogoOpiniones
+                    <CatalogoReservacionesEditar
                         locations = {locations}
                         key = {location.id}  />
                 </div>

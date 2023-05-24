@@ -27,7 +27,7 @@ export const AdressAutocompleto = ( {handleAddLocation} ) => {
     >
       <input
         type="text"
-        className="in-txtFormularioAgregar" 
+        className="searchInput in-txtFormularioAgregar" 
         placeholder="Dirección del lugar" 
       />
     </StandaloneSearchBox>

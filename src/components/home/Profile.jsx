@@ -10,21 +10,23 @@ import { getUserReviews } from '../../helpers/js/getUserReviews'
 
 
 export const Profile = () => {
+    let data;
     const [locations, setLocations] = useState([]);
-    const [profiles, setProfiles] = useState([]);
+    const [profile, setProfile] = useState({});
     const [opinions, setOpinions] = useState([]);
     const [showEdit, setShowEdit] = useState(false);
 
     const fetchProfile = async () => {
         const {result} = await getProfile(localStorage.getItem("id"));
         console.log(result);
-        setProfiles(result);
+        setProfile(result);
       }
 
     const fetchOpiniones = async () => {
         const { result } = await getUserReviews(localStorage.getItem("id"));
-        setOpinions(result);
         console.log(result);
+        setOpinions(result);
+        
     }
 
     const fetchLocaciones = async () => {
@@ -45,17 +47,17 @@ export const Profile = () => {
 
     return (
         <>  
-            {showEdit && <EditarPerfil closePop={handleShowEdit} data={data}/>}
+            {showEdit && <EditarPerfil closePop={handleShowEdit} data={profile}/>}
             <div id="catalogoProfileComponent">
                 <div className="catalogoMitadProfileComponent">
                     <div id="profileContainerProfileComponent">
                         <div id="profileHeaderProfileComponent">
                             <div className="profileCardProfileComponent">
                                 <div className="avatarContainerProfileComponent">
-                                    <img className="userProfileProfileComponent" src={result.imageProfile} alt="" />
+                                    <img className="userProfileProfileComponent" src={profile.fotoPerfil} alt="" />
                                 </div>
                                 <div>
-                                    <div className="bProfileComponent" onClick={()=>{ setShowEdit(!showEdit) }}>Elian Gerard 
+                                    <div className="bProfileComponent" onClick={()=>{ setShowEdit(!showEdit) }}>{profile.nombre+" "+profile.apellidos}
                                             ✏️
                                     </div>
 
@@ -63,10 +65,7 @@ export const Profile = () => {
                             </div>
                         </div>
                         <div>
-                            <p className="profileDescriptionProfileComponent">Soy un arrendador de propiedades con más de 10 años de experiencia en
-                                el mercado inmobiliario. Mi objetivo es que mis inquilinos se sientan
-                                cómodos y seguros en sus hogares, y para lograrlo me aseguro de mantener una comunicación
-                                abierta y efectiva con ellos.</p>
+                            <p className="profileDescriptionProfileComponent">{profile.descripcion}.</p>
                             <div className="tagsProfileComponent">
                                 <div id="userRatingProfileComponent">
                                     4.5 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">
@@ -98,7 +97,6 @@ export const Profile = () => {
                                 {opinions.map(opinion => (
                                     <CatalogoOpinionesSelfCard
                                         location={opinion}
-                                        key={opinion.id}
                                     />
                                 ))
                                 }

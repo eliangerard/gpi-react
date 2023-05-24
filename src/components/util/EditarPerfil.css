@@ -1,0 +1,153 @@
+.popupEditarPerfil{
+    z-index: 10000;
+    width: 95%;
+    height: 100%;;
+    position:fixed;
+    background-color: rgba(0,0,0,0.35);
+}
+
+.btnLaunchEditarPerfil{
+        outline: rgba(0,0,0,1) solid 0.2vw;
+        display:inline-table;
+        text-align: center;
+        font-family: 'Montserrat Alternates', sans-serif;
+        font-weight: 200;
+        color: white;
+        background-color: black;
+        width: 84%;
+        text-align: center;
+        border-radius: 1vw;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        padding-left: 8%;
+        padding-right: 8%;
+        margin-top: 5%;
+        font-size: 1vw;
+        font-family: 'Montserrat Alternates', sans-serif;
+        font-weight: 200;
+}
+      .btnLaunchEditarPerfil:hover {
+        cursor: pointer;
+}
+
+.tarjetaEditarPerfil{
+    padding: 0 0 0 0;
+    margin-left: 25%;
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 50%;
+}
+
+.profileContainerProfileComponent{
+    display: flex;
+    width: 30%;
+}
+
+#profileHeaderProfileComponent{
+    margin: 4% 2%;
+}
+
+.backprofileHeaderProfileComponent{
+    display: flex;
+    width: 10%;
+}
+
+.userTachotaProfileComponent{
+    display: flex;
+    width: 5%;
+    margin-right: 95%;
+}
+
+#closePopUpProfileComponent{
+    margin: 0%;
+    display: flex;
+    width: 100%;
+}
+
+.formularioEditarPerfil, .formularioEditarPerfil:hover{
+    margin: 2% 0%;
+    padding: 5% 10%;
+    width:80%;
+    text-align: center;
+    border-radius: 1rem;
+    background-color: rgb(240,240,240);
+    border: none;
+}
+
+.tituloEditarPerfil{
+    width: 100%;
+}
+
+
+.profile-picProfileComponen {
+    color: transparent;
+    transition: all .3s ease;
+    position: relative;
+    transition: all .3s ease;
+    
+}
+    
+    .spanProfileComponen {
+      display: inline-flex;
+      padding: .2em;
+      height: 2em;
+    }
+
+    .fileProfileComponen{
+        width: 100%;
+        height: 100%;
+    }
+
+    .image-input-container {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+      }
+      
+      .image-input-container input[type="file"] {
+        display: none;
+        width: 100%;
+        height: 100%;
+      }
+      
+      .image-input-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+      
+      .image-input-container label {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        overflow: hidden;
+        cursor: pointer;
+        transition: filter 0.3s ease;
+      }
+      
+      .image-input-container:hover label {
+        filter: opacity(0.5);
+      }
+      
+      .image-input-container:hover label::before {
+        content: "\270E"; /* Código del carácter de lápiz */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 24px;
+        color: white;
+      }
+      
+      .image-input-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }

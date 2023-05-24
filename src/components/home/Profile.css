@@ -119,6 +119,7 @@
     align-items: top;
     flex-wrap: wrap;
     width: 100%;
+    height: 100%;
 }
 
 .profileSectionProfileComponent {
@@ -404,10 +405,8 @@
     overflow-y: scroll;
 }
 .contenedorSelfOpinionesCatalogo2{
-    align-items: center;
-    align-items: center;
     width: 98%;
-    height: 80%;
+    height: 60%;
     display: flex;
     flex-wrap: wrap;
     overflow-y: scroll;

@@ -1,6 +1,5 @@
 
 import React, { useState, useRef } from 'react';
-import { removePublication } from './helpers/js/removePublication'
 
 function formatCurrency(value) {
 	return new Intl.NumberFormat('es-MX', {

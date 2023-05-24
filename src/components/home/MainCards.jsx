@@ -11,7 +11,8 @@ export const MainCards = () => {
         centerMode: true,
         infinite: true,
         slidesToShow: 1.6,
-        speed: 500
+        speed: 500,
+        arrows : false
       };
     return (
         <Slider {...settings}>

@@ -1,46 +1,59 @@
 import './Profile.css'
 import { useState, useEffect } from 'react'
-import 
-
+import LocationCard from '../home/LocationCard'
+import { getLocations } from '../../helpers/js/getLocations'
+import CatalogoOpinionesSelfCard from '../panel/CatalogoOpinionesSelfCard'
+import EditarPerfil from '../util/EditarPerfil'
+import { getProfile } from '../../helpers/js/getProfile'
+import { getOpiniones } from '../../helpers/js/getOpiniones'
 //Importar las dos madres de opiniones y locaciones
 
 
 export const Profile = () => {
     const [locations, setLocations] = useState([]);
+    const [profiles, setProfiles] = useState([]);
     const [opinions, setOpinions] = useState([]);
+    const [showEdit, setShowEdit] = useState(false);
+
+    const fetchProfile = async () => {
+        const {result} = await getProfile(localStorage.getItem("id"));
+        console.log(result);
+        setProfiles(result);
+      }
 
     const fetchOpiniones = async () => {
         const { result } = await getOpiniones(localStorage.getItem("id"));
-        console.log(result);
-        setOpinions(result);
+        
     }
 
     const fetchLocaciones = async () => {
-        const { result } = await getLocaciones(localStorage.getItem("id"));
-        console.log(result);
-        setLocations(result);
+        const { result } = await getLocations(localStorage.getItem("id"));
+        
     }
+
+    const handleShowEdit = () => {
+        setShowEdit(!showEdit);
+    }
+
     useEffect(() => {
-        fetchOpiniones();
-        fetchLocaciones();
+        fetchProfile();
     }, [])
 
     return (
-        <>
+        <>  
+            {showEdit && <EditarPerfil closePop={handleShowEdit} data={data}/>}
             <div id="catalogoProfileComponent">
                 <div className="catalogoMitadProfileComponent">
                     <div id="profileContainerProfileComponent">
                         <div id="profileHeaderProfileComponent">
                             <div className="profileCardProfileComponent">
                                 <div className="avatarContainerProfileComponent">
-                                    <img className="userProfileProfileComponent" src="src/avatar.jpg" alt="" />
+                                    <img className="userProfileProfileComponent" src={result.imageProfile} alt="" />
                                 </div>
                                 <div>
-                                    <div className="bProfileComponent">Elian Gerard <svg className="verifiedProfileComponent" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                        width="64px" height="64px">
-                                        <path
-                                            d="M21.187,10.007a3.457,3.457,0,0,1-.864-.712A3.378,3.378,0,0,1,20.6,8.154c.291-.821.62-1.751.092-2.474s-1.525-.7-2.4-.68a3.371,3.371,0,0,1-1.155-.078,3.369,3.369,0,0,1-.425-1.063c-.248-.845-.531-1.8-1.4-2.086-.838-.27-1.614.324-2.3.846A3.285,3.285,0,0,1,12,3.25a3.285,3.285,0,0,1-1.023-.631C10.293,2.1,9.52,1.5,8.678,1.774c-.867.282-1.15,1.24-1.4,2.085A3.418,3.418,0,0,1,6.857,4.92,3.482,3.482,0,0,1,5.7,5c-.878-.024-1.867-.05-2.4.68s-.2,1.653.092,2.473a3.336,3.336,0,0,1,.281,1.141,3.449,3.449,0,0,1-.863.713c-.732.5-1.563,1.069-1.563,1.993s.831,1.491,1.563,1.993a3.449,3.449,0,0,1,.863.712A3.335,3.335,0,0,1,3.4,15.847c-.29.82-.618,1.75-.091,2.473s1.521.7,2.4.68a3.479,3.479,0,0,1,1.156.078,3.4,3.4,0,0,1,.424,1.063c.248.845.531,1.8,1.4,2.086a1.424,1.424,0,0,0,.431.068,3.382,3.382,0,0,0,1.868-.914A3.285,3.285,0,0,1,12,20.75a3.285,3.285,0,0,1,1.023.631c.685.523,1.461,1.121,2.3.845.867-.282,1.15-1.24,1.4-2.084a3.388,3.388,0,0,1,.424-1.062A3.4,3.4,0,0,1,18.3,19c.878.021,1.867.05,2.4-.68s.2-1.653-.092-2.474a3.38,3.38,0,0,1-.281-1.139,3.436,3.436,0,0,1,.864-.713c.732-.5,1.563-1.07,1.563-1.994S21.92,10.508,21.187,10.007ZM15.45,11.1l-4,3a.749.749,0,0,1-.98-.07l-2-2a.75.75,0,0,1,1.06-1.06l1.54,1.54L14.55,9.9a.75.75,0,0,1,.9,1.2Z" />
-                                    </svg></div>
+                                    <div className="bProfileComponent" onClick={()=>{ setShowEdit(!showEdit) }}>Elian Gerard 
+                                            ✏️
+                                    </div>
 
                                 </div>
                             </div>
@@ -77,7 +90,7 @@ export const Profile = () => {
                     <div id="opinionContainerProfileComponent">
                         <div id="profileSectionsProfileComponent">
                             <div className="profileSectionProfileComponent">Opiniones</div>
-                            <div className="contenedorSelfOpinionesCatalogo">
+                            <div className="contenedorSelfOpinionesCatalogo2">
                                 {opinions.map(opinion => (
                                     <CatalogoOpinionesSelfCard
                                         location={opinion}

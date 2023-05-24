@@ -126,7 +126,7 @@
     transition: border 150ms;
     width: 100%;
     font-weight: bolder;
-    height: 2rem;
+    height: 15%;
     text-align: center;
     display: flex;
     align-items: center;
@@ -164,7 +164,7 @@
 }
 
 #opinionContainerProfileComponent{
-    background-color: white;
+    background-color: transparent;
     width: 80%;
     height: 35%;
     margin-top: 4%;
@@ -388,13 +388,27 @@
 }
 
 .catalogoMitadProfileComponent{
+    margin-top: 2%;
     width: 50%;
     height: 100%;
 }
 
 .contenedorSelfOpinionesCatalogo{
-    width: 100%;
-    height: 75%;
+    align-items: center;
+    align-items: center;
+    margin-top: 4%;
+    width: 98%;
+    height: 90%;
     display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+}
+.contenedorSelfOpinionesCatalogo2{
+    align-items: center;
+    align-items: center;
+    width: 98%;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
     overflow-y: scroll;
 }

@@ -1,6 +1,5 @@
 import './Profile.css'
 import { useState, useEffect } from 'react'
-import 
 
 //Importar las dos madres de opiniones y locaciones
 

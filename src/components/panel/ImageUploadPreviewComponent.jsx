@@ -15,16 +15,16 @@ const ImageUploadPreviewComponent = ({ handleImagesUploaded }) => {
 		const prevFileArray = [...fileURLs];
 
 		let images64 = [];
-		const reader = new FileReader();
-        reader.onloadend = async () => {
-			images64.push(reader.result);
-        };
         fileArray.forEach(file => {
+			const reader = new FileReader();
+			reader.onloadend = async () => {
+				images64.push(reader.result);
+			};
 			reader.readAsDataURL(file);
 		});
 
-		console.log(prevFileArray);
-		setFileArray(prevFileArray);
+		console.log(images64);
+		setFileArray(images64);
 		handleImagesUploaded(images64);
 	};
 

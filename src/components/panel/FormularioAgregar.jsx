@@ -5,6 +5,7 @@ import imgBackButton from '../../assets/gifs/images.png';
 import ImageUploadPreviewComponent from './ImageUploadPreviewComponent';
 import { postLocation } from '../../helpers/js/postLocation';
 import { convertBlobToBase64 } from '../../helpers/js/convertBlobToBase64';
+import { uploadImage } from '../../helpers/js/uploadImage';
 
 export const FormularioAgregar = () => {
   const [formData, setFormData] = useState({
@@ -63,40 +64,27 @@ export const FormularioAgregar = () => {
     const { aforo, categorias, costo, descripcion, imagenes, nombre, tiempo, ubicacion } = formData;
 
     if (
-      aforo.length !== 0 &&
-      categorias.length &&
-      costo.length !== 0 &&
-      descripcion.length !== 0 &&
-      imagenes.length !== 0 &&
-      nombre.length !== 0 &&
-      tiempo.length !== 0 &&
-      ubicacion !== 0
-    ) {
-      console.log("ERES LA MAMADA", formData);
-
-      // // Convierte las imágenes a formato Base64
-      // const base64Images = await Promise.all(
-      //   imagenes.map(async (image) => {
-      //     const blob = await fetch(image).then((response) => response.blob());
-      //     const base64 = await convertBlobToBase64(blob);
-      //     return base64;
-      //   })
-      // );
-
-      // // Actualiza el formData con las imágenes en formato Base64
-      // setFormData((prevFormData) => ({
-      //   ...prevFormData,
-      //   imagenes: base64Images,
-      // }));
-
-      // console.log("Imágenes en Base64:", base64Images);
-
-      // Realiza la llamada a la función postLocation con el formData actualizado
-      const result = await postLocation(localStorage.getItem("id"), formData);
-      console.log(formData);
+      aforo.length == 0 ||
+      categorias.length == 0 ||
+      costo.length == 0 ||
+      descripcion.length == 0 ||
+      imagenes.length == 0 ||
+      nombre.length == 0 ||
+      tiempo.length == 0 ||
+      ubicacion == 0
+    ) return console.log("No están llenos todos los datos");
+    formData.tiempo = tiempo * 60;
+    let urls = [];
+    for (const imagen of imagenes) {
+      const { result } = await uploadImage(imagen, localStorage.getItem("id"));
+      console.log(result);
+      urls.push(result);
     }
-
+    console.log(urls);
+    formData.imagenes = urls;
     console.log(formData);
+    const result = await postLocation(localStorage.getItem("id"), formData);
+    console.log(result);
   };
 
   return (

@@ -1,13 +1,13 @@
 export const uploadImage = async (base64, token) => {
-    let myHeaders = new Headers();
+    var myHeaders = new Headers();
     myHeaders.append("Authorization", "Bearer "+token);
     myHeaders.append("Content-Type", "application/json");
 
-    let raw = JSON.stringify({
-        "image": base64,
+    var raw = JSON.stringify({
+        "image": base64
     });
 
-    let requestOptions = {
+    var requestOptions = {
         method: 'POST',
         headers: myHeaders,
         body: raw,

@@ -8,14 +8,15 @@ const EditarPerfil = ({ data, closePop }) => {
   const [nombre, setNombre] = useState(data.nombre);
   const [apellido, setApellido] = useState(data.apellidos);
   const [descripcion, setDescripcion] = useState(data.descripcion);
-
+  
+  const submitImage = async () => {
+    console.log(fotoPerfil, localStorage.getItem("id"));
+      const response = await uploadImage(fotoPerfil, localStorage.getItem("id"));
+      console.log(response);
+  }
   function handleImageUpload(event) {
     const file = event.target.files[0];
 
-    const uploadImage = async (base64) => {
-        const response = await uploadImage(fotoPerfil, localStorage.getItem("id"));
-        console.log(fotoPerfil);
-    }
 
 
     if (file) {
@@ -47,7 +48,7 @@ const EditarPerfil = ({ data, closePop }) => {
 
   const handleApplyChanges = () => {
     // Aquí puedes utilizar los valores almacenados en los estados
-    uploadImage(fotoPerfil);
+    submitImage(fotoPerfil);
     console.log(fotoPerfil);
   };
 

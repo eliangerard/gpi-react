@@ -1,4 +1,4 @@
-export const updateProfile = async (token, nombre, apellido, imagen) => {
+export const updateProfile = async (token, nombre, apellido, descripcion, imagen) => {
     let myHeaders = new Headers();
     myHeaders.append("Authorization", "Bearer "+token);
     myHeaders.append("Content-Type", "application/json");

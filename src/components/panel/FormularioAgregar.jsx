@@ -72,24 +72,24 @@ export const FormularioAgregar = () => {
       tiempo.length !== 0 &&
       ubicacion !== 0
     ) {
-      console.log("ERES LA MAMADA");
+      console.log("ERES LA MAMADA", formData);
 
-      // Convierte las imágenes a formato Base64
-      const base64Images = await Promise.all(
-        imagenes.map(async (image) => {
-          const blob = await fetch(image).then((response) => response.blob());
-          const base64 = await convertBlobToBase64(blob);
-          return base64;
-        })
-      );
+      // // Convierte las imágenes a formato Base64
+      // const base64Images = await Promise.all(
+      //   imagenes.map(async (image) => {
+      //     const blob = await fetch(image).then((response) => response.blob());
+      //     const base64 = await convertBlobToBase64(blob);
+      //     return base64;
+      //   })
+      // );
 
-      // Actualiza el formData con las imágenes en formato Base64
-      setFormData((prevFormData) => ({
-        ...prevFormData,
-        imagenes: base64Images,
-      }));
+      // // Actualiza el formData con las imágenes en formato Base64
+      // setFormData((prevFormData) => ({
+      //   ...prevFormData,
+      //   imagenes: base64Images,
+      // }));
 
-      console.log("Imágenes en Base64:", base64Images);
+      // console.log("Imágenes en Base64:", base64Images);
 
       // Realiza la llamada a la función postLocation con el formData actualizado
       const result = await postLocation(localStorage.getItem("id"), formData);

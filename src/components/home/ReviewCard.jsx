@@ -22,9 +22,9 @@ function ReviewCard({ data, nombre, puntuacion, fotoPerfil, comentarios, fecha, 
             {
               stars.map((element, i) => {
                 if ((i + 1) > Math.round(puntuacion))
-                  return <span className="starnonr2">&#9733;</span>
+                  return <span key={i} className="starnonr2">&#9733;</span>
                 else
-                  return <span className="star2">&#9733;</span>
+                  return <span key={i} className="star2">&#9733;</span>
 
               })
             }

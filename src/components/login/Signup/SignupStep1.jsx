@@ -52,7 +52,7 @@ export const SignupStep1 = ({ nextStep, setLogin }) => {
         nextStep();
     }
     const ExampleCustomInput = forwardRef(({ value, onClick, placeholder }, ref) => (
-        <button className="loginInput loginDate" onClick={onClick} ref={ref}>
+        <button className="loginInput loginDate loginButton" onClick={onClick} ref={ref}>
             {value || placeholder}
         </button>
     ));
@@ -90,7 +90,7 @@ export const SignupStep1 = ({ nextStep, setLogin }) => {
                 <input ref={inputPass} className="loginInput" type="password" placeholder="Contraseña"></input>
             </div>
             <div id="signOptions">
-                <button onClick={signUp}>{loading ? <Loading white={true} showStatus={false}/> : "Registrarse"}</button>
+                <button className='loginButton' onClick={signUp}>{loading ? <Loading white={true} showStatus={false}/> : "Registrarse"}</button>
                 <p className="loginOption">¿Ya tienes una cuenta? <b onClick={() => setLogin(true)}>Inicia sesión</b></p>
             </div>
         </>

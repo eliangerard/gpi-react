@@ -52,7 +52,7 @@ export const Login = ( { setShowLanding, setLogin} ) => {
                 <p className="loginOption">¿Olvidaste tu contraseña? <b>Recupérala</b></p>
             </div>
             <div id="signOptions">
-                <button id='btnLogin' onClick={ login}>{loading ? <Loading white={true} showStatus={false}/> : "Iniciar sesión" }</button>
+                <button id='btnLogin' className='loginButton' onClick={ login}>{loading ? <Loading white={true} showStatus={false}/> : "Iniciar sesión" }</button>
                 <p className="loginOption">¿No tienes una cuenta? <b onClick={() => setLogin(false)}>Regístrate</b></p>
             </div>
         </>

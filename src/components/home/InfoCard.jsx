@@ -69,9 +69,9 @@ export const InfoCard = ({ idLocacion, nombre, enFavoritos, costo, tiempo, ubica
                         {
                             stars.map((element, i) => {
                                 if ((i+1) > Math.round(promedioPuntuacion))
-                                    return <span className="starnonr2Info">&#9733;</span>
+                                    return <span key={i} className="starnonr2Info">&#9733;</span>
                                 else
-                                    return <span className="star2Info">&#9733;</span>
+                                    return <span key={i} className="star2Info">&#9733;</span>
 
                             })
                         }

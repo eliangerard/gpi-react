@@ -173,7 +173,7 @@ h1 {
 #signOptions p {
     margin: 0.5rem 0;
 }
-button {
+.loginButton{
     background-color: black;
     border: none;
     border-radius: 0.5rem;
@@ -185,7 +185,7 @@ button {
     font-family: 'Montserrat';
 }
 
-button:hover {
+.loginButton:hover {
     cursor: pointer;
 }
 

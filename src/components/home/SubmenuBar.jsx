@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import imagen from '../../assets/gifs/images.png'
 
 
-export const SubmenuBar = ({ id, closePopUp, moveToScroll, handleScroll, scrollHeight2, selectButton, promedioPuntuacion, costo, tiempo }) => {
+export const SubmenuBar = ({ id, closePopUp, moveToScroll, handleScroll, scrollHeight2, selectButton, promedioPuntuacion, costo, tiempo, reservar }) => {
     useEffect(() => {
         selectButtonIntermediate(scrollHeight2);
     }, [scrollHeight2]);
@@ -141,7 +141,7 @@ export const SubmenuBar = ({ id, closePopUp, moveToScroll, handleScroll, scrollH
                             / {parseInt(tiempo)/60} horas
                         </div>
                     </div>
-                    <div className="btnLaunch" id="btnGo">
+                    <div className="btnLaunch" id="btnGo" onClick={reservar}>
                         Reservar
                     </div>
                 </div>

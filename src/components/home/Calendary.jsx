@@ -5,15 +5,19 @@ import './Calendary.css'
 import es from 'date-fns/locale/es'
 registerLocale("es", es);
 
-const Calendary = () => {
+const Calendary = ({setDate}) => {
   const [startDate, setStartDate] = useState(new Date());
 
+  const submitDate = (date) => {
+    setStartDate(date)
+    setDate(date)
+  }
   return (
     <div className="calendarioContainerHome">
       <DatePicker
         locale={es}
         selected={startDate}
-        onChange={(date) => setStartDate(date)}
+        onChange={submitDate}
         monthsShown={3}
         inline
         excludeDates={[new Date("2023/06/21"), new Date()]}

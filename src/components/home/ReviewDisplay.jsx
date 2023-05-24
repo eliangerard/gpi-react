@@ -8,7 +8,7 @@ export const ReviewDisplay = ({ qty, id }) => {
   const [opiniones, setOpiniones] = useState([]);
   const fetchOpiniones = async () => {
     console.log(id);
-    const { result } = await getOpiniones(localStorage.getItem("id"), id);
+    const { result = [] } = await getOpiniones(localStorage.getItem("id"), id);
     console.log(result);
     setOpiniones(result);
   }

@@ -43,7 +43,7 @@ export const SignupStep2 = ({ nextStep, backStep, setLogin }) => {
                     <p>Te hemos enviado un código de verificación al correo que ingresaste</p>
 
                     <input ref={inputCode} className="loginInput verification" type="number" maxLength="6" placeholder="XXXXXX"></input>
-                    <button onClick={confirmCode}>{ loading ? <Loading white={true} showStatus={false} /> : "Verificar"}</button>
+                    <button className='loginButton' onClick={confirmCode}>{ loading ? <Loading white={true} showStatus={false} /> : "Verificar"}</button>
                 </div>
             </div>
         </>

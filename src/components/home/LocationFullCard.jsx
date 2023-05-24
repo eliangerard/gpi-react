@@ -8,7 +8,11 @@ import QuestionsDisplay from './QuestionsDisplay';
 import Calendary from './Calendary';
 import Mapa from './Mapa';
 import { getLocationByID } from '../../helpers/js/getLocations';
-import PreguntasTarjeta from '../panel/PreguntasTarjeta';
+import { PreguntasDisplay } from './PreguntasDisplay';
+import { postReservation } from '../../helpers/js/postReservation';
+import { ToastContainer, toast } from 'react-toastify';
+
+import "react-toastify/dist/ReactToastify.css";
 
 export const LocationFullCard = ({ id, closePop }) => {
 	const [scrollHeight2, setScrollHeight2] = useState(0);
@@ -20,7 +24,32 @@ export const LocationFullCard = ({ id, closePop }) => {
 	const Review = useRef(null);
 	const Ubication = useRef(null);
 	const Calendar = useRef(null);
-	
+
+	let datedDate = "";
+
+	const setDate = (date) => {
+		datedDate = date;
+	}
+
+	const notify = () => toast.success('¡Reservación exitosa!', {
+		position: "bottom-right",
+		autoClose: 50000,
+		hideProgressBar: false,
+		closeOnClick: true,
+		pauseOnHover: true,
+		draggable: true,
+		progress: undefined,
+		theme: "light",
+	});
+	const reservar = async () => {
+		if (!datedDate) return;
+		console.log(datedDate);
+		const response = await postReservation(localStorage.getItem("id"), datedDate.toISOString(), id);
+		console.log(response);
+		notify();
+		closePop();
+	}
+
 	const fetchLocation = async () => {
 		const { result } = await getLocationByID(localStorage.getItem("id"), id);
 		console.log(result[0]);
@@ -96,8 +125,10 @@ export const LocationFullCard = ({ id, closePop }) => {
 		};
 	}, []);
 
-	return (
+	return (<>
+
 		<div className={`popup ${show ? 'show' : ''}`}>
+
 			<div className="contenedorChueco" ref={scrollViewer}>
 				<div className="tarjeta" ref={Gallery}>
 					<SubmenuBar
@@ -107,9 +138,10 @@ export const LocationFullCard = ({ id, closePop }) => {
 						handleSroll={handleScroll}
 						scrollHeight2={scrollHeight2}
 						selectButton={selectButton}
+						reservar={reservar}
 						{...locationData}
 					/>
-					<Carrousel id={id} imagenes={locationData.ruta}/>
+					<Carrousel id={id} imagenes={locationData.ruta} />
 					<InfoCard id={id} {...locationData} />
 					<div className="wideCard2">
 						<div className="wideCard" ref={Review}>
@@ -118,7 +150,10 @@ export const LocationFullCard = ({ id, closePop }) => {
 						</div>
 						<div className="wideCard" ref={Review}>
 							<div className="segmentHeader">Preguntas</div>
-							<PreguntasTarjeta qty={6} id={id} />
+							<div className='wcPreguntas'>
+								<PreguntasDisplay id={id} />
+
+							</div>
 						</div>
 						<div className="wideCard" ref={Ubication}>
 							<div className="segmentHeader">Ubicación</div>
@@ -126,12 +161,13 @@ export const LocationFullCard = ({ id, closePop }) => {
 						</div>
 						<div className="wideCard" ref={Calendar}>
 							<div className="segmentHeader">Fechas</div>
-							<Calendary id={id} />
+							<Calendary setDate={setDate} id={id} />
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+	</>
 	);
 };
 

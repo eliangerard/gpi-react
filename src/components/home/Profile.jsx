@@ -1,11 +1,11 @@
 import './Profile.css'
 import { useState, useEffect } from 'react'
 import LocationCard from '../home/LocationCard'
-import { getLocations } from '../../helpers/js/getLocations'
+import { getUserLocations } from '../../helpers/js/getUserLocations'
 import CatalogoOpinionesSelfCard from '../panel/CatalogoOpinionesSelfCard'
 import EditarPerfil from '../util/EditarPerfil'
 import { getProfile } from '../../helpers/js/getProfile'
-import { getOpiniones } from '../../helpers/js/getOpiniones'
+import { getUserReviews } from '../../helpers/js/getUserReviews'
 //Importar las dos madres de opiniones y locaciones
 
 
@@ -23,12 +23,14 @@ export const Profile = () => {
 
     const fetchOpiniones = async () => {
         const { result } = await getUserReviews(localStorage.getItem("id"));
-        
+        setOpinions(result);
+        console.log(result);
     }
 
     const fetchLocaciones = async () => {
         const { result } = await getUserLocations(localStorage.getItem("id"));
-        
+        setLocations(result);
+        console.log(result)
     }
 
     const handleShowEdit = () => {

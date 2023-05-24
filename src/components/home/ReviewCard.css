@@ -24,7 +24,9 @@
     width: 100%;
     height: calc(100% * (20% / var(--element-width)));
 }
-  
+.reviewHeader {
+    display: flex;
+}
 .image-container2 {
     display: inline-table;
     vertical-align: middle;

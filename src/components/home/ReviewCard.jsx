@@ -5,7 +5,7 @@ function ReviewCard({ data, nombre, puntuacion, fotoPerfil, comentarios, fecha, 
   const [stars, setStars] = useState([1, 1, 1, 1, 1]);
   return (
     <div className="card2">
-      <div className="wideCard">
+      <div className="reviewHeader">
         <div className="image-container2">
           <img src={fotoPerfil} alt="Profile Picture" />
         </div>

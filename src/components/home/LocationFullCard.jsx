@@ -4,9 +4,11 @@ import SubmenuBar from './SubmenuBar';
 import Carrousel from './Carrusel';
 import InfoCard from './InfoCard';
 import ReviewDisplay from './ReviewDisplay';
+import QuestionsDisplay from './QuestionsDisplay';
 import Calendary from './Calendary';
 import Mapa from './Mapa';
 import { getLocationByID } from '../../helpers/js/getLocations';
+import PreguntasTarjeta from '../panel/PreguntasTarjeta';
 
 export const LocationFullCard = ({ id, closePop }) => {
 	const [scrollHeight2, setScrollHeight2] = useState(0);
@@ -113,6 +115,10 @@ export const LocationFullCard = ({ id, closePop }) => {
 						<div className="wideCard" ref={Review}>
 							<div className="segmentHeader">Reseñas</div>
 							<ReviewDisplay qty={6} id={id} />
+						</div>
+						<div className="wideCard" ref={Review}>
+							<div className="segmentHeader">Preguntas</div>
+							<PreguntasTarjeta qty={6} id={id} />
 						</div>
 						<div className="wideCard" ref={Ubication}>
 							<div className="segmentHeader">Ubicación</div>

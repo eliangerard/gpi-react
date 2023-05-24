@@ -3,7 +3,7 @@ import './Home.css';
 import NavBar from './components/home/NavBar'
 import HomeDisplay from './components/home/HomeDisplay'
 import About from './components/about/About'
-import Notifications from './components/notifications/Notifications'
+import Admin from './Admin'
 import Panel from './components/panel/Panel'
 import Profile from './components/home/Profile'
 import { MobileNavBar } from './components/home/MobileNavBar';
@@ -43,7 +43,7 @@ function Home({ setShowLanding }) {
       {currentView === 'home' && <HomeDisplay />}
       {currentView === 'about' && <About />}
       {currentView === 'panel' && <Panel />}
-      {currentView === 'notifications' && <Notifications />}
+      {currentView === 'admin' && <Admin />}
       {currentView === 'profile' && <Profile/>}
     </div>
   );

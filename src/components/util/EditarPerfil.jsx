@@ -11,16 +11,15 @@ const EditarPerfil = ({ data, closePop }) => {
   const [descripcion, setDescripcion] = useState(data.descripcion);
   
   const submitImage = async () => {
+    console.log("HOLAAA");
+    console.log(descripcion);
     console.log(fotoPerfil, localStorage.getItem("id"));
       const response = await uploadImage(fotoPerfil, localStorage.getItem("id"));
       const result = await updateProfile(localStorage.getItem("id"),nombre,apellido,descripcion,response.result);
-      console.log(response);
-      console.log(result);
+      console.log(descripcion);
   }
   function handleImageUpload(event) {
     const file = event.target.files[0];
-
-
 
     if (file) {
       const reader = new FileReader();
@@ -47,10 +46,10 @@ const EditarPerfil = ({ data, closePop }) => {
 
   const handleDescripcionChange = (event) => {
     setDescripcion(event.target.value);
+    console.log(event.target.value);
   };
 
   const handleApplyChanges = () => {
-    // Aquí puedes utilizar los valores almacenados en los estados
     submitImage(fotoPerfil);
   };
 
@@ -74,13 +73,14 @@ const EditarPerfil = ({ data, closePop }) => {
             <div className="avatarContainerProfileComponent">
               <div className="image-input-container">
                 <input
-                  type="file"
-                  id="image-input"
-                  accept="image/*"
-                  onChange={(event) => {
-                    handleImageUpload(event);
-                  }}
-                />
+  type="file"
+  id="image-input"
+  accept="image/*"
+  defaultValue=""
+  onChange={(event) => {
+    handleImageUpload(event);
+  }}
+/>
                 <label htmlFor="image-input">
                   <img src={fotoPerfil} alt="Seleccionar imagen" />
                 </label>
@@ -90,7 +90,7 @@ const EditarPerfil = ({ data, closePop }) => {
               Nombre:
               <input
                 className="formularioEditarPerfil"
-                placeholder={`${data.nombre}`}
+                placeholder={data.nombre}
                 value={nombre}
                 onChange={handleNombreChange}
               />
@@ -108,9 +108,10 @@ const EditarPerfil = ({ data, closePop }) => {
               Descripción:
               <input
                 className="formularioEditarPerfil"
-                placeholder={`${data.descripcion}.`}
+                placeholder={data.descripcion}
                 value={descripcion}
-                onChange={handleDescripcionChange}
+                onChange={handleDescripcionChange
+                }
               />
             </div>
             <div className="btnLaunchEditarPerfil" id="btnGo" onClick={handleApplyChanges}>

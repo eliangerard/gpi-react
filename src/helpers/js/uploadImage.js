@@ -4,7 +4,7 @@ export const uploadImage = async (base64, token) => {
     myHeaders.append("Content-Type", "application/json");
 
     let raw = JSON.stringify({
-        "imagen": base64,
+        "image": base64,
     });
 
     let requestOptions = {

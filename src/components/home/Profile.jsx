@@ -22,12 +22,12 @@ export const Profile = () => {
       }
 
     const fetchOpiniones = async () => {
-        const { result } = await getOpiniones(localStorage.getItem("id"));
+        const { result } = await getUserReviews(localStorage.getItem("id"));
         
     }
 
     const fetchLocaciones = async () => {
-        const { result } = await getLocations(localStorage.getItem("id"));
+        const { result } = await getUserLocations(localStorage.getItem("id"));
         
     }
 
@@ -37,6 +37,8 @@ export const Profile = () => {
 
     useEffect(() => {
         fetchProfile();
+        fetchLocaciones();
+        fetchOpiniones();
     }, [])
 
     return (

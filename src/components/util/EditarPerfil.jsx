@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Imagen1 from '../../assets/gifs/images.png';
 import './EditarPerfil.css';
 import { uploadImage } from '../../helpers/js/uploadImage';
+import {updateProfile} from '../../helpers/js/updateProfile';
 
 const EditarPerfil = ({ data, closePop }) => {
   const [fotoPerfil, setFotoPerfil] = useState(data.fotoPerfil);
@@ -12,7 +13,9 @@ const EditarPerfil = ({ data, closePop }) => {
   const submitImage = async () => {
     console.log(fotoPerfil, localStorage.getItem("id"));
       const response = await uploadImage(fotoPerfil, localStorage.getItem("id"));
+      const result = await updateProfile(localStorage.getItem("id"),nombre,apellido,descripcion,response.result);
       console.log(response);
+      console.log(result);
   }
   function handleImageUpload(event) {
     const file = event.target.files[0];
@@ -49,7 +52,6 @@ const EditarPerfil = ({ data, closePop }) => {
   const handleApplyChanges = () => {
     // Aquí puedes utilizar los valores almacenados en los estados
     submitImage(fotoPerfil);
-    console.log(fotoPerfil);
   };
 
   const closeComponent = () => {

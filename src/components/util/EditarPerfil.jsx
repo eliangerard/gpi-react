@@ -14,6 +14,7 @@ const EditarPerfil = ({ data, closePop }) => {
 
     const uploadImage = async (base64) => {
         const response = await uploadImage(fotoPerfil, localStorage.getItem("id"));
+        console.log(response);
         console.log(fotoPerfil);
     }
 

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Imagen1 from '../../assets/gifs/images.png';
 import './EditarPerfil.css';
+import { uploadImage } from '../../helpers/js/uploadImage';
 
 const EditarPerfil = ({ data, closePop }) => {
   const [fotoPerfil, setFotoPerfil] = useState(data.fotoPerfil);
@@ -10,6 +11,12 @@ const EditarPerfil = ({ data, closePop }) => {
 
   function handleImageUpload(event) {
     const file = event.target.files[0];
+
+    const uploadImage = async (base64) => {
+        const response = await uploadImage(fotoPerfil, localStorage.getItem("id"));
+        console.log(fotoPerfil);
+    }
+
 
     if (file) {
       const reader = new FileReader();
@@ -40,10 +47,8 @@ const EditarPerfil = ({ data, closePop }) => {
 
   const handleApplyChanges = () => {
     // Aquí puedes utilizar los valores almacenados en los estados
+    uploadImage(fotoPerfil);
     console.log(fotoPerfil);
-    console.log(nombre);
-    console.log(apellido);
-    console.log(descripcion);
   };
 
   const closeComponent = () => {

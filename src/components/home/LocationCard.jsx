@@ -11,7 +11,8 @@ function formatCurrency(value) {
 	}).format(value);
 }
 
-export const LocationCard = ({ id, nombre, costo, ruta, ubicacion, tiempo, enFavoritos }) => {
+export const LocationCard = ({ id, nombre, costo, ruta, ubicacion, tiempo, enFavoritos, promedioPuntuacion, categoria }) => {
+	const [stars, setStars] = useState([1, 1, 1, 1, 1]);
 	const [show, setShow] = useState(false);
 	const btnHeart = useRef(null);
 
@@ -42,14 +43,17 @@ export const LocationCard = ({ id, nombre, costo, ruta, ubicacion, tiempo, enFav
 			<article className="granja">
 				<img className="granjaImg" src={ruta} />
 				<div className="granjaTop">
-					<div className="granjaCategoria">Al aire libre</div>
-					<div className="granjaCategoria tiempo">{parseInt(tiempo)/60} horas</div>
+					<div className="granjaCategoria">{categoria}</div>
+					<div className="granjaCategoria tiempo">{parseInt(tiempo) / 60} horas</div>
 					<div className="host">
-						<span className="fa fa-star checked rating"></span>
-						<span className="fa fa-star checked rating"></span>
-						<span className="fa fa-star checked rating"></span>
-						<span className="fa fa-star checked rating"></span>
-						<span className="fa fa-star rating"></span>
+						{
+							stars.map((element, i) => {
+								if ((i + 1) > Math.round(promedioPuntuacion))
+									return <span key={i} className="fa fa-star rating"></span>
+								else
+									return <span key={i} className="fa fa-star checked rating"></span>
+							})
+						}
 					</div>
 				</div>
 				<p className="name">{nombre}</p>
@@ -65,7 +69,7 @@ export const LocationCard = ({ id, nombre, costo, ruta, ubicacion, tiempo, enFav
 					<button className="btnSave" onClick={addFavorite}>
 						<i className={"heartContainerInfoCardMini " + (enFavoritos == 1 ? "press" : "")} ref={btnHeart}></i>
 					</button>
-					<button id={'location'+id} className="btnReservar" onClick={showPopUp}>
+					<button id={'location' + id} className="btnReservar" onClick={showPopUp}>
 						Ver detalles
 					</button>
 				</div>

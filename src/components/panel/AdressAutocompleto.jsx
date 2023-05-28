@@ -1,7 +1,7 @@
 import React, {useRef} from 'react';
 import {StandaloneSearchBox, LoadScript} from '@react-google-maps/api';
 
-export const AdressAutocompleto = ( {handleAddLocation} ) => {
+export const AdressAutocompleto = ( {handleAddLocation , header = false} ) => {
   const inputRef = useRef();
 
   const handleLocationSelect = () => {
@@ -27,7 +27,7 @@ export const AdressAutocompleto = ( {handleAddLocation} ) => {
     >
       <input
         type="text"
-        className="searchInput in-txtFormularioAgregar" 
+        className={ header ? "searchInput siDir" : "searchInput in-txtFormularioAgregar" }
         placeholder="Dirección del lugar" 
       />
     </StandaloneSearchBox>

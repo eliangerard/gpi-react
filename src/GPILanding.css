@@ -118,6 +118,10 @@ aside {
     position: absolute;
 }
 
+.navEdit:hover {
+    cursor: pointer;
+}
+
 .navContainer{
     height: 100%;
 }

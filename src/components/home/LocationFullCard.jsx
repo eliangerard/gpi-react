@@ -13,11 +13,16 @@ import { postReservation } from '../../helpers/js/postReservation';
 import { ToastContainer, toast } from 'react-toastify';
 
 import "react-toastify/dist/ReactToastify.css";
+import placeholder from '../../assets/img/gpi_placeholder.png'
 
 export const LocationFullCard = ({ id, closePop }) => {
 	const [scrollHeight2, setScrollHeight2] = useState(0);
 	const [show, setShow] = useState(false);
 	const [locationData, setLocationData] = useState({});
+	const [locationImages, setLocationImages] = useState([{
+		image: '../../assets/img/gpi_placeholder.png',
+		caption :"Loading"
+	}]);
 
 	const scrollViewer = useRef(null);
 	const Gallery = useRef(null);
@@ -52,8 +57,9 @@ export const LocationFullCard = ({ id, closePop }) => {
 
 	const fetchLocation = async () => {
 		const { result } = await getLocationByID(localStorage.getItem("id"), id);
-		console.log(result[0]);
-		setLocationData(result[0])
+		console.log(result);
+		setLocationData(result.location);
+		setLocationImages(result.images);
 	}
 
 	useEffect(() => {
@@ -141,7 +147,7 @@ export const LocationFullCard = ({ id, closePop }) => {
 						reservar={reservar}
 						{...locationData}
 					/>
-					<Carrousel id={id} imagenes={locationData.ruta} />
+					<Carrousel id={id} imagenes={locationImages} />
 					<InfoCard id={id} {...locationData} />
 					<div className="wideCard2">
 						<div className="wideCard" ref={Review}>

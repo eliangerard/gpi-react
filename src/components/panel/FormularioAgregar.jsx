@@ -30,17 +30,18 @@ export const FormularioAgregar = () => {
   };
 
   const handleCheckboxChange = (e) => {
-    const { name, checked } = e.target;
+    const { name, value, checked } = e.target;
     setFormData((prevFormData) => {
       const updatedValues = checked
-        ? [...prevFormData[name], name]
-        : prevFormData[name].filter((item) => item !== name);
+        ? [...prevFormData[name], value]
+        : prevFormData[name].filter((item) => item !== value);
       return {
         ...prevFormData,
         [name]: updatedValues,
       };
     });
   };
+
 
   const handleImagesUploaded = async (images) => {
     setFormData((prevFormData) => ({
@@ -63,6 +64,7 @@ export const FormularioAgregar = () => {
   const handleSubmit = async () => {
     const { aforo, categorias, costo, descripcion, imagenes, nombre, tiempo, ubicacion } = formData;
 
+    console.log(formData);
     if (
       aforo.length == 0 ||
       categorias.length == 0 ||
@@ -201,56 +203,60 @@ export const FormularioAgregar = () => {
                   <input
                     type="checkbox"
                     name="categorias"
-                    value={categorias[0]}
+                    value={0}
                     className="in-catFormularioAgregar"
                     onChange={handleCheckboxChange}
                   />
                   <label htmlFor="categoria1" className="checkbox-lblFormularioAgregar">
-                    Aire Libre
+                    {categorias[0]}
                   </label>
                 </div>
                 <div className="chck-catFormularioAgregar">
                   <input
                     type="checkbox"
                     name="categorias"
+                    value={1}
                     className="in-catFormularioAgregar"
                     onChange={handleCheckboxChange}
                   />
                   <label htmlFor="categoria2" className="checkbox-lblFormularioAgregar">
-                    Salón
+                    {categorias[1]}
                   </label>
                 </div>
                 <div className="chck-catFormularioAgregar">
                   <input
                     type="checkbox"
                     name="categorias"
+                    value={2}
                     className="in-catFormularioAgregar"
                     onChange={handleCheckboxChange}
                   />
                   <label htmlFor="categoria3" className="checkbox-lblFormularioAgregar">
-                    Elegante
+                    {categorias[2]}
                   </label>
                 </div>
                 <div className="chck-catFormularioAgregar">
                   <input
                     type="checkbox"
                     name="categorias"
+                    value={3}
                     className="in-catFormularioAgregar"
                     onChange={handleCheckboxChange}
                   />
                   <label htmlFor="categoria4" className="checkbox-lblFormularioAgregar">
-                    Familiar
+                    {categorias[3]}
                   </label>
                 </div>
                 <div className="chck-catFormularioAgregar">
                   <input
                     type="checkbox"
                     name="categorias"
+                    value={4}
                     className="in-catFormularioAgregar"
                     onChange={handleCheckboxChange}
                   />
                   <label htmlFor="categoria5" className="checkbox-lblFormularioAgregar">
-                    Fiestas
+                    {categorias[4]}
                   </label>
                 </div>
               </div>

@@ -5,3 +5,7 @@
     padding-bottom: 5%;
     width: 52%;
 }
+.thumbnail {
+    height: 5rem;
+    object-fit: cover;
+}

@@ -28,6 +28,9 @@
   aspect-ratio: 20/11;
   overflow-y: scroll;
 }
+.contenedorChueco::-webkit-scrollbar {
+  padding: ;
+}
 .halfImages {
   border-radius: 0.5vw;
   display: inline-table;

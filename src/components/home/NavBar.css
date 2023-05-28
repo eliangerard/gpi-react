@@ -27,7 +27,9 @@
 #iLogout {
     width: 60%;
 }
-
+.siDir {
+    width: 100%!important;
+}
 #navRight {
     position:absolute;
     filter: invert(100%);

@@ -9,6 +9,7 @@ export const PanelHome = ({ isDataEmpty }) => {
     //Aquí lleva una manera de ocultar las reservaciones en caso de no tener y mostrar las recientes o en su defecto
     //la que no ha calificado
 
+
     const renderQuestionsOpinions = () => {
         return (
             <>

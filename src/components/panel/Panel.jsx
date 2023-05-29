@@ -8,7 +8,7 @@ import PanelReservations from './PanelReservations'
 import PanelQuestions from './PanelQuestions'
 import PanelReviews from './PanelReview'
 import PanelMyLocations from './PanelMyLocations'
-import { getHostLocations } from '../../helpers/js/getHostLocations';
+import { getUserLocations } from '../../helpers/js/getUserLocations'
 
 import './Panel.css'
 import { useEffect } from 'react';
@@ -27,14 +27,16 @@ export const Panel = () => {
     const [currentView, setCurrentView] = useState('PanelHome');
     const [isDataEmpty, setIsDataEmpty] = useState(false);
 
-    const fetchLocaciones = async () => {
-        const { result } = await getHostLocations(localStorage.getItem("id"));
+
+    const fetchHostLocations = async () => {
+        const { result } = await getUserLocations(localStorage.getItem("id"));
         console.log(result);
-        
-        setIsDataEmpty(isEmpty(result));
+        setIsDataEmpty(isEmpty(result));        
     }
+    
+
     useEffect(()=>{
-        fetchLocaciones();
+        fetchHostLocations();
     },[])
 
     const changeView = (view) => {

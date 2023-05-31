@@ -13,7 +13,7 @@ export const HomeDisplay = () => {
 	const [searched, setSearched] = useState(false);
 
 	const fetchLocations = async () => {
-		const { result } = await getLocations(localStorage.getItem("id"), category);
+		const { result = [] } = await getLocations(localStorage.getItem("id"), category);
 		console.log(result);
 		setSearched(false);
 		setLocations(result);

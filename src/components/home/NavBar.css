@@ -1,0 +1,100 @@
+#navLogoContainer {
+    display:inline-block;
+    align-items: center;
+    margin: 1.3rem;
+    border-radius: 0.75vw;
+    height: 2.5rem;
+    width: calc(100% - 2.6rem);
+    overflow: hidden;
+}
+
+#navLogo {
+    position: absolute;
+    height: 1.5rem;
+    float: left;
+    z-index: 0;
+}
+
+#rightBackground {
+    position:absolute;
+    background: linear-gradient(90deg, rgba(36,0,13,0) 0%, rgba(0,0,0,1) 14%, rgba(0,0,0,1) 100%);
+    width: 5rem;
+    right: 0;
+    height: 3rem;
+    z-index: 1;
+}
+
+#iLogout {
+    width: 60%;
+}
+.siDir {
+    width: 100%!important;
+}
+#navRight {
+    position:absolute;
+    filter: invert(100%);
+    right: 1.8rem;
+    height: 1.5rem;
+    z-index: 2;
+}
+
+.navIconContainer {
+    display:flex;
+    align-items: center;
+    background-color: #000000;
+    margin: 1rem;
+    padding: 0.2rem 0rem;
+    border-radius: 0.75vw;
+    height: 2.5rem;
+    overflow: hidden;
+    transition: filter 0.15s;
+}
+.navIconContainer:hover {
+    filter: invert(100%);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.navIcon {
+    filter: invert(100%);
+    margin: 0.5rem 1rem 0.5rem 0.5rem;
+    height: 2rem;
+}
+
+.navText {
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+
+.navLink {
+    width: 80%;
+    height: 7%;
+}
+
+aside {
+    display: relative;
+    position: fixed;
+    z-index: 2;
+    background-color: black;
+    width: 5rem;
+    height: 100vh;
+    color: white;
+    left:0;
+    top:0;
+    transition: width 0.5s;
+}
+
+aside:hover {
+    width: 15rem;
+}
+#asideHeader {
+    width:100%
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+
+#navPreview{
+    right: 35%;
+}

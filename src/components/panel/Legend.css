@@ -1,0 +1,14 @@
+.containerLegendGoHost{
+    display: flex;
+    text-align: center;
+    vertical-align: top;
+    background-color: rgb(230,230,230);
+    border-color: rgb(210,210,210);
+    border-radius: 1rem;
+    font-size: 1rem;
+    width: 30%;
+    margin-left: 2%;
+    padding: 18% 9% 18%;
+    color: rgb(180,180,180);
+    font-family: 'Montserrat';
+}

@@ -1,12 +1,11 @@
-import { useState } from 'react';
-
-import gpiWhite from '../../assets/logos/gpi-w.png';
+import { useState, useEffect } from 'react';
+import { Login } from './Login'
+import { Signup } from './Signup'
 import exampleLocation from '../../assets/locations/portada.jpg'
-import './LoginCard.css';
-import Login from './Login';
-import Signup from './Signup';
-
-export const LoginCard = ( { toLogin } ) => {
+export const LoginCard = ( { setShowLanding, toLogin } ) => {
+    useEffect(() => {
+        import('./LoginCard.css');
+      }, []);
     const [login, setLogin] = useState(toLogin);
     const setShowLogin = (show) => {
         setLogin(show);
@@ -17,8 +16,8 @@ export const LoginCard = ( { toLogin } ) => {
             <div id='opaquer'>
                 <section id='loginCard'>
                     <div id="signLeft">
-                        { !login && (<Signup setLogin = {setShowLogin}/>)}
-                        { login && (<Login setLogin = {setShowLogin}/>)}
+                        { !login && (<Signup setLogin = {setShowLogin} setShowLanding= {setShowLanding}/>)}
+                        { login && (<Login setShowLanding = {setShowLanding} setLogin = {setShowLogin}/>)}
                     </div>
                     <div id="signImg">
                         <img src={exampleLocation}></img>

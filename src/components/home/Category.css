@@ -1,0 +1,37 @@
+.categories {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: calc(95%);
+    justify-content: center;
+    margin-top: 5rem;
+    padding-bottom: 0rem;
+}
+
+.category {
+    display: inline-block;
+    margin: auto;
+    margin-inline: 5vw;
+    filter: opacity(40%);
+    transition: filter 0.3s;
+}
+
+.catContent {
+    display: flex;
+    justify-content: center;
+}
+.headIcon {
+    height: 2rem;
+}
+
+div.h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1vw;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+}
+.category:hover {
+    filter: opacity(100%);
+    cursor: pointer;
+}

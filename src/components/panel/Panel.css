@@ -1,0 +1,691 @@
+.panelBodyContainerMain{
+    width: calc(100%);
+}
+
+@font-face {
+    font-family: clear-sans-light;
+    src: url("assets/clear-sans.light.ttf");
+    
+ }
+ @font-face {
+    font-family: clear-sans-bold;
+    src: url("assets/clear-sans.bold.ttf");
+    
+ }
+ @font-face {
+    font-family: clear-sans-thin;
+    src: url("assets/clear-sans.thin.ttf");
+ }
+
+/* Panel */
+.panelHeaderPanelStyle{
+    z-index: 1;
+    width: calc(100%-5rem);
+    height: 30%;
+    display: flex;
+    border-bottom: inset 5px;
+    padding-bottom: 1%;
+    margin: 1%;
+    position: sticky;
+    background-color: white;
+    top: 0;
+}
+
+.panelItemPanelStyle{
+    color: black;
+    font-family: 'Montserrat';
+    font-size: 0.9rem;
+    width: fit-content;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-top: 1%;
+    margin-left: 3%;
+    flex-direction: row;
+}
+
+.panelBodyPanelStyle{
+    display: flex;
+    width: 98%;
+    height: 98%;
+    margin: 1%;
+    flex-direction: row;
+}
+
+
+.panel1PanelStyle{
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    height: 80%;
+    margin-top: 1%;
+    margin-left: 1%;
+}
+
+.panel2PanelStyle{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height:80%;
+    margin-left: 3%;
+}
+
+.itemWelcomePanelStyle{
+    font-family: clear-sans-bold;
+    font-size: 2rem;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 2%;
+}
+
+.itemResumenPanelStyle{
+    font-family: clear-sans-bold;
+    font-size: 1.15rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column; 
+    margin-bottom: 2%;
+}
+
+.itemResumenBodyPanelStyle{
+    margin-top: 0.5%;
+    display: flex;
+    flex-direction: row;
+}
+
+.itemResumenCardPanelStyle{
+    font-size: 1rem;
+    width: 15%;
+    aspect-ratio: 1/1;
+    display: flex;
+    flex-direction: column;
+    margin: 2%;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5% 3%;
+    box-shadow: 1px 1px 8px 1px rgba(70, 70, 71, 0.4);
+    border-radius: 1rem;
+}
+
+.itemResumenCardNumberPanelStyle{
+    font-size: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:white;
+    background-color: black;
+    padding: 12% 20%;
+    border-radius: .6rem;
+    margin:15% 30%;
+    text-shadow: 0.1rem 0.1rem 0rem black;
+}
+
+.itemReservacionPanelStyle{
+    display: flex;
+    flex-direction:column;
+    height: fit-content;
+    font-family: clear-sans-bold;
+    font-size: 1.15rem;
+    margin-bottom: 1%;
+}
+
+.itemReservacionCardPanelStyle{
+    text-align: center;
+    align-items: center;
+    border-radius: 1.25rem;
+    margin-top: 2%;
+    margin-left: 1.5%;
+    padding: 0.5%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2%;
+    width: 95%;
+    height: 10%;
+    box-shadow: 1px 1px 8px 1px rgba(70, 70, 71, 0.4);
+}
+
+.itemReservacionCardPhotoPanelStyle{
+    width: 8%;
+    height: 100%;
+    margin-left: 5%;
+}
+
+.imgReservacionCardPanelStyle{
+    align-items: center;
+    display: block;
+    z-index: 1;
+    width: 100%;
+    margin-right: 20%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: .5rem;
+}
+
+.imgReservacionCard2PanelStyle{
+    display:block;
+    z-index: 1;
+    width: 80%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 50%;
+    opacity: 90%;
+}
+
+.itemReservacionCardNamePanelStyle{
+    margin-left: 4%;
+    height: fit-content;
+    display: inline-table;
+    width: 20%;
+    font-size: 1rem;
+}
+
+.itemReservacionCardNameProfilePanelStyle{
+    width: 30%;
+    font-size: 1rem;
+    margin-left: 0%;
+}
+
+.itemReservacionCardDatePanelStyle{
+    font-size: 1rem;
+    margin-right: 5%;
+}
+
+.btnReservacionCardPanelStyle{
+    border-radius: 1rem;
+    font-family: clear-sans-light;
+    font-size: .7rem;
+    border-radius: 1rem;
+    background-color: #000000;
+    color: white;
+    border: 0;
+    border: outset;
+    width: 10%;
+    height: 90%;
+}
+
+.btnReservacionCardPanelStyle:hover{
+    background-color: #f7f7f79a;
+    color: rgb(134, 134, 134);
+}
+
+.itemPreguntaPanelStyle{
+    font-family: clear-sans-bold;
+    font-size: 1.15rem;
+}
+
+.itemPreguntaCardPanelStyle{
+    border-radius: 1.25rem;
+    margin-top: 2.4%;
+    margin-bottom: 3%;
+    box-shadow: 1px 1px 8px 1px rgba(70, 70, 71, 0.4);
+    padding: 2% 3%;
+    width: 85%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.itemPreguntaPhotoPanelStyle{
+    display: flex;
+    width: 10%;
+    aspect-ratio: 1/1;
+}
+
+
+#preguntaPhotoPanelStyle{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.itemPreguntaBodyPanelStyle{
+    display: flex;
+    height:100%;
+    align-items:center;
+    position: relative;
+}
+
+.itemPreguntaBodyTextPanelStyle{
+    align-items: center;
+    margin-left: 5%;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+}
+
+.itemPreguntaTextHeaderPanelStyle{
+    align-items: center;
+    font-size: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.itemPreguntaTextQuestionPanelStyle{
+    margin-top: 2%;
+    align-items: center;
+    font-size: 1rem;
+    display: flex;
+    width: 100%;
+}
+
+.itemPreguntaTextPerfilPanelStyle{
+    margin-right: 2%;
+    align-items: center;
+    font-size: 1rem;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    font-family: clear-sans-bold;
+}
+
+.itemPreguntaTextDatePanelStyle{
+    margin-right: 2%;
+    display: flex;
+    font-size: 0.8rem;
+    padding-right: .3rem;
+    width: fit-content;
+    height: fit-content;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.itemPreguntaTextPlacePanelStyle{
+    display: flex;
+    font-size: 0.8rem;
+    padding-right: .3rem;
+    width: fit-content;
+    height: fit-content;
+}
+
+.itemPreguntaBodyInputPanelStyle{
+    margin-top: 3%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.itemPreguntaInputPanelStyle{
+    display:flex;
+    height: fit-content;
+    width: 94%;
+}
+
+.inputRespuestaPanelStyle{
+    font-size: clear-sans-thin;
+    width: 100%;
+    padding: .3rem;
+    padding-left: 4%;
+    border-radius: 1rem;
+    background-color: #0000000A;
+    border: none;
+    outline: #0000000A solid 2px;
+}
+
+.btnRespuestaEnviarPanelStyle{
+    display: flex;
+    align-items: center;
+    margin-left: 1%;
+    width: 5%;
+    aspect-ratio: 1/1;
+    height:auto;
+    background-color: transparent;
+}
+
+#btnRespuestaPanelStyle{
+    background-position: center;
+    width: 150%;
+    filter: invert(60%);
+}
+
+.itemOpinionPanelStyle{
+    font-family: clear-sans-bold;
+    font-size: 1.15rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.itemOpinionCardPanelStyle{
+    border-radius: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    box-shadow: 1px 1px 8px 1px rgba(70, 70, 71, 0.4);
+    padding: 2% 3%;
+    width: 85%;
+}
+
+.itemOpinionPhotoPanelStyle{
+    align-items: center;
+    display: flex;
+    aspect-ratio: 1/1;
+    width: 10%;
+}
+
+#opinionPhotoPanelStyle{
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.itemOpinionBodyPanelStyle{
+    display: flex;
+    width:100%;
+}
+
+.itemOpinionBodyTextPanelStyle{
+    align-items: center;
+    margin-left: 5%;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.itemOpinionTextHeaderPanelStyle{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.itemOpinionTextDatePanelStyle{
+    font-family: clear-sans-bold;
+    font-size: 0.9rem;
+    width: 60%;
+    height: fit-content;
+}
+
+.itemOpinionTextPlacePanelStyle{
+    width: fit-content;
+    height: fit-content;
+}
+
+.itemOpinionTextHeader2PanelStyle{
+    
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.itemOpinionTextPerfilPanelStyle{
+    font-size: 0.8rem;
+    width: 60%;
+    height: fit-content;
+    display: flex;
+}
+
+.itemOpinionStarsPanelStyle{
+    margin-left: 50%;
+    display: flex;
+    width: 30%;
+    height: fit-content;
+    font-size: 1rem;
+}
+
+.itemBodyReseñaPanelStyle{
+    padding: 2%;
+    width: 100%;
+    height: fit-content;
+}
+
+.itemOpinionTextReseñaPanelStyle{
+    font-size: 0.7rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    text-align: justify;
+}
+
+.itemLikeBodyPanelStyle{
+    padding: 1%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.btnLikePanelStyle, .btnDislikePanelStyle{
+    margin-left: 3%;
+    font-size: 0.7rem;
+    width: 20%;
+    font-family: clear-sans-bold;
+    border: none;
+}
+
+.btnDislikePanelStyle{
+    margin-left: .5rem;
+}
+
+
+
+.panelItemPanelStyle:hover{
+    background-color: black;
+    color: white;
+    border-radius: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    transition: .7s;
+}
+
+#aPanelPanelStyle:hover{
+    color: white;
+}
+
+
+/* Barra lateral */
+
+#asideHeaderPanelStyle {
+    width:100%
+}
+
+#navPreviewPanelStyle {
+    position:absolute;
+    filter: invert(100%);
+    right: 1.4rem;
+    height: 1.5rem;
+    z-index: 2;
+}
+
+.navProfileContainerPanelStyle {
+    position: inline-table;
+    flex: auto;
+    align-items: center;
+    margin-top: 1.5rem;
+    border-radius: 0.75vw;
+    height: 9.5rem;
+    width: calc(100% - 2.6rem);
+    overflow: hidden;
+}
+
+#navProfilePanelStyle {
+    position: absolute;
+    float: left;
+    z-index: 0;
+    border-radius: 50%;
+    object-fit: cover;
+    height: 5.5rem;
+    width: 5.5rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding-top: 1rem;
+    padding-left: 1.5rem;
+}
+
+#navPPanelStyle #navPiPanelStyle {
+    display: inline-table;
+    position:absolute;
+    background: linear-gradient(90deg, rgba(36,0,13,0) 0%, rgba(0,0,0,1) 14%, rgba(0,0,0,1) 100%);
+    width: 4rem;
+    right: 0;
+    height: 2rem;
+    z-index: 1;
+}
+
+.navPPanelStyle{
+    display: inline-table;
+    position: flex;
+    width: 6.8rem;
+    height: 8rem;
+}
+
+.navNamePanelStyle{
+    font-family: clear-sans-bold;
+    font-size: 1rem;
+    text-shadow: 0rem .5rem .5rem black;
+    display: inline-table;
+    position: absolute;
+    flex: auto;
+    width: calc(50% - 2.6rem);
+    height: calc(8% - 1.5rem);
+    margin-top: .5rem;
+    padding-left: 1.5rem;
+    padding-top: 1.5rem;
+}
+
+.navRatePanelStyle{
+    font-family: clear-sans-bold;
+    font-size: .75rem;
+    text-shadow: 0.1rem 0.1rem 0rem black;
+    display: inline-block;
+    height: 2rem;
+    margin-top: 5rem;
+    padding-left: 1.5rem;
+    position: absolute;
+}
+
+.navEditPanelStyle{
+    font-family: clear-sans-light;
+    font-size: .7rem;
+    text-shadow: 0.1rem 0.1rem 0rem black;
+    display: inline-block;
+    height: 2rem;
+    margin-top: 6.1rem;
+    padding-left: 1.5rem;
+    position: absolute;
+}
+
+.navContainerPanelStyle{
+    height: 100%;
+}
+
+.navIconContainerPanelStyle {
+    display:flex;
+    align-items: center;
+    background-color: #000000;
+    margin: 1rem;
+    border-radius: 0.75vw;
+    height: 2.75rem;
+    overflow: hidden;
+    transition: filter 0.15s;
+}
+
+.navIconContainerPanelStyle:hover {
+    filter: invert(100%);
+    font-weight: bold;
+}
+
+.navIconPanelStyle {
+    filter: invert(100%);
+    margin: .75rem 1rem 0.6rem 0rem;
+    height: 2rem;
+}
+
+#iPlacePanelStyle{
+    margin-left: -0.1rem;
+    margin-right: 1.05rem;
+}
+
+#iPencilPanelStyle{
+    margin: 0.35rem 0rem -0.1rem 0.25rem;
+    height: .75rem;
+}
+
+#iLogoutPanelStyle{
+    bottom: 0;
+    margin-bottom: 2rem;
+    position: absolute;
+    width: 2rem;
+}   
+
+.navTextPanelStyle {
+    font-family: clear-sans-bold;
+    font-size: 1em;
+}
+
+.aPanelStyle{
+    text-decoration: none;
+    color:white;
+}
+
+aside .navProfileContainerPanelStyle{
+    height: 5rem;
+}
+
+aside:hover .navProfileContainerPanelStyle{
+    height: 9rem;
+    transition: 1.15s;
+}
+
+aside:hover .navIconContainerPanelStyle{
+    margin-left: 1.8rem;
+}
+
+aside #iLogPanelStyle{
+    opacity: 0;
+    background-color: transparent;
+}
+
+aside:hover #iLogoutPanelStyle{
+    width: 12rem;
+    transition: .5s;
+}
+
+aside:hover #iLogPanelStyle{
+    opacity: 1;
+    transition: .1s;
+}
+
+aside:hover {
+    width: 15rem;
+}
+
+aside:hover #navPiPanelStyle{
+    opacity:0;
+    transition: 1s;
+}
+
+aside #navProfilePanelStyle{
+    opacity: 0;
+}
+
+aside:hover #navProfilePanelStyle{
+    opacity: 1;
+    transition: 1.45s;
+}
+
+aside .navNamePanelStyle{
+    opacity:0;
+}
+
+aside:hover .navNamePanelStyle{
+    opacity:1;
+    transition: 2s;
+}
+
+aside .navRatePanelStyle{
+    opacity:0;
+}
+
+aside:hover .navRatePanelStyle{
+    opacity:1;
+    transition: 2s;
+}
+
+aside .navEditPanelStyle{
+    opacity:0;
+}
+
+aside:hover .navEditPanelStyle   {
+    opacity:1;
+    transition: 2s;
+}

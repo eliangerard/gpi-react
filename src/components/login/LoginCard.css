@@ -11,6 +11,7 @@
     box-shadow: 1px 1px 15px 0px rgba(0,0,0,0.15);
     right: 0;
     display: flex;
+    justify-content: space-between;
     transition: height 1500ms;
 }
 
@@ -33,7 +34,7 @@ html {
     height: 100%;
 }
 
-body {
+.landingBackground {
     margin: 0;
     display: flex;
     background-color: black;
@@ -41,7 +42,7 @@ body {
     align-items: center;
     height: 100%;
 }
-#logo {
+#logoLogin {
     height: 1.8rem;
     border-radius: 0.5rem;
     object-fit: cover;
@@ -68,13 +69,20 @@ h1 {
     display: flex;
     justify-content: space-between;
 }
-#fullName input {
+#fullName .loginInput {
     width: calc(49% - 2rem);
 }
-input {
+.loginHr {
+    margin: 0.5rem 0;
+    border: none;
+    border-top: #0000001a solid 1px;
+    border-radius: 1rem;
+}
+.loginInput {
     border: none;
     border-radius: 0.5rem;
     padding: 0.5rem 1rem;
+    color: black;
     background-color: #0000000a;
     outline: #0000006c solid 0px;
     transition: outline 150ms;
@@ -83,40 +91,59 @@ input {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: medium;
-    margin-top: 1rem;
+    margin-top: 0.75rem;
 }
-input:focus {
+.firstInput {
+    margin-top: 0;
+}
+.loginDate {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 1.4rem 1rem;
+}
+.loginInput:focus {
     outline: #0000003a solid 3px;
 }
 #signImg {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 2rem 0;
+    margin: 2rem;
+    margin-left: 0;
+    padding-left: 2rem;
     border-left: #00000011 solid 2px;
     width: 50%;
 }
 #signImg img {
-    width: 80%;
-    height: 100%;
+    width: calc(100% - 4rem);
+    height: calc(100% - 4rem);
     object-fit: cover;
     border-radius: 0.5rem;
 }
 #signLeft {
     display: flex;
     flex-direction: column;
-    width: calc(50% - 8rem);
+    width: calc(50% - 5rem);
     padding: 2rem 4rem;    
     justify-content: space-between;
 }
 #signData {
     width: 100%;
-    margin-bottom: 1rem;
+}
+#signData h3 {
+    margin: 0.5rem 0;
+}
+#signData p {
+    margin: 0.5rem 0;
+}
+.authentication  {
+    margin-top: 0;
 }
 #signUpHeader {
     display: flex;
     justify-content: space-between;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 .flex-container {
     display: flex;
@@ -146,7 +173,7 @@ input:focus {
 #signOptions p {
     margin: 0.5rem 0;
 }
-button {
+.loginButton{
     background-color: black;
     border: none;
     border-radius: 0.5rem;
@@ -158,7 +185,7 @@ button {
     font-family: 'Montserrat';
 }
 
-button:hover {
+.loginButton:hover {
     cursor: pointer;
 }
 
@@ -242,7 +269,17 @@ button:hover {
     font-weight: 800;
 }
 
-@media (max-width: 1249px) {
+#qrContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+@media (max-width: 1349px) {
+    #loginCard {
+        width: 90%;
+    }
+}
+@media (max-width: 1049px) {
     #signImg {
         display: none;
     }
@@ -251,9 +288,6 @@ button:hover {
     }
 }
 @media (max-width: 599px) {
-    #loginCard {
-        width: 90%;
-    }
     #signLeft {
         width: calc(100% - 4rem);
         padding: 2rem 2rem;

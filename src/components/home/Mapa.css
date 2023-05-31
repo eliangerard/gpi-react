@@ -1,0 +1,11 @@
+.Mapa {
+    display: inline-table;
+    width: 100%;
+    aspect-ratio: 21/9;
+}
+
+.map-container {
+    margin: 0% 5%;
+    width: 90%;
+    aspect-ratio: 21/9;
+}

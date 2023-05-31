@@ -1,0 +1,46 @@
+#mostrarBusqueda {
+    margin-left: 3%;
+    width: calc(100% - 5rem);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#mbIzq {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+#mbIzq button {
+    width: 4rem;
+    margin-right: 1rem;
+}
+
+#catalogo {
+    justify-content:center;
+    flex-wrap: wrap;
+    display: flex;
+    padding: 0.5rem;    
+    background-color: transparent!important;
+}
+#busqueda {
+    font-family: clear-sans-bold!important;
+    color: #838383;
+    font-size: 2rem;
+    margin: 1rem 0 ;
+}
+
+.contenedorHomeDisplayMainCardsSlider{
+    width: 100%;
+}
+
+.btnEliminarGrandis{
+    width: 100%;
+    background-color: rgba(255, 0, 0, 0.753);
+    color: white;
+    border-radius: 0.5rem;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    height: 3rem;
+}

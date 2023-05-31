@@ -1,0 +1,421 @@
+
+
+.profileDataProfileComponent {
+    display: flex;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    background-color: white;
+    /* border-radius: 0.5rem;
+    border: #00000016 solid 3px; */
+    width: 0%;
+}
+
+#profileHeaderProfileComponent {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#profileHeaderProfileComponent b {
+    font-size: 2rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+#profileHeaderProfileComponent p {
+    margin: 0.4rem 0;
+}
+
+.profileCardProfileComponent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2% 3%;
+    width: 94%;
+    background-color: transparent;
+}
+
+.avatarContainerProfileComponent {
+    display: flex;
+    border-radius: 50%;
+    border: #00000057 solid 3px;
+    width: 20%;
+    margin-bottom: 5%;
+}
+
+.image-input-container{
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+    overflow: hidden;
+    aspect-ratio: 1;
+    object-fit: cover; /* Ajusta la imagen sin distorsión */
+}
+
+.bProfileComponent {
+    font-size: 1rem;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+#userActiveProfileComponent {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: orange;
+    height: 2rem;
+    width: 2rem;
+    border: white solid 3px;
+    border-radius: 100%;
+}
+#userRatingProfileComponent {
+    background-color: #00000016;
+    border-radius: 0.5rem;
+    width: fit-content;
+    padding: 0.25rem 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #00000080;
+    font-weight: bold;
+    font-size: 0.7rem;
+}
+#userRatingProfileComponent svg {
+    fill: orange;
+    height: 1.2rem;
+    width: 1.2rem;
+    margin-left: 0.3rem;
+}
+.userProfileProfileComponent {
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+    overflow: hidden;
+    aspect-ratio: 1;
+    object-fit: cover; /* Ajusta la imagen sin distorsión */
+}
+
+.profileDescriptionProfileComponent {
+    text-align: justify;
+    font-size: .8vw;
+    color: #000000A0;
+}
+
+.opacProfileComponent {
+    background-color: #00000069;
+    z-index: 0;
+}
+
+
+#profileProfileComponent {
+    display: flex;
+    width: 100%;
+}
+
+#appProfileComponent {
+    display: flex;
+    justify-content: center;
+}
+
+#profileSectionsProfileComponent {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-around;
+    align-items: top;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+}
+
+.profileSectionProfileComponent {
+    border-bottom: #00000000 solid 4px;
+    transition: border 150ms;
+    width: 100%;
+    font-weight: bolder;
+    height: 15%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+
+.pfSelectedProfileComponent {
+    background-color: black;
+    border-radius: 0.5rem;
+    color: white;
+}
+
+#profileContentProfileComponent {
+    background-color: #00000016;
+    display:flex;
+    width: 100%;
+    border-radius: 0.5rem;
+    margin: 0;
+}
+
+#profileContainerProfileComponent {
+    background-color: white;
+    width: 80%;
+    aspect-ratio: 2/1;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-right: 6%;
+    margin-left: 6%;
+    padding: 2% 4%;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 8px 1px rgba(70, 70, 71, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#opinionContainerProfileComponent{
+    background-color: transparent;
+    width: 80%;
+    height: 35%;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    margin-right: 6%;
+    margin-left: 6%;
+    padding: 2% 4%;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 8px 1px rgba(70, 70, 71, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tagsProfileComponent {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tagsProfileComponent div {
+    margin: 0.5rem;
+}
+
+#lastSeenProfileComponent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: rgb(168, 110, 1);
+    background-color: orange;
+    height: 1.5rem;
+    border-radius: 0.5rem;
+
+}
+
+.granjaProfileComponent {
+    background-color: white;
+    border-radius: 0.5rem;
+    width: 15rem;
+    height: 20.5rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.14);
+}
+
+.granjaImgProfileComponent {
+    width: 100%;
+    height: 45%;
+    object-fit: cover;
+    border-radius: 0.3rem;
+}
+
+#contentProfileComponent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-y: scroll;
+    width: 100%;
+}
+
+.buttonProfileComponent button  {
+    background-color: black;
+    border: none;
+    border-radius: 0.3rem;
+    color: white;
+    width: 100%;
+    height: 2.5rem;
+    font-size: medium;
+    font-weight: bold;
+    font-family: 'Montserrat';
+}
+
+.buttonProfileComponent button:hover {
+    cursor: pointer;
+}
+
+.ratingProfileComponent {
+    fill: #ffc400;
+}
+
+.goodsProfileComponent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1vw 0;
+}
+
+.gItemsProfileComponent {
+    margin: 0 5%;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: small;
+}
+
+.granjaUbiProfileComponent {
+    width: 230px;
+    height: fit-content;
+    margin-left: 0.3rem;
+    font-size: 1rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.iconProfileComponent {
+    /* filter: opacity(0%); */
+    height: 2rem;
+}
+
+.ubiIconProfileComponent {
+    height: 1rem;
+}
+
+.granjaTopProfileComponent {
+    display: flex;
+    align-items: center;
+}
+
+.granjaCategoriaProfileComponent {
+    margin: 0.3rem;
+    font-size: small;
+}
+
+.granjaUbiProfileComponent {
+    margin: 0.3rem;
+}
+
+.ubiProfileComponent {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 2.5rem;
+    overflow: hidden;
+    margin-bottom: 1vw;
+}
+
+.ubiProfileComponent:hover {
+    cursor: pointer;
+}
+
+.hostProfileComponent {
+    margin-left: auto;
+}
+
+.precioProfileComponent {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 1.7rem;
+    font-weight: 900;
+    margin-top: 0.2rem;
+}
+
+.costoProfileComponent p {
+    margin: 0;
+}
+
+.ubiIconProfileComponent {
+    width: 1.5rem;
+    margin: 0;
+    height: 1.5rem;
+}
+
+.checkedProfileComponent {
+    color: orange;
+}
+
+.verifiedProfileComponent {
+    height: 3vh;
+    width: 2rem;
+    fill: orange;
+}
+
+#usernameProfileComponent {
+    color: #00000080;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.languageProfileComponent {
+    font-size: 0.7rem;
+    position: relative;
+    z-index: 0;
+    background-color: #00000016;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    padding: 0rem 0.5rem;
+}
+
+.languageProfileComponent p {
+    color: #00000080;
+    font-weight: 700;
+    margin: 0.3rem !important;
+}
+
+.languageProfileComponent svg {
+    fill: #00000080;
+    height: 1.2rem;
+    width: 1.2rem;
+
+}
+
+#catalogoProfileComponent{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 95vh;
+}
+
+#profileContainerProfileComponentLocations{
+    background-color: white;
+    width: 88%;
+    height: 92%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-right: 2%;
+    margin-left: 2%;
+    padding: 2% 4%;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 8px 1px rgba(70, 70, 71, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.catalogoMitadProfileComponent{
+    margin-top: 2%;
+    width: 50%;
+    height: 100%;
+}
+
+.contenedorSelfOpinionesCatalogo{
+    align-items: center;
+    align-items: center;
+    margin-top: 4%;
+    width: 98%;
+    height: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+}
+.contenedorSelfOpinionesCatalogo2{
+    width: 98%;
+    height: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+}

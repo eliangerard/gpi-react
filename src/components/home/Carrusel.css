@@ -1,0 +1,11 @@
+.Carrusel {
+    display: inline-table;
+    padding-top: 3%;
+    padding-left: 3%;
+    padding-bottom: 5%;
+    width: 52%;
+}
+.thumbnail {
+    height: 5rem;
+    object-fit: cover;
+}

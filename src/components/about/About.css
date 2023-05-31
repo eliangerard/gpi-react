@@ -1,0 +1,234 @@
+#contentAboutMenuAboutComponent {
+    background-image: url(src/assets/img/white.webp);
+    display: flex;
+    width: 100%;
+    left: 0;
+  }
+  
+  .aboutAboutComponent {
+    display: block;
+    width: calc(100%-5rem);
+    height: fit-content;
+    background-color: transparent;
+  }
+  
+  .aboutDivBAboutComponent {
+    background-color: transparent;
+    width: calc(100%-5rem);
+    height: 4rem;
+    position: relative;
+    display: flex;
+  }
+  
+  #aboutGpiAboutComponent {
+    right: 0;
+    position: absolute;
+    display: flex;
+    margin-right: calc(10% - 1.5rem);
+    margin-top: 2rem;
+    height: 2.25rem;
+    border-radius: 3px;
+  }
+  
+  .aboutContainerAboutComponent {
+    position: relative;
+    height: 70vh;
+    width: calc(90% - 3.5rem);
+    background-image: url(src/assets/img/friends.jpg);
+    box-shadow: 1px 1px 8px 1px rgba(70, 70, 71, 0.767);
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+    margin: 4rem;
+    margin-left: 6rem;
+  }
+  
+  .aboutHeaderAboutComponent {
+    font-family: clear-sans-bold;
+    font-size: 4vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    vertical-align: center;
+    position: absolute;
+    display: inline-block;
+    flex: auto;
+    width: 65vh;
+    height: calc(80% - 5rem);
+    background-color: black;
+    color: white;
+    margin-left: 10rem;
+    margin-top: 6rem;
+    padding-top: 6rem;
+    opacity: 90%;
+  }
+  
+  #txtAboutAboutComponent {
+    font-family: clear-sans-thin;
+    font-size: 2.3vh;
+    margin: 4em;
+    text-shadow: 0.1rem 0.1rem 0rem black;
+    margin-top: 2em;
+    text-align: center;
+  }
+  
+  .aboutConAboutComponent {
+    font-family: clear-sans-light;
+    font-size: 2.6vh;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    position: static;
+    margin-top: 7rem;
+    margin-left: 10rem;
+    padding-top: 0.5rem;
+    transition: 5s;
+  }
+  
+  .aboutTxtAboutComponent {
+    color: #04041d;
+    width: 55%;
+    height: fit-content;
+    display: inline-block;
+    flex-direction: row;
+    position: relative;
+    margin-top: 2rem;
+    padding-left: 1rem;
+    text-shadow: 0.1rem 0.1rem 0rem rgb(212, 212, 212);
+  }
+  
+  .aboutImgAboutComponent {
+    height: fit-content;
+    position: relative;
+    display: inline-block;
+    margin-left: 8rem;
+    border-radius: 10%;
+    transition: 5s;
+  }
+  
+  #abImgAboutComponent {
+    width: fit-content;
+    height: 20rem;
+  }
+  
+  .abAboutComponent {
+    margin-top: 4.5rem;
+    text-align: center;
+    font-size: 3vh;
+    font-family: clear-sans-bold;
+    color: #04041d;
+    transition: 7s;
+  }
+  
+  .aboutCon2AboutComponent {
+    margin-left: 10rem;
+    margin-top: 3.5rem;
+    display: flex;
+    width: (100%-5rem);
+    height: fit-content;
+    transition: 7s;
+  }
+  
+  .aboutCardAboutComponent {
+    background-color: #ffffff;
+    width: 35%;
+    margin-right: 3rem;
+    margin-left: 4rem;
+    height: fit-content;
+    display: flex;
+    box-shadow: 1px 1px 8px 1px rgba(70, 70, 71, 0.4);
+  }
+  
+  .aboutCardImgAboutComponent {
+    width: 50%;
+  }
+  
+  .imgCardAboutComponent {
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .aboutCardTxtAboutComponent {
+    font-family: clear-sans-light;
+    font-size: 1.7vh;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    object-fit: cover;
+    flex-direction: column;
+    padding: 1.25rem;
+    text-align: center;
+  }
+  
+  #aboutCardTitleAboutComponent {
+    font-family: clear-sans-bold;
+    font-size: 1.6rem;
+    padding-bottom: 0.3rem;
+  }
+  
+  .aboutCardAboutComponent {
+    background-color: #ffffff;
+    width: 35%;
+    margin-right: 3rem;
+    margin-left: 4rem;
+    height: fit-content;
+    display: flex;
+    box-shadow: 1px 1px 8px 1px rgba(70, 70, 71, 0.4);
+  }
+  
+  .aboutCardImgAboutComponent {
+    width: 50%;
+  }
+  
+  #pObjAboutComponent {
+    width: 25%;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+    margin-left: 2rem;
+  }
+  
+  #pOtAboutComponent {
+    font-family: clear-sans-bold;
+    font-size: 2vh;
+  }
+  
+  #aboutConBAboutComponent {
+    background-color: #000000;
+    color: white;
+    width: 100%;
+    padding-top: 3rem;
+    margin-top: 4.5rem;
+    height: fit-content;
+    padding-bottom: 2rem;
+  }
+  
+  #abImg2AboutComponent {
+    width: fit-content;
+    height: 20rem;
+    margin-right: 3rem;
+  }
+  
+  #abInvAboutComponent {
+    color: #ffffff;
+    text-shadow: none;
+    padding-right: 6rem;
+    text-align: justify;
+  }
+  
+  .aboutConAboutComponentExtraMisa {
+    font-family: clear-sans-light;
+    font-size: 2.6vh;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    position: static;
+    margin-top: 7rem;
+    padding-top: 0.5rem;
+    transition: 5s;
+  }

@@ -1,0 +1,28 @@
+.multi-preview {
+    width: 100%;
+  }
+  
+  .image-preview {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+  }
+  
+  .file-input {
+    display: flex;
+    background-color: #f1f1f1;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 100%;
+  }
+
+  .contenedorSliderImageUpload{
+    width: 100%;
+  }
+
+  .form-groupcontenedorSliderImageUpload{
+    margin-top: 8%;
+    display: flex;
+    width: 100%;
+  }

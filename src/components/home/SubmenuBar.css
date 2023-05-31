@@ -1,0 +1,197 @@
+
+
+.wideCardBar{
+  z-index: 1;
+  display:inline-table;
+  vertical-align: middle;
+  text-align: center;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  width: 100%;
+  height: calc(100% * (20% / var(--element-width))); 
+  background-color: white;
+  transition: box-shadow 500ms ease-out;
+}
+
+.navBar {
+  z-index: 100000000000000000000000;
+  position: sticky;
+  background-color:rgba(255,255,255);
+  box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.14);
+  top: 0;
+}
+
+.halfCard2{
+  display:inline-table;
+  text-align:right;
+  vertical-align: middle;
+  width: 50%;
+  height:auto;
+}
+.level {
+  vertical-align: center;
+  text-align: left;
+  width: 100%;
+}
+
+.btnContext {
+  /* box-shadow: 0px 1px 10px 1px rgb(210, 210, 210); */
+  vertical-align: middle;
+  display:inline-table;
+  width: 12%;
+  margin-right: 2%;
+  margin-left: 2%;
+  text-align: center;
+  border-radius: 1vw;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 7%;
+  padding-right: 7%;
+  font-size: 1vw;
+  color: rgb(255, 255, 255)!important;
+  background-color: rgb(0, 0, 0)!important;
+}
+
+.btnContext:hover{
+  /* box-shadow: 0px 3px 3px 0px rgb(240,240,240); */
+  outline: none;
+  transition: box-shadow 300ms;
+}
+
+.btnContextN {
+  vertical-align: middle;
+  display:inline-table;
+  width: 9%;
+  margin-right: 3%;
+  margin-left: 2%;
+  text-align: center;
+  border-radius: 1vw;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 4%;
+  padding-right: 4%;
+  font-size: 1.03vw;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: black;
+  background-color: white;
+  transition: box-shadow 300ms, background-color 300ms, color 300ms;
+}
+
+.btnContextN:hover {
+  box-shadow: 0px 1px 10px 1px rgba(0, 0, 0, 0.09);
+}
+
+.btnContextSalir {
+  vertical-align: middle;
+  display:inline-table;
+  width:2.5%;
+  aspect-ratio: 1/1;
+  margin-right: 4%;
+  margin-left: 2%;
+  text-align: center;
+  border-radius: 50%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 1%;
+  padding-right: 1%;
+  font-size: 1vw;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 200;
+  color: black;
+  background-color: white;
+  transition: box-shadow 300ms;
+}
+
+.btnContextSalir:hover {
+  box-shadow: 0px 1px 10px 1px rgba(0, 0, 0, 0.09);
+}
+
+.halfCard3{
+  display:inline-table;
+  text-align:right;
+  vertical-align: middle;
+  width: 65%;
+  height:auto;
+}
+
+.halfCard2{
+  display:inline-table;
+  text-align:right;
+  vertical-align: middle;
+  width: 35%;
+  height:auto;
+}
+
+.message {
+  vertical-align: middle;
+  font-family: 'Montserrat';
+  font-weight: 600;
+  display: inline-table;
+  text-align: right;
+  width: 50%;
+  color: #777777;
+  margin-left: 3%;
+  margin-right: 3%;
+  transition: visibility 500ms linear, opacity 0.5s linear;
+  opacity: 1;
+}
+
+.invisible {
+  
+  visibility: hidden;
+  opacity: 0;
+}
+
+.ratingMessage {
+  vertical-align: middle;
+  display: inline-table;
+  width: 5%;
+  font-size: 0.9vw;
+  margin-right: 8%;
+}
+
+.starMessage {
+  width: 4%;
+  color: orange;
+  font-size: 1.2vw;
+  margin: 0;
+}
+
+.priceMessage {
+  vertical-align: bottom;
+  display: inline-table;
+  margin-right: 1%;
+  width: 10%;
+  font-size: 1.3vw;
+}
+
+
+.hourMessage {
+  margin-left: 1%;
+  text-align: left;
+  vertical-align: bottom;
+  display: inline-table;
+  width: 30%;
+  font-size: 0.8vw;
+}
+
+.btnLaunch {
+    outline: rgba(0,0,0,1) solid 0.2vw;
+    display:inline-table;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: white;
+    background-color: black;
+    width: 15%;
+    margin-right: 7%;
+    margin-left: 3%;
+    text-align: center;
+    border-radius: 1vw;
+    padding: 2% 8%;
+    font-size: 1vw;
+  }
+  .btnLaunch:hover {
+    cursor: pointer;
+  }

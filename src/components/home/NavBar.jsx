@@ -38,7 +38,7 @@ function NavBar({setShowLanding, changeView, nombre, promedioPuntuacion, fotoPer
         </a>
         <a className="navIconContainer" onClick={() => {changeView('admin')}}>
             <img className="navIcon" src="./src/assets/img/admin.png" />
-            <h4 class="navText">Administrador</h4>
+            <h4 className="navText">Administrador</h4>
         </a>
         <a className="navIconContainer" id="iLogout" onClick={logOut}>
           <img className="navIcon" src="./src/assets/img/logout.png" />

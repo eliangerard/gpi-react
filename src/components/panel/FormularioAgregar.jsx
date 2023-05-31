@@ -75,7 +75,7 @@ export const FormularioAgregar = () => {
       tiempo.length == 0 ||
       ubicacion == 0
     ) return console.log("No están llenos todos los datos");
-    formData.tiempo = tiempo * 60;
+    formData.tiempo = tiempo;
     let urls = [];
     for (const imagen of imagenes) {
       const { result } = await uploadImage(imagen, localStorage.getItem("id"));

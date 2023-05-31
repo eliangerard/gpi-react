@@ -24,7 +24,7 @@ const ImageUploadPreviewComponent = ({ handleImagesUploaded }) => {
 		});
 
 		console.log(images64);
-		setFileArray(images64);
+		setFileArray(prevFileArray);
 		handleImagesUploaded(images64);
 	};
 
@@ -41,7 +41,9 @@ const ImageUploadPreviewComponent = ({ handleImagesUploaded }) => {
 			<div className="form-group multi-preview">
 				<div className="contenedorSliderImageUpload">
 					<Slider {...settings}>
-						{fileArray.map((url, index) => (
+						{
+							fileArray.map((url, index) => (
+							
 							<div key={index}>
 								<img src={url} alt="Preview" className="image-preview" />
 							</div>

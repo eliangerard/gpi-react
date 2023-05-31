@@ -1,5 +1,4 @@
 import './About.css'
-import NavBar from '../home/NavBar'
 import GPIImage1 from '../../assets/img/gpi.png'
 import GPIImage2 from '../../assets/img/abimg4.svg'
 import GPIImage3 from '../../assets/img/mision.jpg'

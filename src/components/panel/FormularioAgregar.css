@@ -11,12 +11,13 @@ html.FormularioAgregar {
         display: flex;
         width: 100%;
         justify-content: center;
+        align-items: center;
     }
     .formFormularioAgregar {
     display: flex;
     flex-wrap:wrap;
-    width: 70%;
-    padding: 4%;
+    width: 60%;
+    padding: 2% 4%;
     border: 2px solid rgba(255, 255, 255, 0.5);
     border-radius: 2vw;
     box-shadow: 0 0 0.5em 0.1em #c5c5c5;

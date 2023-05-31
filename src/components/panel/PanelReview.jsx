@@ -16,8 +16,8 @@ export const PanelReview = () => {
     },[])
     return(
         <>
-        <div className="panelBodyContainerMain">
-                    <div className="itemWelcomePanelStyle">
+        <div className="panelBodyContainerMainPublications">
+                    <div className="itemWelcomePanelStylePublications">
                         Aqui están las opiniones sobre tus locaciones
                     </div>
                 <div className="panelBodyPanelStyle">

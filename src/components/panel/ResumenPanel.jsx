@@ -1,8 +1,21 @@
 
+import { useEffect, useState } from 'react';
+import { getProfile } from '../../helpers/js/getProfile'
+
 export const ResumenPanel = () => {
+    
+    const [profile, setProfile] = useState({});
+    const fetchProfile = async () => {
+        const {result} = await getProfile(localStorage.getItem("id"));
+        console.log(result);
+        setProfile(result);
+      }
+      useEffect(() => {
+        fetchProfile();
+    }, [])
     return (
         <>
-            <div className="itemWelcomePanelStyle">Bienvenido Misael Alvarez</div>
+            <div className="itemWelcomePanelStyle">Bienvenido {profile.nombre+' '+profile.apellidos}</div>
             <div className="itemResumenPanelStyle">
                 Resumen
                 <div className="itemResumenBodyPanelStyle">

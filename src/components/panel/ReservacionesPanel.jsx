@@ -3,6 +3,8 @@ import Catalogo from '../home/Catalogo'
 import ReservacionesTarjetaPanel from "./ReservacionesTarjetaPanel";'./ReservacionesTarjetaPanel'
 import { getReservaciones } from "../../helpers/js/getReservaciones";
 import { useEffect } from "react";
+import LocationCard from "../home/LocationCard";
+import './ReservacionesPanel.css';
 
 export const ReservacionesPanel = () => {
 
@@ -11,6 +13,7 @@ export const ReservacionesPanel = () => {
     const fetchMyReservations = async () => {
         const {result} = await getReservaciones(localStorage.getItem("id"));
         setLocations(result);
+        console.log(result);
     }
 
     useEffect(() => {
@@ -20,10 +23,17 @@ export const ReservacionesPanel = () => {
     return (
         <>
         <div className="itemReservacionPanelStyle">
-        Reservaciones Activas
-            <Catalogo 
-                locations = {locations}
-            />
+            Reservaciones Activas
+            <div className="contenedorReservacionesPanelAuxiliarReservacionesActivas">
+                        {locations.map(location => (
+                            <LocationCard
+                                id={location.id}
+                                key={location.id}
+                                {...location}
+                            />
+                        ))
+                        }
+                    </div>
         </div>
         </>
     )

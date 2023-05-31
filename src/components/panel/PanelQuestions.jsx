@@ -17,8 +17,8 @@ export const PanelQuestions = () => {
     },[])
     return(
         <>
-        <div className="panelBodyContainerMainQuestion">    
-                 <div className="itemWelcomePanelStyle">
+        <div className="panelBodyContainerMainPublications">    
+                 <div className="itemWelcomePanelStylePublications">
                     Estas son las preguntas que te han realizado
                 </div>           
             <div className="panelBodyPanelStyleQuestions">

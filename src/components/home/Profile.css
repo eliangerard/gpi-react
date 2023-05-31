@@ -43,9 +43,16 @@
     border-radius: 50%;
     border: #00000057 solid 3px;
     width: 20%;
-    aspect-ratio: 1;
     margin-bottom: 5%;
+}
 
+.image-input-container{
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+    overflow: hidden;
+    aspect-ratio: 1;
+    object-fit: cover; /* Ajusta la imagen sin distorsión */
 }
 
 .bProfileComponent {
@@ -82,12 +89,13 @@
     width: 1.2rem;
     margin-left: 0.3rem;
 }
-.userProfileProfileComponent{
+.userProfileProfileComponent {
     height: 100%;
     width: 100%;
     border-radius: 100%;
     overflow: hidden;
     aspect-ratio: 1;
+    object-fit: cover; /* Ajusta la imagen sin distorsión */
 }
 
 .profileDescriptionProfileComponent {

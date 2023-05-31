@@ -11,7 +11,6 @@ const EditarPerfil = ({ data, closePop }) => {
   const [descripcion, setDescripcion] = useState(data.descripcion);
   
   const submitImage = async () => {
-    console.log("HOLAAA");
     console.log(descripcion);
     console.log(fotoPerfil, localStorage.getItem("id"));
       const response = await uploadImage(fotoPerfil, localStorage.getItem("id"));
@@ -51,6 +50,7 @@ const EditarPerfil = ({ data, closePop }) => {
 
   const handleApplyChanges = () => {
     submitImage(fotoPerfil);
+    closeComponent();
   };
 
   const closeComponent = () => {

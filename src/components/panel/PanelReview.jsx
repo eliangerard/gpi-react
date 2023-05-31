@@ -1,12 +1,12 @@
 import CatalogoOpinionesSelfCard from './CatalogoOpinionesSelfCard.jsx'
 
 import { useState, useEffect } from 'react';
-
+import { getOwnOpiniones} from '../../helpers/js/getOwnOpiniones'
 export const PanelReview = () => {
     const [locations, setLocations] = useState([]);
 
     const fetchOpiniones = async () => {
-        const { result } = await getOpinionesMine(localStorage.getItem("id"));
+        const { result } = await getOwnOpiniones(localStorage.getItem("id"));
         console.log(result);
         setLocations(result);
     }
